@@ -517,4 +517,45 @@
   .partners__item {
     height: 30px;
   }
+  .consultation__container {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .main__contact-link {
+    font-size: 19px;
+    line-height: normal;
+    padding: 5px 10px;
+  }
+  .services__item-button {
+    padding: 9px 25px;
+    line-height: normal;
+    font-size: 17px;
+  }
+  .services__robot-img {
+    max-height: 219px;
+  }
+  .services__bullits {
+    grid-template-columns: repeat(auto-fit, minmax(306px, 1fr));
+  }
+  .services__item-active {
+    padding: 15px 20px;
+  }
+  .about__button-text {
+    line-height: normal;
+    font-size: 29px;
+  }
+  .about__button-img,
+  .about__button-black {
+    width: 30px;
+  }
+}
+@media (max-width: px) {
+}
+@media (max-width: px) {
+}
+@media (max-width: px) {
+}
+@media (max-width: px) {
 }

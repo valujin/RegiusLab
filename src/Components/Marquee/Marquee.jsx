@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import './Marquee.scss'; // Import the CSS file
 
 import stack1 from '../../assets/stack1.png';

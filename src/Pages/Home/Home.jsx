@@ -1,4 +1,3 @@
-import React from 'react';
 import './Home.scss';
 import mainBack from '../../assets/main-back.png';
 import arrowDownImg from '../../assets/arrow-down-right.png';
@@ -37,7 +36,7 @@ export default function Header() {
         <div className="main__content">
           <p className="main__company-name">REGIUSLAB</p>
           <h1 className="main__title">широкий спектр IT услуг</h1>
-          <a href="#" className="main__contact">
+          <a href="#form" className="main__contact">
             <p className="main__contact-link">СВЯЗАТЬСЯ</p>
             <img src={arrowDownImg} alt="" className="main__contact-img" />
             <img src={arrowBlack} className="main__contact-img-black" alt="" />
@@ -211,7 +210,7 @@ export default function Header() {
           <img src={partner8} className="partners__item" alt="" />
         </div>
       </div>
-      <div className="consultation">
+      <div id="form" className="consultation">
         <div className="consultation__shadow"></div>
         <div className="consultation__container">
           <img src={bro} className="consultation__img" alt="" />

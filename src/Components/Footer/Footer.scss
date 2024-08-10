@@ -62,3 +62,14 @@
   line-height: 29.26px;
   text-align: left;
 }
+
+@media (max-width: 1600px) {
+  .footer__tel,
+  .footer__info,
+  .footer__link {
+    font-size: 16px;
+  }
+  .footer__logo {
+    max-width: 200px;
+  }
+}

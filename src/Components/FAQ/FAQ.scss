@@ -69,3 +69,23 @@
 .faq__text {
   width: 100%;
 }
+
+@media (max-width: 1600px) {
+  .faq__title {
+    font-size: 47px;
+    line-height: normal;
+  }
+
+  .faq__item {
+    padding: 20px 50px 50px 50px;
+  }
+  .faq__num,
+  .faq__question {
+    line-height: normal;
+    font-size: 24px;
+  }
+  .faq__answer {
+    line-height: normal;
+    font-size: 18px;
+  }
+}

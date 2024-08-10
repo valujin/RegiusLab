@@ -1,4 +1,3 @@
-import React from 'react';
 import logoPic from '../../assets/logo.png';
 import './Header.scss';
 // import '../../style/fonts/fonts.scss';

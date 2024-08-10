@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import faqArrow from '../../assets/faq-arrow.png';
 import './FAQ.scss';
 
@@ -56,6 +56,12 @@ export default function FAQ() {
             key={index}
             className="faq__item"
             onClick={() => toggleFAQ(index)}
+            style={{
+              border:
+                openIndex === index
+                  ? '2px solid #AF7B20'
+                  : ' 2px solid #FFFFFF66',
+            }}
           >
             <p className="faq__num">{String(index + 1).padStart(2, '0')}</p>
             <div className="faq__text">
