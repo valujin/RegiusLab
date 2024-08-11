@@ -71,7 +71,7 @@ export default function FAQ() {
                 className="faq__answer"
                 style={{
                   maxHeight: openIndex === index ? '1000px' : '0',
-                  transition: 'max-height 0.5s ease',
+                  // transition: 'max-height 0.5s ease',
                 }}
               >
                 {item.answer}
