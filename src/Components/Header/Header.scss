@@ -12,6 +12,10 @@
   z-index: 1;
 }
 
+.header {
+  position: relative;
+}
+
 .header__logo {
   max-width: 80px;
 }
@@ -31,14 +35,135 @@
   text-decoration: none;
 }
 
+.header__burger-button {
+  display: none;
+}
+
+.header__contact {
+  border: 1px solid #af7b20;
+  padding: 11px 16px;
+  border-radius: 40px;
+  margin: auto;
+  display: flex;
+  text-decoration: none;
+  width: fit-content;
+  align-items: center;
+  background: var(--Black, #000000);
+  transition: 0.3s;
+
+  position: absolute;
+  bottom: 50px;
+  justify-self: center;
+
+  &:hover {
+    background: var(--Yelow, #af7b20);
+
+    .header__contact-link {
+      color: #000000;
+      font-weight: 600;
+    }
+    .header__contact-img {
+      display: none;
+    }
+    .header__contact-img-black {
+      display: block;
+    }
+  }
+}
+
+.header__contact-img,
+.header__contact-img-black {
+  width: 30px;
+}
+.header__contact-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24.38px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.header__contact-img-black {
+  display: none;
+}
+
+.header-mobile {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: #000000;
+  z-index: 2;
+  overflow-y: hidden;
+  display: grid;
+  transition: 0.4s;
+
+  max-height: 0;
+}
+
+.header-mobile__cross {
+  background: none;
+  width: fit-content;
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  border: none;
+  outline: none;
+}
+.header-mobile__container {
+  align-self: center;
+  width: 90%;
+  max-width: 343%;
+  margin: auto;
+  display: grid;
+}
+.header-mobile__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.header-mobile__item {
+  width: 100%;
+  border-bottom: 1px solid #ffffff;
+  padding: 0 0 8px 0;
+}
+.header-mobile__link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 39.01px;
+  text-align: left;
+  color: #ffffff;
+  text-decoration: none;
+}
+
 @media (max-width: 1600px) {
   .header__link {
     font-size: 15px;
   }
 }
-@media (max-width: px) {
+@media (max-width: 1768px) {
+  .header__link {
+    font-size: 12px;
+    line-height: normal;
+  }
+  .header__nav {
+    gap: 14px;
+  }
+  .header__logo {
+    max-width: 53px;
+  }
 }
-@media (max-width: px) {
+@media (max-width: 425px) {
+  .header__nav {
+    display: none;
+  }
+  .header__burger-button {
+    display: block;
+    background: none;
+    border: none;
+  }
 }
 @media (max-width: px) {
 }

@@ -12,7 +12,6 @@ import bullit5 from '../../assets/bullit5.jpg';
 import bullit6Robot from '../../assets/bullit6Robot.png';
 
 import pegasusLeft from '../../assets/PegasusLeft.png';
-import pegasusRight from '../../assets/PegasusRight.png';
 
 import Marquee from '../../Components/Marquee/Marquee';
 import partner1 from '../../assets/partner1.png';
@@ -27,7 +26,7 @@ import partner8 from '../../assets/partner8.png';
 import bro from '../../assets/bro.png';
 import FAQ from '../../Components/FAQ/FAQ';
 
-export default function Header() {
+export default function Home() {
   return (
     <div>
       <div className="main">
@@ -48,6 +47,7 @@ export default function Header() {
         <div className="services__bullits">
           <div className="services__bullits-item  ">
             <img src={bullit1} className="services__bullit-back" alt="" />
+            <div className="services__bullits-mobile-back"></div>
 
             <div className="services__bullits-item-default">
               <p className="services__item-title">Блокчейн и Web3</p>
@@ -55,6 +55,7 @@ export default function Header() {
             </div>
 
             <div className="services__item-active">
+              <img src={bullit1} className="services__back-mobile" alt="" />
               <ul className="services__item-description">
                 <li className="services__item-li">
                   Бот-магазин с возможностью оплаты картой либо криптовалютой
@@ -74,12 +75,15 @@ export default function Header() {
 
           <div className="services__bullits-item  ">
             <img src={bullit2} className="services__bullit-back" alt="" />
+            <div className="services__bullits-mobile-back"></div>
             <div className="services__bullits-item-default">
               <p className="services__item-title">Автоматизация бизнеса</p>
               <img src={arrowDownImg} className="servises__item-arrow" alt="" />
             </div>
 
             <div className="services__item-active">
+              <img src={bullit2} className="services__back-mobile" alt="" />
+
               <ul className="services__item-description">
                 <li className="services__item-li">
                   Бот-магазин с возможностью оплаты картой либо криптовалютой
@@ -97,14 +101,17 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="services__bullits-item  ">
+          <div className="services__bullits-item   ">
             <img src={bullit3} className="services__bullit-back" alt="" />
+            <div className="services__bullits-mobile-back"></div>
             <div className="services__bullits-item-default">
               <p className="services__item-title">Telegram боты</p>
               <img src={arrowDownImg} className="servises__item-arrow" alt="" />
             </div>
 
             <div className="services__item-active">
+              <img src={bullit3} className="services__back-mobile" alt="" />
+
               <ul className="services__item-description">
                 <li className="services__item-li">
                   Бот-магазин с возможностью оплаты картой либо криптовалютой
@@ -124,12 +131,15 @@ export default function Header() {
 
           <div className="services__bullits-item  ">
             <img src={bullit4} className="services__bullit-back" alt="" />
+            <div className="services__bullits-mobile-back"></div>
             <div className="services__bullits-item-default">
               <p className="services__item-title">1С разработка</p>
               <img src={arrowDownImg} className="servises__item-arrow" alt="" />
             </div>
 
             <div className="services__item-active">
+              <img src={bullit4} className="services__back-mobile" alt="" />
+
               <ul className="services__item-description">
                 <li className="services__item-li">
                   Бот-магазин с возможностью оплаты картой либо криптовалютой
@@ -147,8 +157,9 @@ export default function Header() {
             </div>
           </div>
 
-          <div className="services__bullits-item  ">
+          <div className="services__bullits-item   ">
             <img src={bullit5} className="services__bullit-back" alt="" />
+            <div className="services__bullits-mobile-back"></div>
 
             <div className="services__bullits-item-default">
               <p className="services__item-title">CMS Magento</p>
@@ -156,6 +167,8 @@ export default function Header() {
             </div>
 
             <div className="services__item-active">
+              <img src={bullit5} className="services__back-mobile" alt="" />
+
               <ul className="services__item-description">
                 <li className="services__item-li">
                   Бот-магазин с возможностью оплаты картой либо криптовалютой
@@ -173,13 +186,14 @@ export default function Header() {
             </div>
           </div>
 
-          <img src={bullit6Robot} className="services__robot-img" alt="" />
+          {/* <img src={bullit6Robot} className="services__robot-img" alt="" /> */}
         </div>
       </div>
       <Marquee />
       <div className="about">
         <img src={pegasusLeft} alt="  " className="about__pegas-left" />
-        <img src={pegasusRight} alt="  " className="about__pegas-right" />
+        <img src={pegasusLeft} alt="  " className="about__pegas-right" />
+        {/* <img src={pegasusRight} alt="  " className="about__pegas-right" /> */}
 
         <div className="about__container">
           <a href="#" className="about__button">
@@ -218,18 +232,21 @@ export default function Header() {
             <p className="consultation__title">Запросить консультацию</p>
             <form className="consultation__form">
               <input
+                required
                 type="text"
                 className="consultation__name"
                 autoComplete="none"
                 placeholder="Имя"
               />
               <input
+                required
                 type="tel"
                 autoComplete="none"
                 className="consultation__tel"
                 placeholder="Телефон"
               />
               <input
+                required
                 type="email"
                 className="consultation__email"
                 autoComplete="none"

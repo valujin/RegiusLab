@@ -75,7 +75,7 @@
   :root {
     --marquee-width: 100vw;
     --marquee-height: 16vh;
-    --marquee-elements-displayed: 3;
+    --marquee-elements-displayed: 5;
   }
 
   .marquee:before,
@@ -90,5 +90,11 @@
   }
   .marquee {
     margin: 80px 0 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .fab {
+    max-width: 46px;
   }
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import faqArrow from '../../assets/faq-arrow.png';
 import './FAQ.scss';
 
@@ -66,9 +66,13 @@ export default function FAQ() {
             <p className="faq__num">{String(index + 1).padStart(2, '0')}</p>
             <div className="faq__text">
               <p className="faq__question">{item.question}</p>
+
               <p
                 className="faq__answer"
-                style={{ maxHeight: openIndex === index ? '1000px' : '0' }}
+                style={{
+                  maxHeight: openIndex === index ? '1000px' : '0',
+                  transition: 'max-height 0.5s ease',
+                }}
               >
                 {item.answer}
               </p>
@@ -76,7 +80,9 @@ export default function FAQ() {
             <img
               src={faqArrow}
               className="faq__arrow"
-              style={{ transform: openIndex === index ? 'scaleY(-1)' : 'none' }}
+              style={{
+                transform: openIndex === index ? 'scaleY(-1)' : 'none',
+              }}
               alt=""
             />
           </div>

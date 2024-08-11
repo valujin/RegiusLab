@@ -212,10 +212,8 @@
   border-radius: 40px;
   width: fit-content;
   display: block;
-  margin: auto;
+  margin: 10px auto 0 auto;
 
-  position: absolute;
-  bottom: 24px;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   color: #ffffff;
@@ -260,6 +258,7 @@
   width: 50%;
   z-index: 0;
   max-width: 700px;
+  transform: scaleX(-1);
 }
 
 .about__container {
@@ -451,6 +450,10 @@
   }
 }
 
+.services__back-mobile {
+  display: none;
+}
+
 @media (max-width: 1600px) {
   .main__back {
     max-width: 600px;
@@ -550,12 +553,302 @@
   .about__button-black {
     width: 30px;
   }
+  .consultation__title {
+    font-size: 34px;
+    line-height: normal;
+  }
+  .consultation__form input {
+    width: 100%;
+  }
 }
-@media (max-width: px) {
+@media (max-width: 1078px) {
+  .main__back {
+    max-width: 400px;
+  }
+  .main__company-name {
+    font-size: 70px;
+  }
+  .main__title {
+    font-size: 22px;
+    margin: 20px 0;
+  }
+  .main__contact {
+    padding: 6px 26px;
+    gap: 5px;
+  }
+  .main__contact-link {
+    font-size: 16px;
+  }
+  .main__contact-img,
+  .main__contact-img-black {
+    max-width: 20px;
+  }
+  .services__title {
+    font-size: 25px;
+  }
+  .services__item-title {
+    font-size: 16px;
+  }
+  .services__bullits {
+    grid-template-columns: repeat(auto-fit, minmax(223px, 1fr));
+  }
+  .services__item-li {
+    font-size: 12px;
+  }
+  .fab {
+    max-width: 45px;
+  }
+  .about__description {
+    font-size: 16px;
+    max-width: 539px;
+  }
+  .about__button {
+    gap: 10px;
+    padding: 10px 15px;
+  }
+  .about__button-text {
+    font-size: 25px;
+  }
+  .partners__item {
+    height: 25px;
+  }
+  .consultation__img {
+    width: 50%;
+  }
+  .consultation__container {
+    padding: 20px;
+  }
+  .consultation__right {
+    padding: 20px;
+  }
+  .consultation__title {
+    margin: 0 0 25px 0;
+  }
+  .consultation__form input {
+    font-size: 16px;
+    padding: 10px 10px;
+  }
+  .consultation__form {
+    .consultation__submit {
+      font-size: 16px;
+      padding: 10px 15px;
+      max-width: 183px;
+    }
+  }
+  .consultation__shadow {
+    top: -4%;
+    right: 0%;
+  }
 }
-@media (max-width: px) {
+@media (max-width: 768px) {
+  .main__company-name {
+    font-size: 50px;
+  }
+  .main {
+    padding: 10px 0;
+  }
+  .main__title {
+    font-size: 16px;
+    margin: 10px 0 15px 0;
+  }
+  .main__contact-link {
+    font-size: 14px;
+  }
+  .services__title {
+    font-size: 20px;
+    margin: 0 0 20px 0;
+  }
+  .services__robot-img {
+    max-height: 200px;
+  }
+  .services__bullits-item-default {
+    padding: 10px 20px;
+  }
+  .services__bullits {
+    gap: 15px;
+  }
+  .services__item-active {
+    padding: 10px 20px;
+  }
+
+  .services__item-button {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+  .consultation__title {
+    font-size: 20px;
+  }
+  .consultation__form input {
+    font-size: 14px;
+    padding: 5px 10px;
+    line-height: normal;
+    border-radius: 6px;
+  }
+  .consultation__form .consultation__submit {
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  .consultation__img {
+    width: 40%;
+  }
+  .partners__container {
+    gap: 20px;
+  }
+  .consultation {
+    border-radius: 30px;
+  }
+  .consultation__shadow {
+    -webkit-box-shadow: 10px -6px 600px 200px rgba(215, 172, 69, 0.3);
+    -moz-box-shadow: 10px -6px 600px 200px rgba(215, 172, 69, 0.3);
+    box-shadow: 10px -6px 600px 200px rgba(215, 172, 69, 0.3);
+  }
+  .consultation__right {
+    padding: 0;
+  }
+  .about__pegas-right,
+  .about__pegas-left {
+    height: auto;
+    width: 50%;
+  }
 }
-@media (max-width: px) {
+
+@media (max-width: 425px) {
+  .main {
+    padding: 80px 0;
+  }
+  .main__back {
+    max-width: 500px;
+    width: 120%;
+  }
+  .main__company-name {
+    font-size: 40px;
+  }
+  .main__title {
+    margin: 20px 0 70px;
+  }
+  .main__contact {
+    border: 1px solid var(--Yelow, #af7b20);
+    padding: 10px 16px;
+  }
+  .main__contact-link {
+    padding: 0;
+  }
+  .services__title {
+    font-size: 24px;
+  }
+  .services__item-title {
+  }
+  .servises__item-arrow {
+    display: none;
+  }
+  .services__bullits {
+    gap: 0;
+  }
+  .services__bullits-item {
+    position: relative;
+    // top: -50%;
+    max-height: 50px;
+    overflow: visible;
+  }
+  .services__bullit-back {
+    height: 150%;
+    opacity: 1;
+    border-radius: 16px;
+  }
+  .services__bullits-mobile-back {
+    height: 150%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    background-color: #00000079;
+  }
+  .services__bullits-item:hover {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    .services__bullit-back {
+      max-height: none;
+    }
+    .services__bullits-mobile-back {
+      display: none;
+    }
+    .services__item-active {
+      z-index: 3;
+      height: max-content;
+      border: 1px solid var(--Yelow, #af7b20);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #000000;
+    }
+  }
+
+  .services__item-button {
+    border: 1px solid var(--Yelow, #af7b20);
+    padding: 8px 32px;
+    z-index: 1;
+    font-size: 10px;
+    margin: 50px 0 0 0;
+  }
+  .marquee {
+    margin: 160px 0 0 0;
+  }
+  .services__back-mobile {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.3;
+    z-index: 0;
+  }
+  .services__item-description {
+    z-index: 1;
+  }
+  .about__pegas-right,
+  .about__pegas-left {
+    display: none;
+  }
+  .about {
+    padding: 40px 0;
+  }
+  .about__button {
+    border: 1px solid var(--Yelow, #af7b20);
+  }
+  .partners__container {
+    gap: 25px;
+  }
+  .consultation__container {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .consultation__shadow {
+    display: none;
+  }
+  .consultation {
+    margin: 40px auto;
+    border: 1px solid var(--White, #ffffff);
+    padding: 10px;
+  }
+  .consultation__img {
+    max-width: 320px;
+    width: 100%;
+  }
+  .consultation__form .consultation__submit {
+    border: 1px solid var(--Yelow-strobe, #d7ac45);
+  }
+  .consultation__form input {
+    font-size: 10px;
+    padding: 10px 15px;
+  }
 }
 @media (max-width: px) {
 }

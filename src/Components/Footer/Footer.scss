@@ -73,3 +73,51 @@
     max-width: 200px;
   }
 }
+
+@media (max-width: 1300px) {
+  .footer {
+    gap: 30px;
+  }
+  .footer__column {
+    gap: 0;
+  }
+  .footer__tel,
+  .footer__info,
+  .footer__link {
+    font-size: 14px;
+    line-height: normal;
+  }
+  .footer__logo {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer__social-med {
+    gap: 10px;
+    max-width: 123px;
+  }
+  .footer__soc-img {
+    max-width: 30px;
+  }
+  .footer {
+    grid-template-columns: repeat(auto-fit, minmax(150px, max-content));
+    grid-auto-flow: dense;
+  }
+}
+
+@media (max-width: 425px) {
+  //   .footer__logo {
+  //     display: none;
+  //   }
+  .footer {
+    width: 90%;
+  }
+
+  //   .footer__column:nth-child(3) {
+  //     order: 4;
+  //   }
+  //     .footer__column:nth-child(3) {
+  //     order: 3;
+  //   }
+}
