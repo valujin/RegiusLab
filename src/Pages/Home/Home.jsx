@@ -252,7 +252,7 @@ export default function Home() {
             <div className="services__bullits-mobile-back"></div>
 
             <div className="services__bullits-item-default">
-              <p className="services__item-title">CMS Magento</p>
+              <p className="services__item-title">Bitrix24</p>
               <img src={arrowDownImg} className="servises__item-arrow" alt="" />
             </div>
 
