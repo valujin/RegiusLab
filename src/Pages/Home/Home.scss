@@ -229,6 +229,8 @@
   cursor: pointer;
   transition: 0.3s;
 
+  text-decoration: none;
+
   &:hover {
     background: var(--Yelow, #af7b20);
 

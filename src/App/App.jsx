@@ -17,7 +17,7 @@ function App() {
   return (
     <div className="app">
       <div className="app__container">
-        <Header bodyScroll={bodyScroll} setBodyScroll={setBodyScroll} />
+        {/* <Header bodyScroll={bodyScroll} setBodyScroll={setBodyScroll} /> */}
         <Home />
 
         <Footer />
