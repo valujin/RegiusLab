@@ -28,8 +28,8 @@ export default function Footer() {
           </a>
         </div>
 
-        <a href="tel:+375295756725" className="footer__tel">
-          Тел: +375295756725
+        <a href="tel:+375447041787" className="footer__tel">
+          Тел: +375447041787
         </a>
         <a href="" className="footer__link">
           Настройки cookie
