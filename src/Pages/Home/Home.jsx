@@ -268,10 +268,10 @@ export default function Home() {
                 </li>
                 <li className="services__item-li">Интеграция с 1С </li>
                 <li className="services__item-li">
-                  Внедрение и настройка Bitrix24
+                  Внедрение и настройка Битрикс24
                 </li>
                 <li className="services__item-li">
-                  Поддержка и доработка Bitrix24
+                  Поддержка и доработка Битрикс24
                 </li>
               </ul>
               <a className="services__item-button" href="#form">
