@@ -32,6 +32,7 @@ export default function Home() {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
+  const [thanks, setThanks] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -51,6 +52,8 @@ export default function Home() {
         },
         body: JSON.stringify(data),
       });
+
+      setThanks(true);
 
       if (!response.ok) {
         throw new Error('Network response was not ok');
@@ -257,7 +260,7 @@ export default function Home() {
             </div>
 
             <div className="services__item-active">
-              <img src={bullit5} className="services__back-mobile" alt="" />
+              <img src={bullit6} className="services__back-mobile" alt="" />
 
               <ul className="services__item-description">
                 <li className="services__item-li">
@@ -282,7 +285,6 @@ export default function Home() {
       <div className="about">
         <img src={pegasusLeft} alt="  " className="about__pegas-left" />
         <img src={pegasusLeft} alt="  " className="about__pegas-right" />
-        {/* <img src={pegasusRight} alt="  " className="about__pegas-right" /> */}
 
         <div className="about__container">
           <a href="#" className="about__button">
@@ -318,8 +320,35 @@ export default function Home() {
         <div className="consultation__container">
           <img src={bro} className="consultation__img" alt="" />
           <div className="consultation__right">
-            <p className="consultation__title">Запросить консультацию</p>
-            <form onSubmit={handleSubmit} className="consultation__form">
+            <div
+              style={{
+                opacity: thanks === true ? '1' : '0',
+                visibility: thanks === true ? 'visible' : 'hidden',
+              }}
+              className="consultation__thanks"
+            >
+              <p className="consultation__title consultation__title-thank">
+                Спасибо за вашу заявку, мы свяжемся с вами в ближайшее время!
+              </p>
+            </div>
+
+            <p
+              style={{
+                opacity: thanks === false ? '1' : '0',
+                visibility: thanks === false ? 'visible' : 'hidden',
+              }}
+              className="consultation__title"
+            >
+              Запросить консультацию
+            </p>
+            <form
+              style={{
+                opacity: thanks === false ? '1' : '0',
+                visibility: thanks === false ? 'visible' : 'hidden',
+              }}
+              onSubmit={handleSubmit}
+              className="consultation__form"
+            >
               <input
                 required
                 type="text"

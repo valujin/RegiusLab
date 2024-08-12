@@ -16,13 +16,13 @@ export default function Footer() {
         <div className="footer__social-med">
           <a href="" className="footer__item-soc">
             <img src={soc1} alt="" className="footer__soc-img" />
-          </a>{' '}
+          </a>
           <a href="" className="footer__item-soc">
             <img src={soc2} alt="" className="footer__soc-img" />
-          </a>{' '}
+          </a>
           <a href="" className="footer__item-soc">
             <img src={soc3} alt="" className="footer__soc-img" />
-          </a>{' '}
+          </a>
           <a href="" className="footer__item-soc">
             <img src={soc4} alt="" className="footer__soc-img" />
           </a>
