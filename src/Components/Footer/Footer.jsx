@@ -31,6 +31,9 @@ export default function Footer() {
         <a href="tel:+375447041787" className="footer__tel">
           Тел: +375447041787
         </a>
+        <a href="mailto:sales@regiuslab.by" className="footer__tel">
+          sales@regiuslab.by
+        </a>
         <a href="" className="footer__link">
           Настройки cookie
         </a>
