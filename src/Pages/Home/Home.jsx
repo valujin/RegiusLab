@@ -283,7 +283,7 @@ export default function Home() {
       </div>
 
       <Marquee />
-
+      {/* 
       <div className="services">
         <p className="services__title">Индивидуальная разработка</p>
         <div className="services__bullits">
@@ -475,7 +475,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="about">
         <img src={pegasusLeft} alt="  " className="about__pegas-left" />
