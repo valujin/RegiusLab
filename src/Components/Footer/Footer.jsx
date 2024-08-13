@@ -46,7 +46,7 @@ export default function Footer() {
         <p className="footer__info">
           Юр. адрес: 220083 г.Минск пр.Газеты Правды 9 оф. 5Н
         </p>
-        <p className="footer__info">Офис: Янки Мавра 41, посещение 408</p>
+        <p className="footer__info">Офис: Янки Мавра 41, помещение 408</p>
         <a href="" className="footer__link">
           Политика конфиденциальности
         </a>
