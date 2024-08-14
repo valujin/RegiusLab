@@ -89,7 +89,7 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div className="services">
+      <div id="services" className="services">
         <p className="services__title">Индивидуальная разработка</p>
         <div className="services__bullits">
           <div className="services__bullits-item  ">
@@ -118,7 +118,6 @@ export default function Home() {
               <a
                 className="services__item-button"
                 href="https://b24.regiuslab.by/"
-                target="_blank"
               >
                 Подробнее
               </a>
@@ -154,7 +153,6 @@ export default function Home() {
               <a
                 className="services__item-button"
                 href="https://b24.regiuslab.by/"
-                target="_blank"
               >
                 Подробнее
               </a>
@@ -188,7 +186,6 @@ export default function Home() {
               <a
                 className="services__item-button"
                 href="https://b24.regiuslab.by/"
-                target="_blank"
               >
                 Подробнее
               </a>
@@ -224,7 +221,6 @@ export default function Home() {
               <a
                 className="services__item-button"
                 href="https://b24.regiuslab.by/"
-                target="_blank"
               >
                 Подробнее
               </a>
@@ -263,7 +259,6 @@ export default function Home() {
               <a
                 className="services__item-button"
                 href="https://b24.regiuslab.by/"
-                target="_blank"
               >
                 Подробнее
               </a>
@@ -297,7 +292,6 @@ export default function Home() {
               <a
                 className="services__item-button"
                 href="https://b24.regiuslab.by/"
-                target="_blank"
               >
                 Подробнее
               </a>
@@ -334,7 +328,7 @@ export default function Home() {
                   Создание блокчейн / монет с нуля под ключ
                 </li>
               </ul>
-              <a className="services__item-button" href="https://b24.regiuslab.by/"  target="_blank">
+              <a className="services__item-button" href="https://b24.regiuslab.by/"  >
                 Подробнее
               </a>
             </div>
@@ -366,7 +360,7 @@ export default function Home() {
                   Автоматизация интернет торговли
                 </li>
               </ul>
-              <a className="services__item-button" href="https://b24.regiuslab.by/"  target="_blank">
+              <a className="services__item-button" href="https://b24.regiuslab.by/"  >
                 Подробнее
               </a>
             </div>
@@ -396,7 +390,7 @@ export default function Home() {
                   Бот-магазин с возможностью оплаты картой либо криптовалютой
                 </li>
               </ul>
-              <a className="services__item-button" href="https://b24.regiuslab.by/"  target="_blank">
+              <a className="services__item-button" href="https://b24.regiuslab.by/"  >
                 Подробнее
               </a>
             </div>
@@ -428,7 +422,7 @@ export default function Home() {
                   Интеграция с другими информационными системами
                 </li>
               </ul>
-              <a className="services__item-button" href="https://b24.regiuslab.by/"  target="_blank">
+              <a className="services__item-button" href="https://b24.regiuslab.by/"  >
                 Подробнее
               </a>
             </div>
@@ -463,7 +457,7 @@ export default function Home() {
                 <li className="services__item-li">Подключение POS систем</li>
                 <li className="services__item-li">PIM интеграция</li>
               </ul>
-              <a className="services__item-button" href="https://b24.regiuslab.by/"  target="_blank">
+              <a className="services__item-button" href="https://b24.regiuslab.by/"  >
                 Подробнее
               </a>
             </div>
@@ -493,7 +487,7 @@ export default function Home() {
                   Поддержка и доработка Битрикс24
                 </li>
               </ul>
-              <a className="services__item-button" href="https://b24.regiuslab.by/"  target="_blank">
+              <a className="services__item-button" href="https://b24.regiuslab.by/"  >
                 Подробнее
               </a>
             </div>
@@ -501,7 +495,7 @@ export default function Home() {
         </div>
       </div> */}
 
-      <div className="about">
+      <div id="about" className="about">
         <img src={pegasusLeft} alt="  " className="about__pegas-left" />
         <img src={pegasusLeft} alt="  " className="about__pegas-right" />
 

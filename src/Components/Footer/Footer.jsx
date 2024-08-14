@@ -7,7 +7,7 @@ import soc4 from '../../assets/soc4.png';
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <div id="footer" className="footer">
       <a href="/" className="footer__logo">
         <img src={logoPic} alt="" className="footer__logo-pic" />
       </a>
