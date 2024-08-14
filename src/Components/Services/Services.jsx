@@ -1,102 +1,172 @@
-import './Home.scss';
-import mainBack from '../../assets/main-back.png';
-import arrowDownImg from '../../assets/arrow-down-right.png';
-import arrowBlack from '../../assets/arrow-down-right-black.png';
-import '../../style/fonts/fonts.scss';
+import React from 'react';
 import { useState } from 'react';
+import './Services.scss';
 
 import bullit1 from '../../assets/bullit1.png';
 import bullit2 from '../../assets/bullit2.png';
 import bullit3 from '../../assets/bullit3.png';
 import bullit4 from '../../assets/bullit4.jpg';
 import bullit5 from '../../assets/bullit5.jpg';
+import arrowDownImg from '../../assets/arrow-down-right.png';
 import bullit6 from '../../assets/bullit6.png';
 
-import pegasusLeft from '../../assets/PegasusLeft.png';
+const services_data = [
+  {
+    title: 'Блокчейн и Web3',
+    description: [
+      ' Разработка Smart контрактов',
+      ' Создание криптобирж и криптообменников',
+      'Разработка майнинг пулов',
+      'Создание блокчейн / монет с нуля под ключ',
+    ],
+    image: bullit1,
+    link: 'https://b24.regiuslab.by/',
+  },
+  {
+    title: 'Автоматизация бизнеса',
+    description: [
+      'Автоматизация бизнес-процессов',
+      'Автоматизация документооборота',
+      'Автоматизация производства',
+      'Бот для организацией',
+      'Автоматизация интернет торговли',
+    ],
+    image: bullit2,
+    link: 'https://b24.regiuslab.by/',
+  },
+  {
+    title: 'Telegram боты',
+    description: [
+      'Информационный бот',
+      'Чат–бот',
+      'Бот для управления организацией',
+      'Боты с искусственным интеллектом',
+      'Бот-магазин с возможностью оплаты картой либо криптовалютой',
+    ],
+    image: bullit3,
+    link: 'https://b24.regiuslab.by/',
+  },
+  {
+    title: '1С разработка',
+    description: [
+      'Настройка логики',
+      'Оптимизация быстродействия',
+      'Разработка модулей и калькуляторов',
+      'Автоматизация интернет-торговли',
+      'Интеграция с другими информационными системами',
+    ],
+    image: bullit4,
+    link: 'https://b24.regiuslab.by/',
+  },
+  {
+    title: 'CMS Magento',
+    description: [
+      'PWA приложения',
+      'Оптимизация и поддержка сайтов на CMS Magento',
+      'Разработка публичных и приватных модулей',
+      'Разработка систем электронной коммерции',
+      'Интеграция с системами ERP',
+      'Подключение POS систем',
+      'PIM интеграция',
+    ],
+    image: bullit5,
+    link: 'https://b24.regiuslab.by/',
+  },
+  {
+    title: 'Битрикс24',
+    description: [
+      'Автоматизация бизнес процессов',
+      'Интеграция с 1С ',
+      ' Внедрение и настройка Битрикс24',
+      'Поддержка и доработка Битрикс24',
+    ],
+    image: bullit6,
+    link: 'https://b24.regiuslab.by/',
+  },
+];
 
-import Marquee from '../../Components/Marquee/Marquee';
-import partner1 from '../../assets/partner1.png';
-import partner2 from '../../assets/partner2.png';
-import partner3 from '../../assets/partner3.png';
-import partner4 from '../../assets/partner4.png';
-import partner5 from '../../assets/partner5.png';
-import partner6 from '../../assets/partner6.png';
-import partner7 from '../../assets/partner7.png';
-import partner8 from '../../assets/partner8.png';
-
-import Services from '../../Components/Services/Services';
-
-import bro from '../../assets/bro.png';
-// import InputMask from 'react-input-mask';
-import FAQ from '../../Components/FAQ/FAQ';
-
-export default function Home() {
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
-  const [thanks, setThanks] = useState(false);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const data = {
-      name,
-      email,
-      phone,
-    };
-
-    try {
-      const response = await fetch('https://b24-lead.valuxin.workers.dev', {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      setThanks(true);
-
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-
-      const result = await response.json();
-      console.log('Success:', result);
-    } catch (error) {
-      console.error('Error:', error);
-    }
-  };
-
-  const handleChange = (e) => {
-    const value = e.target.value;
-
-    const digits = value.replace(/\D/g, '');
-
-    setPhone(`+${digits}`);
-  };
+export default function Services() {
+  const [openService, setOpenService] = useState(null);
+  function changeServiceIndex(index) {
+    console.log(window.innerWidth);
+    if (window.innerWidth < 450) {
+      setOpenService(openService === index ? null : index);
+    } else return;
+  }
 
   return (
     <div>
-      <div className="main">
-        <img src={mainBack} className="main__back" alt="" />
-
-        <div className="main__content">
-          <p className="main__company-name">REGIUSLAB</p>
-          <h1 className="main__title">широкий спектр IT услуг</h1>
-          <a href="#form" className="main__contact">
-            <p className="main__contact-link">СВЯЗАТЬСЯ</p>
-            <img src={arrowDownImg} alt="" className="main__contact-img" />
-            <img src={arrowBlack} className="main__contact-img-black" alt="" />
-          </a>
-        </div>
-      </div>
-
-      <Services />
-
-      {/* <div id="services" className="services">
+      <div id="services" className="services">
         <p className="services__title">Индивидуальная разработка</p>
         <div className="services__bullits">
+          {services_data.map(({ title, description, image, link }, index) => (
+            <div
+              key={index}
+              className="services__bullits-item"
+              onClick={() => changeServiceIndex(index)}
+              style={{
+                maxHeight:
+                  window.innerWidth <= 450 && openService !== index
+                    ? ' 50px'
+                    : ' none',
+                overflow:
+                  window.innerWidth <= 450 && openService !== index
+                    ? 'visible'
+                    : 'hidden',
+                border:
+                  window.innerWidth <= 450 && openService === index
+                    ? '1px solid #AF7B20'
+                    : 'none ',
+                boxShadow:
+                  window.innerWidth <= 450 && openService !== index
+                    ? ' 0px 0px 30px 0px #000000E5'
+                    : 'none',
+              }}
+            >
+              <img src={image} className="services__bullit-back" alt="" />
+              <div className="services__bullits-mobile-back"></div>
+
+              <div className="services__bullits-item-default">
+                <p className="services__item-title">{title}</p>
+                <img
+                  src={arrowDownImg}
+                  className="servises__item-arrow"
+                  alt=""
+                />
+              </div>
+
+              <div
+                className="services__item-active"
+                style={{
+                  opacity:
+                    window.innerWidth <= 450 && openService === index
+                      ? '1'
+                      : '0',
+                  visibility:
+                    window.innerWidth <= 450 && openService === index
+                      ? 'visible'
+                      : 'hidden',
+                }}
+              >
+                <img src={image} className="services__back-mobile" alt="" />
+                <ul className="services__item-description">
+                  {description.map((Element, index) => (
+                    <li key={index} className="services__item-li">
+                      {Element}
+                    </li>
+                  ))}
+                </ul>
+                <a className="services__item-button" href={link}>
+                  Подробнее
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    /* <div className="services__bullits">
           <div className="services__bullits-item  ">
             <img src={bullit1} className="services__bullit-back" alt="" />
             <div className="services__bullits-mobile-back"></div>
@@ -302,125 +372,6 @@ export default function Home() {
               </a>
             </div>
           </div>
-        </div>
-      </div> */}
-
-      <Marquee />
-
-      <div id="about" className="about">
-        <img src={pegasusLeft} alt="  " className="about__pegas-left" />
-        <img src={pegasusLeft} alt="  " className="about__pegas-right" />
-
-        <div className="about__container">
-          <a href="#" className="about__button">
-            <p className="about__button-text">О нас</p>
-            <img src={arrowDownImg} alt="" className="about__button-img" />
-            <img src={arrowBlack} className="about__button-black" alt="" />
-          </a>
-
-          <p className="about__description">
-            Мы — команда высококвалифицированных профессионалов. <br />
-            <br /> Наша цель — создавать индивидуальные решения для каждого
-            клиента. Мы не просто автоматизируем бизнес-процессы, но и находим
-            оптимальные пути для роста и развития вашего бизнеса. Наш широкий
-            спектр услуг позволяет реализовать проекты под любые цели. Выбирайте
-            нас, чтобы вместе достичь новых высот!
-          </p>
-        </div>
-      </div>
-      <div className="partners">
-        <div className="partners__container">
-          <img src={partner1} className="partners__item" alt="" />
-          <img src={partner2} className="partners__item" alt="" />
-          <img src={partner3} className="partners__item" alt="" />
-          <img src={partner4} className="partners__item" alt="" />
-          <img src={partner5} className="partners__item" alt="" />
-          <img src={partner6} className="partners__item" alt="" />
-          <img src={partner7} className="partners__item" alt="" />
-          <img src={partner8} className="partners__item" alt="" />
-        </div>
-      </div>
-      <div id="form" className="consultation">
-        <div className="consultation__shadow"></div>
-        <div className="consultation__container">
-          <img src={bro} className="consultation__img" alt="" />
-          <div className="consultation__right">
-            <div
-              style={{
-                opacity: thanks === true ? '1' : '0',
-                visibility: thanks === true ? 'visible' : 'hidden',
-              }}
-              className="consultation__thanks"
-            >
-              <p className="consultation__title consultation__title-thank">
-                Спасибо за вашу заявку, мы свяжемся с вами в ближайшее время!
-              </p>
-            </div>
-
-            <p
-              style={{
-                opacity: thanks === false ? '1' : '0',
-                visibility: thanks === false ? 'visible' : 'hidden',
-              }}
-              className="consultation__title"
-            >
-              Запросить консультацию
-            </p>
-            <form
-              style={{
-                opacity: thanks === false ? '1' : '0',
-                visibility: thanks === false ? 'visible' : 'hidden',
-              }}
-              onSubmit={handleSubmit}
-              className="consultation__form"
-            >
-              <input
-                required
-                type="text"
-                className="consultation__name"
-                autoComplete="none"
-                placeholder="Имя"
-                value={name}
-                onChange={(e) => {
-                  const value = e.target.value;
-                  if (/^[A-Za-zА-Яа-яЁё\s]*$/.test(value)) {
-                    setName(value);
-                  }
-                }}
-              />
-              <input
-                required
-                value={phone}
-                type="tel"
-                autoComplete="none"
-                className="consultation__tel"
-                placeholder="+375 (__) ___-__-__"
-                // onChange={(e) => {
-                //   setPhone(e.target.value);
-                // }}
-                onChange={handleChange}
-              />
-              <input
-                required
-                type="email"
-                className="consultation__email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                autoComplete="none"
-                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
-                placeholder="Электронная почта"
-              />
-
-              <input
-                type="submit"
-                className="consultation__submit"
-                value="Отправить"
-              />
-            </form>
-          </div>
-        </div>
-      </div>
-      <FAQ />
-    </div>
+        </div> */
   );
 }
