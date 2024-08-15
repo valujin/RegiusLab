@@ -1,7 +1,7 @@
 :root {
   --marquee-width: 100%;
   //   --marquee-height: 20vh;
-  --marquee-elements-displayed: 9;
+  --marquee-elements-displayed: 7;
   --marquee-element-width: calc(
     var(--marquee-width) / var(--marquee-elements-displayed)
   );
@@ -75,7 +75,7 @@
   :root {
     --marquee-width: 100vw;
     --marquee-height: 16vh;
-    --marquee-elements-displayed: 5;
+    --marquee-elements-displayed: 7;
   }
 
   .marquee:before,

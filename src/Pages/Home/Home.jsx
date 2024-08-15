@@ -5,12 +5,12 @@ import arrowBlack from '../../assets/arrow-down-right-black.png';
 import '../../style/fonts/fonts.scss';
 import { useState } from 'react';
 
-import bullit1 from '../../assets/bullit1.png';
-import bullit2 from '../../assets/bullit2.png';
-import bullit3 from '../../assets/bullit3.png';
-import bullit4 from '../../assets/bullit4.jpg';
-import bullit5 from '../../assets/bullit5.jpg';
-import bullit6 from '../../assets/bullit6.png';
+// import bullit1 from '../../assets/bullit1.png';
+// import bullit2 from '../../assets/bullit2.png';
+// import bullit3 from '../../assets/bullit3.png';
+// import bullit4 from '../../assets/bullit4.jpg';
+// import bullit5 from '../../assets/bullit5.jpg';
+// import bullit6 from '../../assets/bullit6.png';
 
 import pegasusLeft from '../../assets/PegasusLeft.png';
 
