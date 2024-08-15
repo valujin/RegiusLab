@@ -7,7 +7,7 @@ import stack3 from '../../assets/stack3.png';
 import stack4 from '../../assets/stack4.png';
 import stack5 from '../../assets/stack5.png';
 import stack6 from '../../assets/stack6.png';
-import stack7 from '../../assets/stack7.png';
+// import stack7 from '../../assets/stack7.png';
 import stack8 from '../../assets/stack8.png';
 import stack9 from '../../assets/stack9.png';
 
@@ -50,9 +50,9 @@ const Marquee = () => {
         <li>
           <img src={stack6} alt="" className="fab " />
         </li>
-        <li>
+        {/* <li>
           <img src={stack7} alt="" className="fab " />
-        </li>
+        </li> */}
         <li>
           <img src={stack8} alt="" className="fab " />
         </li>

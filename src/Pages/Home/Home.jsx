@@ -334,7 +334,7 @@ export default function Home() {
           <img src={partner2} className="partners__item" alt="" />
           <img src={partner3} className="partners__item" alt="" />
           <img src={partner4} className="partners__item" alt="" />
-          <img src={partner5} className="partners__item" alt="" />
+          {/* <img src={partner5} className="partners__item" alt="" /> */}
           <img src={partner6} className="partners__item" alt="" />
           <img src={partner7} className="partners__item" alt="" />
           <img src={partner8} className="partners__item" alt="" />
