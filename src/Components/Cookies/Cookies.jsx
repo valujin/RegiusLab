@@ -5,7 +5,6 @@ export default function Cookies() {
   const [cookieVisible, setCookieVisibleState] = useState(false);
 
   useEffect(() => {
-    // Проверяем, есть ли флаг в localStorage
     const hasAcceptedCookies = localStorage.getItem('cookiesAccepted');
 
     if (!hasAcceptedCookies) {
@@ -33,7 +32,7 @@ export default function Cookies() {
               regiuslab.by
             </a>
             , вы соглашаетесь c
-            <a href="" className="cookie__privacy-link">
+            <a href="/privacy" className="cookie__privacy-link">
               политикой
             </a>
             их применения.

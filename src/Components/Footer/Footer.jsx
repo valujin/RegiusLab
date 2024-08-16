@@ -41,7 +41,7 @@ export default function Footer() {
       <div className="footer__column">
         <p className="footer__info">ООО "РЕГИУСЛАБ"</p>
         <p className="footer__info">УНП: 193776565</p>
-        <a href="" className="footer__link">
+        <a href="/terms" className="footer__link">
           Условия обслуживания
         </a>
       </div>
@@ -50,7 +50,7 @@ export default function Footer() {
           Юр. адрес: 220083 г.Минск пр.Газеты Правды 9 оф. 5Н
         </p>
         <p className="footer__info">Офис: Янки Мавра 41, помещение 408</p>
-        <a href="" className="footer__link">
+        <a href="/privacy" className="footer__link">
           Политика конфиденциальности
         </a>
       </div>

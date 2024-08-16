@@ -6,6 +6,8 @@ import Cookies from '../Components/Cookies/Cookies';
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NoPage from '../Pages/NoPage/NoPage';
+import Privacy from '../Pages/Pivacy/Privacy';
+import Terms from '../Pages/Terms/Terms';
 
 function App() {
   const [bodyScroll, setBodyScroll] = useState(true);
@@ -25,15 +27,14 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Home />}></Route>
-            <Route path="/noPage" element={<NoPage />}></Route>
+            <Route path="noPage" element={<NoPage />}></Route>
+            <Route path="privacy" element={<Privacy />}></Route>
+            <Route path="terms" element={<Terms />}></Route>
           </Routes>
 
           <Footer />
 
-          <Cookies
-          // cookieVisible={cookieVisible}
-          // setCookieVisible={setCookieVisible}
-          />
+          <Cookies />
         </div>
       </div>
     </Router>
