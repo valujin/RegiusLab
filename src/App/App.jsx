@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NoPage from '../Pages/NoPage/NoPage';
 import Privacy from '../Pages/Pivacy/Privacy';
 import Terms from '../Pages/Terms/Terms';
+import CookieSettings from '../Pages/CookieSettings/CookieSettings';
 
 function App() {
   const [bodyScroll, setBodyScroll] = useState(true);
@@ -30,6 +31,7 @@ function App() {
             <Route path="noPage" element={<NoPage />}></Route>
             <Route path="privacy" element={<Privacy />}></Route>
             <Route path="terms" element={<Terms />}></Route>
+            <Route path="cookie-settings" element={<CookieSettings />}></Route>
           </Routes>
 
           <Footer />

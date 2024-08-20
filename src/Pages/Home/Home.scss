@@ -1,6 +1,5 @@
 .main {
   padding: 50px 0;
-  // display: grid;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -78,169 +77,6 @@
   display: none;
 }
 
-// .services {
-//   width: 90%;
-//   margin: auto;
-// }
-// .services__title {
-//   font-family: 'Montserrat semi bold', sans-serif;
-//   font-size: 64px;
-//   font-weight: 600;
-//   line-height: 78.02px;
-//   text-align: center;
-//   color: #ffffffcc;
-//   text-transform: uppercase;
-//   margin: 0 0 50px 0;
-// }
-
-// .services__bullits {
-//   display: grid;
-
-//   grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-//   grid-auto-rows: 1fr;
-//   width: 100%;
-//   margin: auto;
-//   gap: 25px;
-//   max-height: none !important;
-// }
-
-// .services__bullits-item {
-//   display: flex;
-//   position: relative;
-//   border-radius: 16px;
-//   overflow: hidden;
-//   transition: 0.3s;
-//   max-height: none;
-// }
-// .services__bullit-back {
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   right: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-
-//   opacity: 0.5;
-//   object-fit: cover;
-//   z-index: 0;
-// }
-
-// .services__bullits-item-default {
-//   position: absolute;
-//   z-index: 1;
-//   padding: 24px;
-//   width: 100%;
-//   display: block;
-//   transition: 0.3s;
-//   height: 100%;
-// }
-
-// .services__item-title {
-//   font-family: 'Montserrat semi bold', sans-serif;
-//   font-size: 32px;
-//   font-weight: 700;
-//   line-height: 38.73px;
-//   text-align: left;
-//   color: #ffffff;
-// }
-
-// .servises__item-arrow {
-//   position: absolute;
-//   bottom: 0;
-//   right: 0;
-//   width: 80px;
-// }
-// .services__item-active {
-//   position: relative;
-//   z-index: 1;
-//   display: grid;
-// }
-
-// .services__robot-img {
-//   max-height: 405px;
-//   margin: auto;
-// }
-
-// .services__bullits-item:hover {
-//   outline: 2px solid #d7ac45;
-//   box-shadow: 0px 0px 9px 0px #d7ac45;
-// }
-
-// .services__bullits-item:hover .services__bullits-item-default {
-//   display: none;
-//   transition: 0.3s;
-//   opacity: 0;
-//   visibility: hidden;
-//   overflow: hidden;
-// }
-// .services__item-active {
-//   background: #000000e5;
-//   width: 100%;
-//   padding: 24px 30px;
-//   transition: 0.3s;
-//   position: relative;
-//   align-items: center;
-
-//   position: relative;
-//   z-index: 1;
-//   opacity: 0;
-//   visibility: hidden;
-//   transition: opacity 0.3s ease, visibility 0.3s ease;
-// }
-// .services__bullits-item:hover .services__item-active {
-//   transition: 0.3s;
-
-//   opacity: 1;
-//   visibility: visible;
-// }
-// .services__item-description {
-//   align-self: self-start;
-// }
-
-// .services__item-li {
-//   font-family: 'Montserrat', sans-serif;
-//   font-size: 24px;
-//   color: #ffffff;
-//   font-weight: 200;
-//   line-height: 33px;
-//   text-align: left;
-//   list-style-type: none;
-// }
-// .services__item-li:before {
-//   content: '•  ';
-// }
-// .services__item-button {
-//   border: 3px solid var(--Yelow, #af7b20);
-//   background: var(--Black, #000000);
-//   padding: 10px 26px;
-//   border-radius: 40px;
-//   width: fit-content;
-//   display: block;
-//   margin: 10px auto 0 auto;
-
-//   font-family: 'Montserrat', sans-serif;
-//   font-size: 20px;
-//   color: #ffffff;
-//   font-weight: 400;
-//   line-height: 24.38px;
-//   text-align: left;
-
-//   align-self: flex-end;
-//   justify-self: center;
-//   cursor: pointer;
-//   transition: 0.3s;
-
-//   text-decoration: none;
-
-//   &:hover {
-//     background: var(--Yelow, #af7b20);
-
-//     font-weight: 600;
-//     color: #000000;
-//   }
-// }
-
 .about {
   padding: 75px 0;
   display: grid;
@@ -253,7 +89,7 @@
   position: absolute;
   align-self: center;
   left: 0;
-  width: 50%;
+  width: 30%;
   max-width: 700px;
   z-index: 0;
 }
@@ -262,7 +98,7 @@
   position: absolute;
   align-self: center;
   right: 0;
-  width: 50%;
+  width: 30%;
   z-index: 0;
   max-width: 700px;
   transform: scaleX(-1);
@@ -324,9 +160,8 @@
 
 .about__description {
   font-family: 'Montserrat', sans-serif;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 400;
-  line-height: 56px;
   text-align: center;
   color: #eaeaea;
   margin: 32px 0 0 0;
@@ -479,10 +314,6 @@
   }
 }
 
-// .services__back-mobile {
-//   display: none;
-// }
-
 @media (max-width: 1600px) {
   .main__back {
     max-width: 600px;
@@ -496,27 +327,6 @@
     font-size: 28px;
     margin: 30px 0;
   }
-  // .services__title {
-  //   line-height: normal;
-  //   font-size: 40px;
-  // }
-  // .services__item-title {
-  //   line-height: normal;
-  //   font-size: 24px;
-  // }
-  // .services__item-li {
-  //   line-height: normal;
-  //   font-size: 14px;
-  // }
-  // .services__robot-img {
-  //   max-height: 300px;
-  // }
-  // .services__bullits {
-  //   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  // }
-  // .servises__item-arrow {
-  //   width: auto;
-  // }
   .about__button {
     padding: 15px 25px;
   }
@@ -560,20 +370,6 @@
     line-height: normal;
     padding: 5px 10px;
   }
-  // .services__item-button {
-  //   padding: 9px 25px;
-  //   line-height: normal;
-  //   font-size: 17px;
-  // }
-  // .services__robot-img {
-  //   max-height: 219px;
-  // }
-  // .services__bullits {
-  //   grid-template-columns: repeat(auto-fit, minmax(306px, 1fr));
-  // }
-  // .services__item-active {
-  //   padding: 15px 20px;
-  // }
   .about__button-text {
     line-height: normal;
     font-size: 29px;
@@ -612,18 +408,6 @@
   .main__contact-img-black {
     max-width: 20px;
   }
-  // .services__title {
-  //   font-size: 25px;
-  // }
-  // .services__item-title {
-  //   font-size: 16px;
-  // }
-  // .services__bullits {
-  //   grid-template-columns: repeat(auto-fit, minmax(223px, 1fr));
-  // }
-  // .services__item-li {
-  //   font-size: 12px;
-  // }
   .fab {
     max-width: 45px;
   }
@@ -683,27 +467,6 @@
   .main__contact-link {
     font-size: 14px;
   }
-  // .services__title {
-  //   font-size: 20px;
-  //   margin: 0 0 20px 0;
-  // }
-  // .services__robot-img {
-  //   max-height: 200px;
-  // }
-  // .services__bullits-item-default {
-  //   padding: 10px 20px;
-  // }
-  // .services__bullits {
-  //   gap: 15px;
-  // }
-  // .services__item-active {
-  //   padding: 10px 20px;
-  // }
-
-  // .services__item-button {
-  //   padding: 10px 15px;
-  //   font-size: 14px;
-  // }
   .consultation__title {
     font-size: 20px;
   }
@@ -763,91 +526,7 @@
   .main__contact-link {
     padding: 0;
   }
-  // .services__bullits {
-  //   grid-auto-rows: auto;
-  // }
-  // .services__title {
-  //   font-size: 24px;
-  // }
-  // .services__item-title {
-  // }
-  // .servises__item-arrow {
-  //   display: none;
-  // }
-  // .services__bullits {
-  //   gap: 0;
-  // }
-  // .services__bullits-item {
-  //   position: relative;
-  //   overflow: hidden;
-  //   // top: -50%;
-  //   max-height: 50px;
-  //   overflow: visible;
-  // }
-  // .services__bullit-back {
-  //   height: 150%;
-  //   opacity: 1;
-  //   border-radius: 16px;
-  // }
-  // .services__bullits-mobile-back {
-  //   height: 150%;
-  //   position: absolute;
-  //   top: 0;
-  //   bottom: 0;
-  //   right: 0;
-  //   left: 0;
-  //   border-radius: 16px;
-  //   width: 100%;
-  //   background-color: #00000079;
-  // }
-  // .services__bullits-item:hover {
-  //   border: none;
-  //   outline: none;
-  //   box-shadow: none;
-  //   overflow: hidden;
-  //   border: 1px solid #af7b20;
-  //   .services__bullit-back {
-  //     max-height: none;
-  //   }
-  //   .services__bullits-mobile-back {
-  //     display: none;
-  //   }
-  //   .services__item-active {
-  //     z-index: 3;
-  //     height: max-content;
-  //     border-radius: 10px;
-  //     overflow: hidden;
-  //     background: #000000;
-  //   }
-  // }
 
-  // .services__item-button {
-  //   border: 1px solid var(--Yelow, #af7b20);
-  //   padding: 8px 32px;
-  //   z-index: 1;
-  //   font-size: 10px;
-  //   margin: 50px 0 0 0;
-  // }
-  // .marquee {
-  //   margin: 160px 0 0 0;
-  // }
-  // .services__back-mobile {
-  //   display: block;
-  //   position: absolute;
-  //   top: 0;
-  //   bottom: 0;
-  //   right: 0;
-  //   left: 0;
-  //   border-radius: 10px;
-  //   width: 100%;
-  //   height: 100%;
-  //   object-fit: cover;
-  //   opacity: 0.3;
-  //   z-index: 0;
-  // }
-  // .services__item-description {
-  //   z-index: 1;
-  // }
   .about__pegas-right,
   .about__pegas-left {
     display: none;
@@ -883,10 +562,6 @@
   .consultation__form input {
     font-size: 10px;
     padding: 10px 15px;
-  }
-
-  .services__bullits-item:hover {
-    // max-height: none;
   }
 }
 @media (max-width: px) {

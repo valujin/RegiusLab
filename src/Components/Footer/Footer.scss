@@ -17,14 +17,10 @@
 }
 .footer__column {
   display: grid;
-  //   justify-content: center;
-  //   align-items: center;
+
   width: 100%;
   gap: 15px;
 }
-// .footer:nth-child(4) {
-//   margin: 0 0 50px 0;
-// }
 
 .footer__social-med {
   display: flex;
@@ -63,7 +59,23 @@
   line-height: 29.26px;
   text-align: left;
 }
+.footer__soc-img {
+  max-width: 41px;
+}
 
+.footer__soc-img-hover {
+  max-width: 41px;
+  display: none;
+}
+
+.footer__item-soc:hover {
+  .footer__soc-img {
+    display: none;
+  }
+  .footer__soc-img-hover {
+    display: block;
+  }
+}
 @media (max-width: 1600px) {
   .footer__tel,
   .footer__info,

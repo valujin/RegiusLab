@@ -40,6 +40,10 @@
   background: linear-gradient(to left, #000000 0%, transparent 100%);
 }
 
+.fab {
+  max-height: 110px;
+}
+
 .marquee-content {
   list-style: none;
   height: 100%;
@@ -75,7 +79,7 @@
   :root {
     --marquee-width: 100vw;
     --marquee-height: 16vh;
-    --marquee-elements-displayed: 7;
+    --marquee-elements-displayed: 5;
   }
 
   .marquee:before,
