@@ -28,7 +28,7 @@
 }
 .header__link {
   font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 300;
   line-height: 24.38px;
   color: #ffffff;
@@ -137,9 +137,14 @@
   color: #ffffff;
   text-decoration: none;
 }
+.main__arrow {
+  max-width: 25px;
+  margin: 60px auto 0 auto;
+  display: block;
+}
 @media (max-width: 1768px) {
   .header__link {
-    font-size: 15px;
+    font-size: 20px;
     line-height: normal;
   }
   .header__nav {
@@ -151,7 +156,7 @@
 }
 @media (max-width: 1600px) {
   .header__link {
-    font-size: 12px;
+    font-size: 16px;
   }
 }
 

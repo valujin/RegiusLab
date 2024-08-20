@@ -19,12 +19,14 @@ import partner1 from '../../assets/partner1.png';
 import partner2 from '../../assets/partner2.png';
 import partner3 from '../../assets/partner3.png';
 import partner4 from '../../assets/partner4.png';
-import partner5 from '../../assets/partner5.png';
+// import partner5 from '../../assets/partner5.png';
 import partner6 from '../../assets/partner6.png';
 import partner7 from '../../assets/partner7.png';
 import partner8 from '../../assets/partner8.png';
 
 import Services from '../../Components/Services/Services';
+
+import arrowDownMain from '../../assets/main__arrow.png';
 
 import bro from '../../assets/bro.png';
 // import InputMask from 'react-input-mask';
@@ -89,6 +91,8 @@ export default function Home() {
             <img src={arrowDownImg} alt="" className="main__contact-img" />
             <img src={arrowBlack} className="main__contact-img-black" alt="" />
           </a>
+
+          <img src={arrowDownMain} className="main__arrow" alt="" />
         </div>
       </div>
 

@@ -16,10 +16,11 @@
   width: 100%;
 }
 .footer__column {
-  display: grid;
-
+  display: flex;
+  flex-direction: column;
   width: 100%;
   gap: 15px;
+  justify-content: space-between;
 }
 
 .footer__social-med {
@@ -76,7 +77,8 @@
     display: block;
   }
 }
-@media (max-width: 1600px) {
+
+@media (max-width: 1700px) {
   .footer__tel,
   .footer__info,
   .footer__link {
@@ -84,6 +86,9 @@
   }
   .footer__logo {
     max-width: 200px;
+  }
+  .footer {
+    width: 90%;
   }
 }
 

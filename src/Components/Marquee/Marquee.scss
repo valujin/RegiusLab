@@ -70,6 +70,20 @@
   width: var(--marquee-element-width);
   max-height: 100%;
 }
+@media (max-width: 1700px) {
+  .fab {
+    max-width: 70px;
+  }
+  .marquee {
+    margin: 80px 0 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .fab {
+    max-width: 46px;
+  }
+}
 
 @media (max-width: 600px) {
   html {
@@ -85,20 +99,5 @@
   .marquee:before,
   .marquee:after {
     width: 5rem;
-  }
-}
-
-@media (max-width: 1600px) {
-  .fab {
-    max-width: 70px;
-  }
-  .marquee {
-    margin: 80px 0 0 0;
-  }
-}
-
-@media (max-width: 768px) {
-  .fab {
-    max-width: 46px;
   }
 }

@@ -313,10 +313,28 @@
     }
   }
 }
-
-@media (max-width: 1600px) {
+@media (max-width: 1920px) {
+  .about__container {
+    width: 80%;
+  }
+  .about__button {
+    padding: 10px 34px;
+  }
+  .about__button-text {
+    font-size: 42px;
+    line-height: normal;
+  }
+  .about__description {
+    line-height: normal;
+    font-size: 22px;
+  }
+  .partners__container {
+    gap: 25px;
+  }
+}
+@media (max-width: 1700px) {
   .main__back {
-    max-width: 600px;
+    max-width: 700px;
   }
   .main__company-name {
     font-size: 90px;
@@ -361,6 +379,12 @@
   }
   .consultation__container {
     padding: 50px;
+  }
+  .consultation {
+    width: 80%;
+  }
+  .faq {
+    width: 80%;
   }
 }
 

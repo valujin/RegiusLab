@@ -163,8 +163,16 @@
 .services__back-mobile {
   display: none;
 }
+@media (max-width: 1920px) {
+  .services {
+    width: 80%;
+  }
+  .services__item-title {
+    font-size: 26px;
+  }
+}
 
-@media (max-width: 1600px) {
+@media (max-width: 1700px) {
   .services__title {
     line-height: normal;
     font-size: 40px;
@@ -186,9 +194,18 @@
   .servises__item-arrow {
     width: auto;
   }
+  .services__item-li {
+    font-size: 14px;
+  }
+  .services__item-active {
+    padding: 15px 15px;
+  }
 }
 
 @media (max-width: 1440px) {
+  .services__bullits {
+    gap: 15px;
+  }
   .services__item-button {
     padding: 9px 25px;
     line-height: normal;
