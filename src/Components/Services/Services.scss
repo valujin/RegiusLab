@@ -262,6 +262,9 @@
 }
 
 @media (max-width: 450px) {
+  .services {
+    width: 90%;
+  }
   .services__bullits {
     grid-auto-rows: auto;
   }
