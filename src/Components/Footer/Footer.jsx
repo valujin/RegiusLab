@@ -18,15 +18,22 @@ export default function Footer() {
 
       <div className="footer__column">
         <div className="footer__social-med">
-          <a href="" className="footer__item-soc">
+          <a
+            href="https://www.linkedin.com/company/regiuslab/"
+            className="footer__item-soc"
+          >
             <img src={soc1} alt="" className="footer__soc-img" />
             <img src={soc12} alt="" className="footer__soc-img-hover" />
           </a>
-          <a href="" className="footer__item-soc">
+          <a href="https://t.me/regiuslab" className="footer__item-soc">
             <img src={soc2} alt="" className="footer__soc-img" />
             <img src={soc22} alt="" className="footer__soc-img-hover" />
           </a>
-          <a href="" className="footer__item-soc">
+          <a
+            href="https://x.com/RegiusLab
+"
+            className="footer__item-soc"
+          >
             <img src={soc3} alt="" className="footer__soc-img" />
             <img src={soc32} alt="" className="footer__soc-img-hover" />
           </a>
