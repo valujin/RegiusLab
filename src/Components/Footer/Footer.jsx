@@ -25,7 +25,7 @@ export default function Footer() {
             <img src={soc1} alt="" className="footer__soc-img" />
             <img src={soc12} alt="" className="footer__soc-img-hover" />
           </a>
-          <a href="https://t.me/regiuslab" className="footer__item-soc">
+          <a href="https://t.me/RegiuslabBot" className="footer__item-soc">
             <img src={soc2} alt="" className="footer__soc-img" />
             <img src={soc22} alt="" className="footer__soc-img-hover" />
           </a>
