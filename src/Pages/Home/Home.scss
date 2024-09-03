@@ -13,11 +13,20 @@
   width: 60%;
 }
 .main__arrow {
-  max-width: 55px;
+  max-width: 40px;
   margin: 60px auto 0 auto;
   display: block;
+  animation: jump 0.5s alternate infinite ease-in-out;
+  cursor: pointer;
 }
-
+@keyframes jump {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
 .main__content {
   position: absolute;
   align-self: center;

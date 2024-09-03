@@ -103,7 +103,7 @@ export default function Services({
     } else return;
   }
   function scrollTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }
   return (
     <div>

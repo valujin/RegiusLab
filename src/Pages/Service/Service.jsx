@@ -11,8 +11,9 @@ export default function Service({
   setActiveIndex,
 }) {
   function scrollTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0 });
   }
+
   const services = [
     serviceDb.blockchain,
     serviceDb.automatization,
@@ -25,7 +26,7 @@ export default function Service({
     setActiveIndex(index);
     setPage(service);
     localStorage.setItem('activeServiceIndex', index);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0 });
   };
   useEffect(() => {
     const savedIndex = localStorage.getItem('activeServiceIndex');

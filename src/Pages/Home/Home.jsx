@@ -88,7 +88,9 @@ export default function Home({
             <img src={arrowDownImg} alt="" className="main__contact-img" />
             <img src={arrowBlack} className="main__contact-img-black" alt="" />
           </a>
-          <img src={arrowDownMain} className="main__arrow" alt="" />
+          <a href="#services" className="main__arrow-link">
+            <img src={arrowDownMain} className="main__arrow" alt="" />
+          </a>
         </div>
       </div>
 
