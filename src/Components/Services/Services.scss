@@ -94,7 +94,7 @@
   overflow: hidden;
 }
 .services__item-active {
-  background: #000000e5;
+  background: #00000099;
   width: 100%;
   padding: 24px 30px;
   transition: 0.3s;
@@ -361,11 +361,11 @@
     z-index: 1;
   }
 
-  .services__bullits-item:hover .services__bullits-item-default {
-    display: block;
-    transition: 0.3s;
-    opacity: 1;
-    visibility: visible;
-    overflow: visible;
-  }
+  // .services__bullits-item:hover .services__bullits-item-default {
+  //   display: block;
+  //   transition: 0.3s;
+  //   opacity: 1;
+  //   visibility: visible;
+  //   overflow: visible;
+  // }
 }

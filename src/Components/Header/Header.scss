@@ -93,7 +93,7 @@
   height: 100vh;
   width: 100%;
   background-color: #000000;
-  z-index: 2;
+  z-index: 10;
   overflow-y: hidden;
   display: grid;
   transition: 0.4s;
@@ -137,11 +137,7 @@
   color: #ffffff;
   text-decoration: none;
 }
-.main__arrow {
-  max-width: 25px;
-  margin: 60px auto 0 auto;
-  display: block;
-}
+
 @media (max-width: 1768px) {
   .header__link {
     font-size: 20px;
@@ -165,7 +161,11 @@
     max-width: 70px;
   }
 }
-
+@media (max-width: 600px) {
+  .header__link {
+    font-size: 12px;
+  }
+}
 @media (max-width: 450px) {
   .header__nav {
     display: none;
@@ -177,8 +177,6 @@
   }
 }
 
-@media (max-width: px) {
-}
 @media (max-width: px) {
 }
 @media (max-width: px) {

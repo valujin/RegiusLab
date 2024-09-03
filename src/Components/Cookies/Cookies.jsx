@@ -26,16 +26,15 @@ export default function Cookies() {
       {cookieVisible && (
         <div className="cookie">
           <p className="cookie__text">
-            Наш сайт использует файлы cookie, чтобы улучшить работу сайта,
-            повысить его эффективность и удобство. Продолжая использовать сайт
+            Используя сайт
             <a href="https://regiuslab.by/" className="cookie__regiuslab-link">
               regiuslab.by
             </a>
-            , вы соглашаетесь c
-            <a href="/privacy" className="cookie__privacy-link">
-              политикой
+            , вы даете согласие на использование
+            <a href="/cookie-settings" className="cookie__privacy-link">
+              файлов cookie
             </a>
-            их применения.
+            , помогающих нам сделать его удобнее для вас
           </p>
           <button className="cookie__button" onClick={handleAccept}>
             Согласен

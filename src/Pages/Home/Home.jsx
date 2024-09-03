@@ -5,13 +5,6 @@ import arrowBlack from '../../assets/arrow-down-right-black.png';
 import '../../style/fonts/fonts.scss';
 import { useState } from 'react';
 
-// import bullit1 from '../../assets/bullit1.png';
-// import bullit2 from '../../assets/bullit2.png';
-// import bullit3 from '../../assets/bullit3.png';
-// import bullit4 from '../../assets/bullit4.jpg';
-// import bullit5 from '../../assets/bullit5.jpg';
-// import bullit6 from '../../assets/bullit6.png';
-
 import pegasusLeft from '../../assets/PegasusLeft.png';
 
 import Marquee from '../../Components/Marquee/Marquee';
@@ -19,7 +12,6 @@ import partner1 from '../../assets/partner1.png';
 import partner2 from '../../assets/partner2.png';
 import partner3 from '../../assets/partner3.png';
 import partner4 from '../../assets/partner4.png';
-// import partner5 from '../../assets/partner5.png';
 import partner6 from '../../assets/partner6.png';
 import partner7 from '../../assets/partner7.png';
 import partner8 from '../../assets/partner8.png';
@@ -29,10 +21,15 @@ import Services from '../../Components/Services/Services';
 import arrowDownMain from '../../assets/main__arrow.png';
 
 import bro from '../../assets/bro.png';
-// import InputMask from 'react-input-mask';
 import FAQ from '../../Components/FAQ/FAQ';
 
-export default function Home() {
+export default function Home({
+  page,
+  setPage,
+  serviceDb,
+  activeIndex,
+  setActiveIndex,
+}) {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
@@ -85,18 +82,23 @@ export default function Home() {
 
         <div className="main__content">
           <p className="main__company-name">REGIUSLAB</p>
-          <h1 className="main__title">широкий спектр IT услуг</h1>
+          <h1 className="main__title">IT ПРОДУКТЫ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
           <a href="#form" className="main__contact">
             <p className="main__contact-link">СВЯЗАТЬСЯ</p>
             <img src={arrowDownImg} alt="" className="main__contact-img" />
             <img src={arrowBlack} className="main__contact-img-black" alt="" />
           </a>
-
           <img src={arrowDownMain} className="main__arrow" alt="" />
         </div>
       </div>
 
-      <Services />
+      <Services
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex}
+        page={page}
+        setPage={setPage}
+        serviceDb={serviceDb}
+      />
 
       <Marquee />
 
@@ -105,7 +107,11 @@ export default function Home() {
         <img src={pegasusLeft} alt="  " className="about__pegas-right" />
 
         <div className="about__container">
-          <a href="#" className="about__button">
+          <a
+            href="#"
+            className="about__button"
+            onClick={(event) => event.preventDefault()}
+          >
             <p className="about__button-text">О нас</p>
             <img src={arrowDownImg} alt="" className="about__button-img" />
             <img src={arrowBlack} className="about__button-black" alt="" />
@@ -127,7 +133,6 @@ export default function Home() {
           <img src={partner2} className="partners__item" alt="" />
           <img src={partner3} className="partners__item" alt="" />
           <img src={partner4} className="partners__item" alt="" />
-          {/* <img src={partner5} className="partners__item" alt="" /> */}
           <img src={partner6} className="partners__item" alt="" />
           <img src={partner7} className="partners__item" alt="" />
           <img src={partner8} className="partners__item" alt="" />
@@ -188,9 +193,6 @@ export default function Home() {
                 autoComplete="none"
                 className="consultation__tel"
                 placeholder="+375 (__) ___-__-__"
-                // onChange={(e) => {
-                //   setPhone(e.target.value);
-                // }}
                 onChange={handleChange}
               />
               <input

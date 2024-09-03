@@ -7,6 +7,7 @@ import cross from '../../assets/crossHeader.svg';
 
 import arrowDownImg from '../../assets/arrow-down-right.png';
 import arrowBlack from '../../assets/arrow-down-right-black.png';
+import { Link } from 'react-router-dom';
 
 export default function Header({ bodyScroll, setBodyScroll }) {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
@@ -17,6 +18,9 @@ export default function Header({ bodyScroll, setBodyScroll }) {
     setBodyScroll(!status);
   }
 
+  const handleLinkClick = (anchor) => {
+    window.location.href = `/#${anchor}`;
+  };
   return (
     <div className="header">
       <div
@@ -36,7 +40,7 @@ export default function Header({ bodyScroll, setBodyScroll }) {
           <div className="header-mobile__wrapper">
             <div className="header-mobile__item">
               <a
-                href="#about"
+                href="/#about"
                 onClick={() => setBurgerStatus(false)}
                 className="header-mobile__link"
               >
@@ -45,7 +49,7 @@ export default function Header({ bodyScroll, setBodyScroll }) {
             </div>
             <div className="header-mobile__item">
               <a
-                href="#services"
+                href="/#services"
                 onClick={() => setBurgerStatus(false)}
                 className="header-mobile__link"
               >
@@ -54,7 +58,7 @@ export default function Header({ bodyScroll, setBodyScroll }) {
             </div>
             <div className="header-mobile__item">
               <a
-                href="#form"
+                href="/#form"
                 onClick={() => setBurgerStatus(false)}
                 className="header-mobile__link"
               >
@@ -63,7 +67,7 @@ export default function Header({ bodyScroll, setBodyScroll }) {
             </div>
             <div className="header-mobile__item">
               <a
-                href="#footer"
+                href="/#footer"
                 onClick={() => setBurgerStatus(false)}
                 className="header-mobile__link"
               >
@@ -101,16 +105,17 @@ export default function Header({ bodyScroll, setBodyScroll }) {
         </button>
 
         <div className="header__nav">
-          <a href="#about" className="header__link">
+          <a href="/#about" className="header__link">
             О нас
           </a>
-          <a href="#services" className="header__link">
+
+          <a href="/#services" className="header__link">
             Услуги
           </a>
-          <a href="#form" className="header__link">
+          <a href="/#form" className="header__link">
             Обратная связь
           </a>
-          <a href="#footer" className="header__link">
+          <a href="/#footer" className="header__link">
             Контакты
           </a>
         </div>
