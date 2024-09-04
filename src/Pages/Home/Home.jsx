@@ -23,13 +23,7 @@ import arrowDownMain from '../../assets/main__arrow.png';
 import bro from '../../assets/bro.png';
 import FAQ from '../../Components/FAQ/FAQ';
 
-export default function Home({
-  page,
-  setPage,
-  serviceDb,
-  activeIndex,
-  setActiveIndex,
-}) {
+export default function Home({}) {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
@@ -94,13 +88,7 @@ export default function Home({
         </div>
       </div>
 
-      <Services
-        activeIndex={activeIndex}
-        setActiveIndex={setActiveIndex}
-        page={page}
-        setPage={setPage}
-        serviceDb={serviceDb}
-      />
+      <Services />
 
       <Marquee />
 

@@ -1,6 +1,7 @@
 {
   "blockchain": {
     "id": 1,
+    "href": "/blockchain&web3",
     "main-back-img": "./blockchain-back.png",
     "main-title": "Блокчейн и WEB3",
     "main-description": "— будущее уже здесь! Воспользуйтесь децентрализованными технологиями для максимальной безопасности и прозрачности вашего бизнеса!",
@@ -98,6 +99,7 @@
   },
   "automatization": {
     "id": 2,
+    "href": "/automatization",
     "main-back-img": "./automatization-main-back.png",
     "main-title": "Автоматизация бизнеса",
     "main-description": "— инновации для вашего Бизнеса! Оптимизируйте процессы, увеличивайте производительность и улучшайте клиентский опыт. Присоединяйтесь к лидерам рынка и используйте новейшие технологии!",
@@ -194,6 +196,7 @@
   },
   "telegram": {
     "id": 3,
+    "href": "/telegram-bots",
     "main-back-img": "./telegram-back.png",
     "main-title": "Telegram боты",
     "main-description": "— ваш виртуальный помощник 24/7! Улучшайте клиентский сервис и автоматизируйте бизнес-процессы.",
@@ -290,6 +293,7 @@
   },
   "1Cdev": {
     "id": 4,
+    "href": "/1c-development",
     "main-back-img": "./1c-back.png",
     "main-title": "1C разработка",
     "main-description": "— ваш бизнес на автопилоте! Создавайте уникальные решения для автоматизации и управления.",
@@ -387,6 +391,7 @@
   },
   "CMSMagento": {
     "id": 5,
+    "href": "/magento",
     "main-back-img": "./magento-back.png",
     "main-title": "CMS Magento ",
     "main-description": "— мощная платформа для вашего бизнеса! Создайте уникальный интернет-магазин с богатым функционалом и высокой производительностью.",
@@ -484,6 +489,7 @@
   },
   "Bitrix24": {
     "id": 6,
+    "href": "/bitrix24",
     "main-back-img": "./bitrix-back.png",
     "main-title": "Битрикс24",
     "main-description": "— ваш универсальный инструмент для бизнеса! Управляйте проектами, автоматизируйте процессы и улучшайте взаимодействие с клиентами в одном месте.",

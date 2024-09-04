@@ -15,18 +15,16 @@ import Privacy from '../Pages/Pivacy/Privacy';
 import Terms from '../Pages/Terms/Terms';
 import CookieSettings from '../Pages/CookieSettings/CookieSettings';
 import serviceDb from '../data/services.json';
-import Service from '../Pages/Service/Service';
-
+// import Service from '../Pages/Service/Service';
+import Blockchain from '../Pages/Blockchain/Blockchain';
+import Automatization from '../Pages/Automatization/Automatization';
+import TelegramBots from '../Pages/TelegramBots/TelegramBots';
+import CDev from '../Pages/OneCDev/OneCDev';
+import OneCDev from '../Pages/OneCDev/OneCDev';
+import Magento from '../Pages/Magento/Magento';
+import Bitrix24 from '../Pages/Bitrix24/Bitrix24';
 function App() {
   const [bodyScroll, setBodyScroll] = useState(true);
-
-  const [page, setPage] = useState(() => {
-    const currentPagePart = localStorage.getItem('currentPagePart');
-    return currentPagePart !== null
-      ? JSON.parse(currentPagePart)
-      : serviceDb.blockchain;
-  });
-  const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
     document.querySelector('body').style.overflow = bodyScroll
@@ -51,34 +49,18 @@ function App() {
           <Header bodyScroll={bodyScroll} setBodyScroll={setBodyScroll} />
 
           <Routes>
-            <Route
-              path="/"
-              element={
-                <Home
-                  page={page}
-                  setPage={setPage}
-                  serviceDb={serviceDb}
-                  activeIndex={activeIndex}
-                  setActiveIndex={setActiveIndex}
-                />
-              }
-            ></Route>
-            <Route path="/noPage" element={<NoPage />}></Route>
+            <Route path="/" element={<Home serviceDb={serviceDb} />}></Route>
             <Route path="/privacy" element={<Privacy />}></Route>
             <Route path="/terms" element={<Terms />}></Route>
             <Route path="/cookie-settings" element={<CookieSettings />}></Route>
-            <Route
-              path="/service"
-              element={
-                <Service
-                  page={page}
-                  setPage={setPage}
-                  serviceDb={serviceDb}
-                  activeIndex={activeIndex}
-                  setActiveIndex={setActiveIndex}
-                />
-              }
-            ></Route>
+
+            <Route path="/blockchain&web3" element={<Blockchain />}></Route>
+            <Route path="/automatization" element={<Automatization />}></Route>
+            <Route path="/telegram-bots" element={<TelegramBots />}></Route>
+            <Route path="/1c-development" element={<OneCDev />}></Route>
+            <Route path="/magento" element={<Magento />}></Route>
+            <Route path="/bitrix24" element={<Bitrix24 />}></Route>
+            <Route path="/noPage" element={<NoPage />}></Route>
             <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
 

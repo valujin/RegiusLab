@@ -22,8 +22,7 @@ const services_data = [
       'Создание блокчейн / монет с нуля под ключ',
     ],
     image: bullit1,
-    link: '/service',
-    pagePart: serviceDb.blockchain,
+    link: '/blockchain&web3',
   },
   {
     title: 'Автоматизация бизнеса',
@@ -35,8 +34,7 @@ const services_data = [
       'Автоматизация интернет торговли',
     ],
     image: bullit2,
-    link: '/service',
-    pagePart: serviceDb.automatization,
+    link: '/automatization',
   },
   {
     title: 'Telegram боты',
@@ -48,8 +46,7 @@ const services_data = [
       'Бот-магазин с возможностью оплаты картой либо криптовалютой',
     ],
     image: bullit3,
-    link: '/service',
-    pagePart: serviceDb.telegram,
+    link: '/telegram-bots',
   },
   {
     title: '1С разработка',
@@ -61,8 +58,7 @@ const services_data = [
       'Интеграция с другими информационными системами',
     ],
     image: bullit4,
-    link: '/service',
-    pagePart: serviceDb['1Cdev'],
+    link: '/1c-development',
   },
   {
     title: 'CMS Magento',
@@ -73,8 +69,7 @@ const services_data = [
       'Разработка систем электронной коммерции',
     ],
     image: bullit5,
-    link: '/service',
-    pagePart: serviceDb.CMSMagento,
+    link: '/magento',
   },
   {
     title: 'Битрикс24',
@@ -85,17 +80,11 @@ const services_data = [
       'Поддержка и доработка Битрикс24',
     ],
     image: bullit6,
-    link: '/service',
-    pagePart: serviceDb.Bitrix24,
+    link: '/bitrix24',
   },
 ];
 
-export default function Services({
-  page,
-  setPage,
-  activeIndex,
-  setActiveIndex,
-}) {
+export default function Services() {
   const [openService, setOpenService] = useState(null);
   function changeServiceIndex(index) {
     if (window.innerWidth < 450) {
@@ -110,102 +99,75 @@ export default function Services({
       <div id="services" className="services">
         <p className="services__title">Индивидуальная разработка</p>
         <div className="services__bullits">
-          {services_data.map(
-            ({ title, description, image, link, pagePart }, index) => (
+          {services_data.map(({ title, description, image, link }, index) => (
+            <div
+              key={index}
+              className="services__bullits-item"
+              onClick={() => {
+                changeServiceIndex(index);
+              }}
+              style={{
+                maxHeight:
+                  window.innerWidth <= 450 && openService !== index
+                    ? ' 50px'
+                    : ' none',
+                overflow:
+                  window.innerWidth <= 450 && openService !== index
+                    ? 'visible'
+                    : 'hidden',
+                border:
+                  window.innerWidth <= 450 && openService === index
+                    ? '1px solid #AF7B20'
+                    : 'none ',
+                boxShadow:
+                  window.innerWidth <= 450 && openService !== index
+                    ? ' 0px 0px 30px 0px #000000E5'
+                    : 'none',
+              }}
+            >
+              <img src={image} className="services__bullit-back" alt="" />
+              <div className="services__bullits-mobile-back"></div>
+
+              <div className="services__bullits-item-default">
+                <p className="services__item-title">{title}</p>
+                <img
+                  src={arrowDownImg}
+                  className="servises__item-arrow"
+                  alt=""
+                />
+              </div>
+
               <div
-                key={index}
-                className="services__bullits-item"
-                onClick={() => {
-                  changeServiceIndex(index);
-                }}
+                className="services__item-active"
                 style={{
-                  maxHeight:
-                    window.innerWidth <= 450 && openService !== index
-                      ? ' 50px'
-                      : ' none',
-                  overflow:
-                    window.innerWidth <= 450 && openService !== index
+                  opacity:
+                    window.innerWidth <= 450 && openService === index
+                      ? '1'
+                      : '0',
+                  visibility:
+                    window.innerWidth <= 450 && openService === index
                       ? 'visible'
                       : 'hidden',
-                  border:
-                    window.innerWidth <= 450 && openService === index
-                      ? '1px solid #AF7B20'
-                      : 'none ',
-                  boxShadow:
-                    window.innerWidth <= 450 && openService !== index
-                      ? ' 0px 0px 30px 0px #000000E5'
-                      : 'none',
                 }}
               >
-                <img
-                  src={image}
-                  className="services__bullit-back"
-                  alt=""
-                  // style={{
-                  //   opacity:
-                  //     window.innerWidth <= 450 && openService === index
-                  //       ? '0'
-                  //       : '1',
-                  //   visibility:
-                  //     window.innerWidth <= 450 && openService === index
-                  //       ? 'hidden'
-                  //       : ' visible',
-                  // }}
-                />
-                <div className="services__bullits-mobile-back"></div>
-
-                <div className="services__bullits-item-default">
-                  <p className="services__item-title">{title}</p>
-                  <img
-                    src={arrowDownImg}
-                    className="servises__item-arrow"
-                    alt=""
-                  />
-                </div>
-
-                <div
-                  className="services__item-active"
-                  style={{
-                    opacity:
-                      window.innerWidth <= 450 && openService === index
-                        ? '1'
-                        : '0',
-                    visibility:
-                      window.innerWidth <= 450 && openService === index
-                        ? 'visible'
-                        : 'hidden',
+                <ul className="services__item-description">
+                  {description.map((Element, index) => (
+                    <li key={index} className="services__item-li">
+                      {Element}
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  className="services__item-button"
+                  to={{
+                    pathname: link,
                   }}
                 >
-                  {/* <img src={image} className="services__back-mobile" alt="" /> */}
-                  <ul className="services__item-description">
-                    {description.map((Element, index) => (
-                      <li key={index} className="services__item-li">
-                        {Element}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    className="services__item-button"
-                    to={{
-                      pathname: link,
-                      state: { page: pagePart, activeIndex: index },
-                    }}
-                    onClick={() => {
-                      setPage(pagePart);
-                      scrollTop();
-                      localStorage.setItem(
-                        'currentPagePart',
-                        JSON.stringify(pagePart)
-                      );
-                      localStorage.setItem('activeServiceIndex', index);
-                    }}
-                  >
-                    Подробнее
-                  </Link>
-                </div>
+                  Подробнее
+                </Link>
               </div>
-            )
-          )}
+            </div>
+          ))}
         </div>
       </div>
     </div>
