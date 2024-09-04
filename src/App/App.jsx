@@ -59,7 +59,7 @@ function App() {
             <Route path="/telegram-bots" element={<TelegramBots />}></Route>
             <Route path="/1c-development" element={<OneCDev />}></Route>
             <Route path="/magento" element={<Magento />}></Route>
-            <Route path="/bitrix24" element={<Bitrix24 />}></Route>
+            <Route path="/b24" element={<Bitrix24 />}></Route>
             <Route path="/noPage" element={<NoPage />}></Route>
             <Route path="/*" element={<Navigate to="/" />} />
           </Routes>

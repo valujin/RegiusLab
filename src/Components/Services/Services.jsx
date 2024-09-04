@@ -80,7 +80,7 @@ const services_data = [
       'Поддержка и доработка Битрикс24',
     ],
     image: bullit6,
-    link: '/bitrix24',
+    link: '/b24',
   },
 ];
 
