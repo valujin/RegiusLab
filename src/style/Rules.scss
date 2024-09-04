@@ -14,7 +14,7 @@
 
 .rules__subtitle {
   font-family: 'Montserrat', sans-serif;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 600;
   text-align: left;
   color: #ffffff;
@@ -23,7 +23,7 @@
 
 .rules__text {
   font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   text-align: left;
   color: #ffffff;
@@ -41,8 +41,14 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .rules {
     padding: 100px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .rules__title {
+    font-size: 22px;
   }
 }

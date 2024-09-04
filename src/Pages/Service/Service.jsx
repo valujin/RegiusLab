@@ -106,12 +106,12 @@ export default function Service({
         <div className="role__top">
           <div className="role__text">
             <p className="role__title">{page['role-title']}</p>
-            <div className="role__definition">
+            {/* <div className="role__definition">
               <img src={lamp} className="role__lamp" alt="" />
               <p className="role__definition-text">
                 {page['role-description']}
               </p>
-            </div>
+            </div> */}
           </div>
           <a href="/#form" className="role__button">
             Связаться
