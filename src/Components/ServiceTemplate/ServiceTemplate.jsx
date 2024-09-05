@@ -1,12 +1,32 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './ServiceTemplate.scss';
 import serviceDb from '../../data/services.json';
 import lamp from '../../assets/lamp.png';
+import ServiceForm from '../../Components/ServiceForm/ServiceForm';
 
 export default function ServiceTemplate({ currentInfo }) {
   function scrollTop() {
     window.scrollTo({ top: 0 });
   }
+  const [isScrollDisabled, setIsScrollDisabled] = useState(false);
+
+  const handleButtonClick = () => {
+    setIsScrollDisabled(!isScrollDisabled);
+  };
+
+  React.useEffect(() => {
+    if (isScrollDisabled) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isScrollDisabled]);
+  const [modal, setModal] = useState(false);
+
   const services = [
     serviceDb.blockchain,
     serviceDb.automatization,
@@ -15,11 +35,11 @@ export default function ServiceTemplate({ currentInfo }) {
     serviceDb.CMSMagento,
     serviceDb.Bitrix24,
   ];
-  window.scrollTo({ top: 0, behavior: 'instant' });
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, []);
   const currentPath = window.location.pathname;
-  //   useEffect(() => {
-  //     localStorage.setItem('currentPagePart', JSON.stringify(currentInfo));
-  //   }, [currentInfo]);
+
   return (
     <div className="service">
       <div
@@ -80,21 +100,27 @@ export default function ServiceTemplate({ currentInfo }) {
           </div>
         </div>
       </div>
-
+      {modal && (
+        <ServiceForm
+          modal={modal}
+          setModal={setModal}
+          setIsScrollDisabled={setIsScrollDisabled}
+        />
+      )}
       <div className="role">
         <div className="role__top">
           <div className="role__text">
             <p className="role__title">{currentInfo['role-title']}</p>
-            {/* <div className="role__definition">
-              <img src={lamp} className="role__lamp" alt="" />
-              <p className="role__definition-text">
-                {currentInfo['role-description']}
-              </p>
-            </div> */}
           </div>
-          <a href="/#form" className="role__button">
+          <button
+            onClick={() => {
+              setModal(true);
+              setIsScrollDisabled(true);
+            }}
+            className="role__button"
+          >
             Связаться
-          </a>
+          </button>
         </div>
 
         <div className="role__wrapper">
@@ -139,7 +165,15 @@ export default function ServiceTemplate({ currentInfo }) {
           ))}
         </div>
       </div>
-
+      <button
+        onClick={() => {
+          setModal(true);
+          setIsScrollDisabled(true);
+        }}
+        className="role__button service-button"
+      >
+        Получить консультацию
+      </button>
       <div className="why-auto">
         <div className="why-auto__left">
           <img
@@ -162,7 +196,15 @@ export default function ServiceTemplate({ currentInfo }) {
           ))}
         </div>
       </div>
-
+      <button
+        onClick={() => {
+          setModal(true);
+          setIsScrollDisabled(true);
+        }}
+        className="role__button service-button"
+      >
+        Бесплатная консультация
+      </button>
       <div className="why-us">
         <p className="why-us__title">Почему выбирают нас?</p>
         <div className="why-us__content">

@@ -189,7 +189,9 @@ p {
   font-weight: 400;
   line-height: normal;
 }
-
+.service-button {
+  margin: 100px auto;
+}
 .role {
   width: 80%;
   margin: auto;
@@ -199,10 +201,11 @@ p {
   align-items: start;
   justify-content: space-between;
   gap: 50px;
+  margin: 0 0 40px 0;
 }
 .role__button {
   display: flex;
-
+  cursor: pointer;
   padding: 15px 30px;
   justify-content: center;
   align-items: center;
@@ -237,7 +240,6 @@ p {
   font-weight: 600;
   line-height: normal;
   text-transform: uppercase;
-  margin: 0 0 40px 0;
 }
 .role__definition {
   display: flex;
@@ -293,8 +295,8 @@ p {
 
 .our-services {
   width: 100%;
-  margin: 50px 0;
-  padding: 100px 0;
+  margin: 50px 0 0 0;
+  padding: 100px 0 0 0;
 }
 
 .our-services__title {
@@ -502,7 +504,7 @@ p {
 }
 
 .why-us {
-  padding: 200px 0;
+  padding: 100px 0;
   width: 100%;
   margin: auto;
   display: grid;
@@ -1039,7 +1041,7 @@ p {
     // margin: 40px 0 0 0;
   }
   .why-auto {
-    padding: 70px 20px;
+    padding: 0 20px;
     width: 100%;
     grid-template-columns: auto;
     // overflow: visible;
@@ -1081,6 +1083,9 @@ p {
   }
   .role__button {
     margin: auto;
+  }
+  .service-button {
+    margin: 50px auto;
   }
   .role__top {
     gap: 40px;

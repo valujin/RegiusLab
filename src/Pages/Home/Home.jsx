@@ -23,7 +23,7 @@ import arrowDownMain from '../../assets/main__arrow.png';
 import bro from '../../assets/bro.png';
 import FAQ from '../../Components/FAQ/FAQ';
 
-export default function Home({}) {
+export default function Home() {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
@@ -47,6 +47,8 @@ export default function Home({}) {
         },
         body: JSON.stringify(data),
       });
+
+      console.log(JSON.stringify(data));
 
       setThanks(true);
 
