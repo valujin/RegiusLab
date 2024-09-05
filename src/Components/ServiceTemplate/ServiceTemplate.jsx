@@ -105,6 +105,7 @@ export default function ServiceTemplate({ currentInfo }) {
           modal={modal}
           setModal={setModal}
           setIsScrollDisabled={setIsScrollDisabled}
+          serviceName={currentInfo['main-title']}
         />
       )}
       <div className="role">

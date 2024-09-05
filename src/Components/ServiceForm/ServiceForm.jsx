@@ -3,7 +3,12 @@ import './ServiceForm.scss';
 import { useState, useEffect } from 'react';
 import closeCross from '../../assets/cross.png';
 
-export default function ServiceForm({ modal, setModal, setIsScrollDisabled }) {
+export default function ServiceForm({
+  modal,
+  setModal,
+  setIsScrollDisabled,
+  serviceName,
+}) {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
@@ -18,6 +23,7 @@ export default function ServiceForm({ modal, setModal, setIsScrollDisabled }) {
       phone,
       email,
       comment,
+      serviceName,
     };
 
     try {
