@@ -11,6 +11,8 @@ p {
   position: relative;
   background-position: top;
   background-size: cover;
+  // height: 700px;
+  height: 800px;
 }
 
 .service__main-center {
@@ -681,7 +683,9 @@ p {
   .tabs__item:last-child {
     padding: 10px;
   }
-
+  .service__main {
+    height: 600px;
+  }
   .service__main-title {
     font-size: 30px;
   }
@@ -731,6 +735,9 @@ p {
 }
 
 @media (max-width: 1200px) {
+  .service__main {
+    height: 550px;
+  }
   .role__button {
     font-size: 13px;
     padding: 6px 20px;
@@ -990,6 +997,9 @@ p {
 }
 
 @media (max-width: 500px) {
+  .service__main {
+    height: 480px;
+  }
   .role__wrapper {
     width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
