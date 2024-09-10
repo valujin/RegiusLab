@@ -12,7 +12,7 @@ p {
   background-position: top;
   background-size: cover;
   // height: 700px;
-  height: 800px;
+  height: 850px;
 }
 
 .service__main-center {
@@ -36,7 +36,67 @@ p {
   width: 80%;
   margin: auto;
 }
+.service__main-button {
+  margin: 50px 0;
+}
+.flare-button {
+  width: 100%;
+  max-width: 280px;
+  // height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // padding-top: 2px;
+  // margin-bottom: 30px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  background: #eb9f11;
+  cursor: pointer;
+  text-decoration: none;
 
+  position: relative;
+  overflow: hidden;
+}
+.flare-button:after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 200px;
+  margin-left: 50px;
+  background: #fff;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.5) 0%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 0.5) 100%
+  );
+  left: -40px;
+  top: -100px;
+  z-index: 1;
+  transform: rotate(45deg);
+  position: absolute;
+  animation: movingFlare 2s ease-in-out 0.05s infinite;
+}
+
+@keyframes movingFlare {
+  0% {
+    left: -30px;
+    margin-left: 0px;
+  }
+  30% {
+    left: 110%;
+    margin-left: 80px;
+  }
+  100% {
+    left: 110%;
+    margin-left: 80px;
+  }
+}
 .service__main-id {
   color: var(--Yelow, #af7b20);
   font-family: 'Montserrat', sans-serif;
@@ -732,6 +792,10 @@ p {
     font-size: 17px;
     padding: 10px 20px;
   }
+  .flare-button {
+    max-width: 220px;
+    margin: 20px 0;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -840,6 +904,9 @@ p {
 
   .our-services__item-content-title {
     font-size: 16px;
+  }
+  .flare-button {
+    max-width: 170px;
   }
 }
 
@@ -998,7 +1065,7 @@ p {
 
 @media (max-width: 500px) {
   .service__main {
-    height: 480px;
+    height: 500px;
   }
   .role__wrapper {
     width: 100%;
@@ -1121,6 +1188,13 @@ p {
       rgba(227, 171, 72, 0.3) 0%,
       rgba(0, 0, 0, 0.7) 100%
     );
+  }
+
+  .flare-button {
+    margin: 20px;
+    max-width: none;
+    width: auto;
+    padding: 10px 30px;
   }
 }
 @media (max-width: 400px) {

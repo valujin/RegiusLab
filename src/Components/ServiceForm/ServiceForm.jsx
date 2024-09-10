@@ -166,6 +166,18 @@ export default function ServiceForm({
           value={comment}
           onChange={(e) => setComment(e.target.value)}
         ></textarea>
+
+        <label className="consent-checkbox">
+          <input required type="checkbox" id="consent" name="consent" />
+          <span>
+            Нажимая на кнопку "Отправить", я даю свое согласие на обработку моих
+            персональных данных для получения обратной связи в соответствии с
+            <a className="consent-checkbox-link" href="/privacy">
+              Политикой обработки персональных данных
+            </a>
+          </span>
+        </label>
+
         <input
           type="submit"
           className="service-form__submit"

@@ -57,7 +57,7 @@ export default function ServiceTemplate({ currentInfo }) {
         <div className="service__main-back"></div>
 
         <div className="service__main-container">
-          <p className="service__main-id">#{currentInfo.id}</p>
+          {/* <p className="service__main-id">#{currentInfo.id}</p> */}
           <h1 className="service__main-title">{currentInfo['main-title']}</h1>
           <p className="service__main-description">
             {currentInfo['main-description']}
@@ -69,6 +69,16 @@ export default function ServiceTemplate({ currentInfo }) {
               </div>
             ))}
           </div>
+
+          <button
+            onClick={() => {
+              setModal(true);
+              setIsScrollDisabled(true);
+            }}
+            className="service__main-button role__button flare-button"
+          >
+            Связаться
+          </button>
         </div>
       </div>
 

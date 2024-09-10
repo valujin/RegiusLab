@@ -122,7 +122,54 @@
   line-height: normal;
   text-transform: uppercase;
 }
+.consent-checkbox {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
 
+  input {
+    margin: 0 10px 0 0;
+  }
+}
+.consent-checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 16px; /* Размер шрифта */
+}
+
+.consent-checkbox input[type='checkbox'] {
+  -webkit-appearance: none; /* Убираем стандартный вид чекбокса */
+  -moz-appearance: none;
+  appearance: none;
+  min-width: 40px; /* Ширина чекбокса */
+  height: 40px !important;
+  border: 2px solid #d7ac45; /* Цвет границы */
+  border-radius: 4px; /* Закругление углов */
+  outline: none; /* Убираем обводку при фокусе */
+  cursor: pointer; /* Курсор при наведении */
+  background-color: transparent; /* Прозрачный фон */
+  padding: 0 !important;
+}
+
+.consent-checkbox input[type='checkbox']:checked {
+  background-color: transparent; /* Цвет фона при выборе */
+  border-color: #d7ac45; /* Цвет границы при выборе */
+}
+
+.consent-checkbox input[type='checkbox']:checked::after {
+  content: '✓'; /* Символ галочки */
+  color: white; /* Цвет галочки */
+  position: relative;
+  bottom: 3px;
+  right: -7px;
+
+  font-size: 30px; /* Размер галочки */
+}
+.consent-checkbox-link {
+  font-family: 'Montserrat', sans-serif;
+  color: #d7ac45;
+  text-decoration: none;
+  margin: 0 0 0 5px;
+}
 @media (max-width: 1900px) {
   .service-form__form {
     padding: 30px 40px;
@@ -145,6 +192,13 @@
   }
 }
 @media (max-width: 1024px) {
+  // .consent-checkbox input[type='checkbox']:checked::after {
+  //   bottom: 13px;
+  //   right: 8px;
+  // }
+  .consent-checkbox {
+    font-size: 12px;
+  }
   .service-form__title {
     font-size: 18px;
   }
@@ -163,6 +217,10 @@
 }
 
 @media (max-width: 500px) {
+  // .consent-checkbox input[type='checkbox']:checked::after {
+  //   bottom: 11px;
+  //   right: 8px;
+  // }
   .service-form__form {
     width: 90%;
   }
