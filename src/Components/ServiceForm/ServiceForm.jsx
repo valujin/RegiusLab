@@ -17,6 +17,7 @@ export default function ServiceForm({
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    window.fbq('track', 'Lead');
 
     const data = {
       name,
