@@ -125,7 +125,7 @@ export default function ServiceForm({
           required
           type="text"
           className="service-form__name"
-          autoComplete="none"
+          name="name"
           placeholder="*Имя"
           value={name}
           onChange={(e) => {
@@ -138,7 +138,7 @@ export default function ServiceForm({
         <input
           required
           type="tel"
-          autoComplete="none"
+          name="phone"
           className="service-form__tel"
           placeholder="*+375 (__) ___-__-__"
           value={phone}
@@ -148,7 +148,7 @@ export default function ServiceForm({
           required
           type="email"
           className="service-form__email"
-          autoComplete="none"
+          name="email"
           placeholder="*Электронная почта"
           value={email}
           pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"

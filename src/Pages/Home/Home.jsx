@@ -168,7 +168,7 @@ export default function Home() {
                 required
                 type="text"
                 className="consultation__name"
-                autoComplete="none"
+                name="name"
                 placeholder="Имя"
                 value={name}
                 onChange={(e) => {
@@ -182,7 +182,7 @@ export default function Home() {
                 required
                 value={phone}
                 type="tel"
-                autoComplete="none"
+                name="phone"
                 className="consultation__tel"
                 placeholder="+375 (__) ___-__-__"
                 onChange={handleChange}
@@ -193,7 +193,7 @@ export default function Home() {
                 className="consultation__email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                autoComplete="none"
+                name="email"
                 pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
                 placeholder="Электронная почта"
               />

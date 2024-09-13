@@ -123,15 +123,6 @@ export default function ServiceTemplate({ currentInfo }) {
           <div className="role__text">
             <p className="role__title">{currentInfo['role-title']}</p>
           </div>
-          <button
-            onClick={() => {
-              setModal(true);
-              setIsScrollDisabled(true);
-            }}
-            className="role__button"
-          >
-            Связаться
-          </button>
         </div>
 
         <div className="role__wrapper">
@@ -146,6 +137,15 @@ export default function ServiceTemplate({ currentInfo }) {
             </div>
           ))}
         </div>
+        <button
+          onClick={() => {
+            setModal(true);
+            setIsScrollDisabled(true);
+          }}
+          className="role__button flare-button"
+        >
+          получить бесплатную консультацию
+        </button>
       </div>
 
       <div className="our-services">
@@ -181,7 +181,7 @@ export default function ServiceTemplate({ currentInfo }) {
           setModal(true);
           setIsScrollDisabled(true);
         }}
-        className="role__button service-button"
+        className="role__button service-button flare-button"
       >
         Получить консультацию
       </button>
@@ -212,7 +212,7 @@ export default function ServiceTemplate({ currentInfo }) {
           setModal(true);
           setIsScrollDisabled(true);
         }}
-        className="role__button service-button"
+        className="role__button service-button flare-button"
       >
         Бесплатная консультация
       </button>

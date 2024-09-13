@@ -41,7 +41,7 @@ p {
 }
 .flare-button {
   width: 100%;
-  max-width: 280px;
+  // max-width: 280px;
   // height: 50px;
   display: flex;
   justify-content: center;
@@ -246,7 +246,7 @@ p {
 .theory__item {
   color: var(--White, #fff);
   font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -256,6 +256,9 @@ p {
 }
 .role {
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: auto;
 }
 .role__top {
@@ -268,7 +271,9 @@ p {
 .role__button {
   display: flex;
   cursor: pointer;
-  padding: 15px 30px;
+  padding: 15px 50px;
+  display: block;
+  width: fit-content;
   justify-content: center;
   align-items: center;
   gap: 20px;
@@ -278,7 +283,7 @@ p {
   background: var(--Black, #000);
   color: var(--White, #fff);
   font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
+  font-size: 30px;
   text-decoration: none;
   font-style: normal;
   font-weight: 400;
@@ -324,7 +329,7 @@ p {
   display: grid;
   // margin: 100px 0 0 0;
   gap: 60px;
-
+  margin: 0 auto 50px auto;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 }
 
@@ -450,7 +455,7 @@ p {
 .our-services__item-content-description {
   color: var(--White, #fff);
   font-family: 'Montserrat', sans-serif;
-  font-size: 19px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -558,7 +563,7 @@ p {
 .why-auto__description {
   color: var(--White, #fff);
   font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -615,7 +620,7 @@ p {
 .why-us__description {
   color: var(--White, #fff);
   font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -648,23 +653,7 @@ p {
   .role__wrapper {
     gap: 30px;
   }
-  .theory__title,
-  .role__title,
-  .our-services__title,
-  .our-services__item-content-title,
-  .why-auto__title,
-  .why-us__title,
-  .why-us__item-title {
-    font-size: 32px;
-  }
-  .theory__item,
-  .role__definition-text,
-  .role__item-text,
-  .our-services__item-content-description,
-  .why-auto__description,
-  .why-us__description {
-    font-size: 18px;
-  }
+
   .theory__lamp,
   .role__lamp {
     max-width: 50px;
@@ -768,7 +757,7 @@ p {
   .why-auto__title,
   .why-us__title,
   .why-us__item-title {
-    font-size: 26px;
+    font-size: 30px;
   }
   .theory__item,
   .role__definition-text,
@@ -776,7 +765,7 @@ p {
   .our-services__item-content-description,
   .why-auto__description,
   .why-us__description {
-    font-size: 14px;
+    font-size: 16px;
   }
   .our-services__item-content-line {
     height: 1px;
@@ -789,12 +778,13 @@ p {
     justify-self: auto;
   }
   .role__button {
-    font-size: 17px;
-    padding: 10px 20px;
+    font-size: 20px;
   }
   .flare-button {
-    max-width: 220px;
-    margin: 20px 0;
+    margin: 20px auto;
+  }
+  .service__main-button {
+    margin: 20px;
   }
 }
 
@@ -803,8 +793,8 @@ p {
     height: 550px;
   }
   .role__button {
-    font-size: 13px;
-    padding: 6px 20px;
+    font-size: 16px;
+    padding: 15px 30px;
   }
   .service__main-description {
     max-width: 600px;
@@ -845,14 +835,7 @@ p {
   .role__item {
     border: 1px solid #af7b20;
   }
-  .theory__item,
-  .role__definition-text,
-  .role__item-text,
-  .our-services__item-content-description,
-  .why-auto__description,
-  .why-us__description {
-    font-size: 12px;
-  }
+
   .role__item {
     padding: 20px 10px;
   }
@@ -861,6 +844,9 @@ p {
   }
   .our-services__item-content {
     padding: 40px 0 40px 100px;
+  }
+  .why-auto {
+    padding: 50px 0;
   }
 
   .our-services__item:nth-child(2) .our-services__item-content,
@@ -892,6 +878,17 @@ p {
   .role__wrapper {
     gap: 10px;
   }
+
+  .our-services__item-content-title {
+    font-size: 16px;
+  }
+
+  .our-services {
+    padding: 0;
+  }
+}
+
+@media (max-width: 1024px) {
   .theory__title,
   .role__title,
   .our-services__title,
@@ -901,16 +898,14 @@ p {
   .why-us__item-title {
     font-size: 20px;
   }
-
-  .our-services__item-content-title {
-    font-size: 16px;
+  .theory__item,
+  .role__definition-text,
+  .role__item-text,
+  .our-services__item-content-description,
+  .why-auto__description,
+  .why-us__description {
+    font-size: 14px;
   }
-  .flare-button {
-    max-width: 170px;
-  }
-}
-
-@media (max-width: 1024px) {
   .theory__lamp,
   .role__lamp {
     max-width: 30px;
@@ -962,9 +957,7 @@ p {
     width: 70%;
     // margin: 50px auto;
   }
-  .our-services {
-    padding: 0;
-  }
+
   .our-services__item-img {
     position: absolute;
 
@@ -1192,7 +1185,6 @@ p {
 
   .flare-button {
     margin: 20px;
-    max-width: none;
     width: auto;
     padding: 10px 30px;
   }
