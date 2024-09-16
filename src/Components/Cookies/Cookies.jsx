@@ -23,24 +23,22 @@ export default function Cookies() {
 
   return (
     <>
-      {cookieVisible && (
-        <div className="cookie">
-          <p className="cookie__text">
-            Используя сайт
-            <a href="https://regiuslab.by/" className="cookie__regiuslab-link">
-              regiuslab.by
-            </a>
-            , вы даете согласие на использование
-            <a href="/cookie-settings" className="cookie__privacy-link">
-              файлов cookie
-            </a>
-            , помогающих нам сделать его удобнее для вас
-          </p>
-          <button className="cookie__button" onClick={handleAccept}>
-            Согласен
-          </button>
-        </div>
-      )}
+      <div className={cookieVisible ? 'cookie active' : 'cookie'}>
+        <p className="cookie__text">
+          Используя сайт
+          <a href="https://regiuslab.by/" className="cookie__regiuslab-link">
+            regiuslab.by
+          </a>
+          , вы даете согласие на использование
+          <a href="/cookie-settings" className="cookie__privacy-link">
+            файлов cookie
+          </a>
+          , помогающих нам сделать его удобнее для вас
+        </p>
+        <button className="cookie__button" onClick={handleAccept}>
+          Согласен
+        </button>
+      </div>
     </>
   );
 }

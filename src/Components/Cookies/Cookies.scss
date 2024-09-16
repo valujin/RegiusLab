@@ -1,6 +1,6 @@
 .cookie {
   position: fixed;
-  left: 20px;
+  left: -1000px;
   bottom: 20px;
   right: 20px;
 
@@ -11,9 +11,13 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 5;
   max-width: 500px;
-  transition: 0.3s;
+  transition: 1s;
   backdrop-filter: blur(3px);
+  &.active {
+    left: 20px;
+  }
 }
+
 .cookie__button {
   margin-top: 10px;
   background-color: #007bff;
