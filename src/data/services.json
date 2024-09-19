@@ -32,7 +32,7 @@
       },
       {
         "role-item-img": "./role24.png",
-        "role-item-title": "Автоматизацию процессов"
+        "role-item-title": "Автоматизация процессов"
       }
     ],
     "services": [
@@ -117,15 +117,15 @@
     "role-wrapper": [
       {
         "role-item-img": "./role1.png",
-        "role-item-title": "Сокращать время на выполнение рутинных задач"
+        "role-item-title": "Сокращение времени на выполнение рутинных задач"
       },
       {
         "role-item-img": "./role2.png",
-        "role-item-title": "Повышать точность и снижать количество ошибок"
+        "role-item-title": "Повышение точности и снижение количества ошибок"
       },
       {
         "role-item-img": "./role3.png",
-        "role-item-title": "Улучшать управление ресурсами"
+        "role-item-title": "Улучшение управления ресурсами"
       },
       {
         "role-item-img": "./role4.png",
@@ -218,7 +218,7 @@
       },
       {
         "role-item-img": "./role32.png",
-        "role-item-title": "Автоматизацию процессов"
+        "role-item-title": "Автоматизация процессов"
       },
       {
         "role-item-img": "./role33.png",
@@ -316,7 +316,7 @@
       },
       {
         "role-item-img": "./role52.png",
-        "role-item-title": "Автоматизацию рутинных задач"
+        "role-item-title": "Автоматизация рутинных задач"
       },
       {
         "role-item-img": "./role53.png",
@@ -324,7 +324,7 @@
       },
       {
         "role-item-img": "./role54.png",
-        "role-item-title": "Интеграцию с другими системами"
+        "role-item-title": "Интеграция с другими системами"
       }
     ],
     "services": [
@@ -414,11 +414,11 @@
       },
       {
         "role-item-img": "./role42.png",
-        "role-item-title": "Многофункциональность"
+        "role-item-title": "Универсальность"
       },
       {
         "role-item-img": "./role43.png",
-        "role-item-title": "Поддержку мультивалютности и мультиязычности"
+        "role-item-title": "Поддержка мультивалютности и мультиязычности"
       },
       {
         "role-item-img": "./role44.png",
@@ -508,19 +508,19 @@
     "role-wrapper": [
       {
         "role-item-img": "./role61.png",
-        "role-item-title": "Улучшить коммуникацию"
+        "role-item-title": "Улучшение коммуникации"
       },
       {
         "role-item-img": "./role62.png",
-        "role-item-title": "Управлять продажами"
+        "role-item-title": "Управление продажами"
       },
       {
         "role-item-img": "./role63.png",
-        "role-item-title": "Организовать работу над проектами"
+        "role-item-title": "Организация работы над проектами"
       },
       {
         "role-item-img": "./role64.png",
-        "role-item-title": "Создавать сайты и магазины"
+        "role-item-title": "Создание сайтов и магазинов"
       }
     ],
     "services": [

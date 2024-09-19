@@ -129,7 +129,15 @@ export default function Services() {
               <div className="services__bullits-mobile-back"></div>
 
               <div className="services__bullits-item-default">
-                <p className="services__item-title">{title}</p>
+                <p
+                  className={
+                    window.innerWidth <= 450 && openService == index
+                      ? 'services__item-title none'
+                      : 'services__item-title'
+                  }
+                >
+                  {title}
+                </p>
                 <img
                   src={arrowDownImg}
                   className="servises__item-arrow"
@@ -147,6 +155,10 @@ export default function Services() {
                   visibility:
                     window.innerWidth <= 450 && openService === index
                       ? 'visible'
+                      : 'hidden',
+                  overflow:
+                    window.innerWidth <= 450 && openService == index
+                      ? 'hidden'
                       : 'hidden',
                 }}
               >
