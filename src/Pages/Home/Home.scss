@@ -326,6 +326,64 @@
     }
   }
 }
+
+
+
+
+.form__checkbox {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+
+  
+}
+.form__checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 16px; /* Размер шрифта */
+}
+
+.form__checkbox input[type='checkbox'] {
+  -webkit-appearance: none; /* Убираем стандартный вид чекбокса */
+  -moz-appearance: none;
+  appearance: none;
+  min-width: 40px; /* Ширина чекбокса */
+  max-width: 40px;
+  height: 40px !important;
+  border: 2px solid #d7ac45; /* Цвет границы */
+  border-radius: 4px; /* Закругление углов */
+  outline: none; /* Убираем обводку при фокусе */
+  cursor: pointer; /* Курсор при наведении */
+  background-color: transparent; /* Прозрачный фон */
+  padding: 0 !important;
+}
+
+.form__checkbox input[type='checkbox']:checked {
+  background-color: transparent; /* Цвет фона при выборе */
+  border-color: #d7ac45; /* Цвет границы при выборе */
+}
+
+.form__checkbox input[type='checkbox']:checked::after {
+  content: '✓'; /* Символ галочки */
+  color: white; /* Цвет галочки */
+  position: relative;
+  bottom: -5px;
+  right: -7px;
+
+  font-size: 30px; /* Размер галочки */
+}
+.form__checkbox-link {
+  font-family: 'Montserrat', sans-serif;
+  color: #d7ac45;
+  text-decoration: none;
+  margin: 0 0 0 5px;
+}
+
+.form__checkbox-text{
+  font-family: 'Montserrat', sans-serif;
+  color: #ffffff;
+  margin: 0 0 0 20px;
+}
+
 @media (max-width: 1920px) {
   .about__container {
     width: 80%;
@@ -409,6 +467,12 @@
     font-size: 16px;
     line-height: normal;
   }
+  .form__checkbox input[type=checkbox]:checked::after{
+    bottom: 3px;
+  }
+  .form__checkbox-text {
+    font-size: 12px;
+  }
 }
 @media (max-width: 1440px) {
   .main__contact-link {
@@ -438,6 +502,9 @@
   }
 }
 @media (max-width: 1078px) {
+  .consent-checkbox {
+    font-size: 12px;
+  }
   .main__back {
     max-width: 400px;
   }
@@ -559,6 +626,35 @@
     width: 50%;
   }
 }
+@media (max-width: 500px) {
+  .consultation__container {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .consultation__shadow {
+    display: none;
+  }
+  .consultation {
+    margin: 40px auto;
+    border: 1px solid var(--White, #ffffff);
+    padding: 10px;
+  }
+  .consultation__img {
+    max-width: 320px;
+    width: 100%;
+  }
+  .consultation__form .consultation__submit {
+    border: 1px solid var(--Yelow-strobe, #d7ac45);
+  }
+  .consultation__form input {
+    font-size: 10px;
+    padding: 10px 15px;
+  }
+  .form__checkbox-text {
+    font-size: 10px;
+}
+}
+
 
 @media (max-width: 450px) {
   .consultation {
@@ -596,29 +692,5 @@
   .partners__container {
     gap: 25px;
   }
-  .consultation__container {
-    flex-direction: column;
-    gap: 24px;
-  }
-  .consultation__shadow {
-    display: none;
-  }
-  .consultation {
-    margin: 40px auto;
-    border: 1px solid var(--White, #ffffff);
-    padding: 10px;
-  }
-  .consultation__img {
-    max-width: 320px;
-    width: 100%;
-  }
-  .consultation__form .consultation__submit {
-    border: 1px solid var(--Yelow-strobe, #d7ac45);
-  }
-  .consultation__form input {
-    font-size: 10px;
-    padding: 10px 15px;
-  }
-}
-@media (max-width: px) {
+
 }

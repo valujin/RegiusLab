@@ -197,7 +197,16 @@ export default function Home() {
                 pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
                 placeholder="Электронная почта"
               />
-
+        <label className="form__checkbox">
+          <input required type="checkbox" id="consent" name="consent" />
+          <span className='form__checkbox-text'>
+            Нажимая на кнопку "Отправить", я даю свое согласие на обработку моих
+            персональных данных для получения обратной связи в соответствии с
+            <a className="form__checkbox-link" href="/privacy">
+              Политикой обработки персональных данных
+            </a>
+          </span>
+        </label>
               <input
                 type="submit"
                 className="consultation__submit"
