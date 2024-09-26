@@ -4,7 +4,7 @@ import arrowDownImg from '../../assets/arrow-down-right.png';
 import arrowBlack from '../../assets/arrow-down-right-black.png';
 import '../../style/fonts/fonts.scss';
 import { useState } from 'react';
-
+import { saveAs } from "file-saver";
 import pegasusLeft from '../../assets/PegasusLeft.png';
 
 import Marquee from '../../Components/Marquee/Marquee';
@@ -99,15 +99,9 @@ export default function Home() {
         <img src={pegasusLeft} alt="  " className="about__pegas-right" />
 
         <div className="about__container">
-          <a
-            href="#"
-            className="about__button"
-            onClick={(event) => event.preventDefault()}
-          >
-            <p className="about__button-text">О нас</p>
-            <img src={arrowDownImg} alt="" className="about__button-img" />
-            <img src={arrowBlack} className="about__button-black" alt="" />
-          </a>
+       
+            <p className="about__button-text title">О нас</p>
+         
 
           <p className="about__description">
             Мы — команда высококвалифицированных профессионалов. <br />
@@ -117,6 +111,8 @@ export default function Home() {
             спектр услуг позволяет реализовать проекты под любые цели. Выбирайте
             нас, чтобы вместе достичь новых высот!
           </p>
+
+          <button className="about__button" onClick={()=> window.open("/preza.pdf", "_blank")}>Презентация компании</button>
         </div>
       </div>
       <div className="partners">
