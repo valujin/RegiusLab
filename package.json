@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@react-pdf-viewer/core": "^3.12.0",
     "express": "^4.19.2",
     "file-saver": "^2.0.5",
     "i18next": "^23.12.2",
@@ -18,6 +17,7 @@
     "pdfjs-dist": "^4.6.82",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-google-recaptcha": "^3.1.0",
     "react-i18next": "^15.0.1",
     "react-input-mask": "^2.0.4",
     "react-router-dom": "^6.26.1",
