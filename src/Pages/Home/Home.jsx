@@ -29,7 +29,7 @@ export default function Home() {
   const [email, setEmail] = useState('');
   const [thanks, setThanks] = useState(false);
 
-  const [captchaVerified, setCaptchaVerified] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(true);
 
   const handleCaptchaVerify = (value) => {
     if (value) {
@@ -214,10 +214,7 @@ export default function Home() {
             </a>
           </span>
         </label>
-        <ReCAPTCHA required
-    sitekey="6LfFgVAqAAAAAEo8lQRhmz0DGwaa-y8jYG4flq7R"
-    onChange={handleCaptchaVerify}
-  />
+ 
               <input
                 type="submit"
                 className="consultation__submit"
