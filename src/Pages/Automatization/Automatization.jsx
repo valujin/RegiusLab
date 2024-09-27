@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+
 import "./Automatization.scss";
 import serviceDb from "../../data/services.json";
 import lamp from "../../assets/lamp.png";

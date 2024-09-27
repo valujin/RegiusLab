@@ -6,7 +6,7 @@ import '../../style/fonts/fonts.scss';
 import { useState } from 'react';
 import { saveAs } from "file-saver";
 import pegasusLeft from '../../assets/PegasusLeft.png';
-
+import ReCAPTCHA from 'react-google-recaptcha';
 import Marquee from '../../Components/Marquee/Marquee';
 import partner1 from '../../assets/partner1.png';
 import partner2 from '../../assets/partner2.png';
@@ -29,8 +29,19 @@ export default function Home() {
   const [email, setEmail] = useState('');
   const [thanks, setThanks] = useState(false);
 
+  const [captchaVerified, setCaptchaVerified] = useState(false);
+
+  const handleCaptchaVerify = (value) => {
+    if (value) {
+      setCaptchaVerified(true);
+    }
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!captchaVerified) {
+      alert('Пожалуйста, пройдите капчу');
+      return;
+    }
     window.fbq('track', 'Lead');
     const data = {
       name,
@@ -203,6 +214,10 @@ export default function Home() {
             </a>
           </span>
         </label>
+        <ReCAPTCHA required
+    sitekey="6LfFgVAqAAAAAEo8lQRhmz0DGwaa-y8jYG4flq7R"
+    onChange={handleCaptchaVerify}
+  />
               <input
                 type="submit"
                 className="consultation__submit"
