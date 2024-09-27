@@ -30,7 +30,7 @@ export default function Home() {
   const [email, setEmail] = useState('');
   const [thanks, setThanks] = useState(false);
 
-  const [captchaVerified, setCaptchaVerified] = useState(false);
+  const [captchaVerified, setCaptchaVerified] = useState(true);
 
   const handleCaptchaVerify = (value) => {
     if (value) {
@@ -215,10 +215,10 @@ export default function Home() {
             </a>
           </span>
         </label>
-        <ReCAPTCHA
+        {/* <ReCAPTCHA
     sitekey="6Lfrb1AqAAAAAFGoyeSuU9O_cgzV4K6C9hyBlbO4"
     onChange={handleCaptchaVerify}
-  />
+  /> */}
               <input
                 type="submit"
                 className="consultation__submit"
