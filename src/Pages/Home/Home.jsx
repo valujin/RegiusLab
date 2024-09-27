@@ -124,7 +124,7 @@ export default function Home() {
             нас, чтобы вместе достичь новых высот!
           </p>
 
-          <button className="about__button" onClick={()=> window.open("/preza.pdf", "_blank")}>Презентация компании</button>
+          <button className="about__button" onClick={()=> window.open("/RegiusLab_Creds.pdf", "_blank")}>Презентация компании</button>
         </div>
       </div>
       <div className="partners">

@@ -36,7 +36,7 @@ export default function SwiperTestimonails() {
               ? 2
               : 3
           }
-          spaceBetween={150}
+          spaceBetween={window.innerWidth < 1024 && window.innerWidth > 500 ? 150: 50}
           loop={true}
           speed={5000}
           autoplay={{
