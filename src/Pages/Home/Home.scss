@@ -460,6 +460,16 @@
   margin: 0 0 0 20px;
 }
 
+.testimonails__title{
+  font-family: "Montserrat semi bold", sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  margin:  100px 0 0 0;
+}
+
 @media (max-width: 1920px) {
   .about__container {
     width: 80%;

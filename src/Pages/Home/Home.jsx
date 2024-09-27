@@ -22,6 +22,7 @@ import arrowDownMain from '../../assets/main__arrow.png';
 
 import bro from '../../assets/bro.png';
 import FAQ from '../../Components/FAQ/FAQ';
+import SwiperTestimonails from '../../Components/SwiperTestimonails/SwiperTestimonails';
 
 export default function Home() {
   const [name, setName] = useState('');
@@ -29,7 +30,7 @@ export default function Home() {
   const [email, setEmail] = useState('');
   const [thanks, setThanks] = useState(false);
 
-  const [captchaVerified, setCaptchaVerified] = useState(true);
+  const [captchaVerified, setCaptchaVerified] = useState(false);
 
   const handleCaptchaVerify = (value) => {
     if (value) {
@@ -214,7 +215,10 @@ export default function Home() {
             </a>
           </span>
         </label>
- 
+        <ReCAPTCHA
+    sitekey="6Lfrb1AqAAAAAFGoyeSuU9O_cgzV4K6C9hyBlbO4"
+    onChange={handleCaptchaVerify}
+  />
               <input
                 type="submit"
                 className="consultation__submit"
@@ -224,6 +228,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+     
+      <SwiperTestimonails/>
       <FAQ />
     </div>
   );
