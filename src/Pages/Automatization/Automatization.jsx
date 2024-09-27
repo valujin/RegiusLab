@@ -225,6 +225,7 @@ export default function Automatization() {
                       className="our-services__item-case-phone"
                     />
                     <div className="our-services__item-case-top-bullits">
+                      
                       <div className="our-services__item-case-bullits-wrapper">
                         {service.right.bullits.map((bullit, BullitIndex) => (
                           <div
@@ -237,7 +238,7 @@ export default function Automatization() {
                               alt=""
                             />
                             <p className="our-services__item-case-bullits-item-text">
-                              {bullit[0] } 
+                              {bullit[0]+ " " } 
                             </p>
                             <p className="our-services__item-case-bullits-item-percents">
                               {bullit[1]}
@@ -266,9 +267,9 @@ export default function Automatization() {
                       </p>
                       <div className="our-services__item-case-solution-description">
                         {service.right.solution.map((solution, index) => (
-                          <p key={index}>
+                          <p className="our-services__item-case-solution-description-wrapper" key={index}>
                             <span className="our-services__item-case-solution-description-item-b">
-                              {solution[0]}
+                              {solution[0]+ " "}
                             </span>
                             <span className="our-services__item-case-solution-description-item-p">
                               {solution[1]}

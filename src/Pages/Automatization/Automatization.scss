@@ -561,7 +561,7 @@ p {
     background-color: #0c2e50;
   }
   .our-services__item-case-top {
-    background-color: #08213A;
+    background-color: #08213a;
   }
   .our-services__item-case-bullits-item-percents {
     color: #af7b20;
@@ -1096,7 +1096,8 @@ p {
   gap: 10px;
 }
 .our-services__item-case-bullits-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
   align-items: center;
   gap: 10px;
 }
@@ -1148,7 +1149,7 @@ p {
 .our-services__item-case-situation-title,
 .our-services__item-case-solution-title {
   color: var(--White, #fff);
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat bold", sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -1159,7 +1160,7 @@ p {
 .our-services__item-case-situation-description {
   color: var(--White, #fff);
   font-family: "Montserrat", sans-serif;
-  font-size: 11px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 15px;
@@ -1167,7 +1168,7 @@ p {
 .our-services__item-case-solution-description-item-b {
   color: var(--White, #fff);
   font-family: "Montserrat", sans-serif;
-  font-size: 11px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 700;
   line-height: 15px;
@@ -1177,7 +1178,7 @@ p {
   color: var(--White, #fff);
   font-family: "Montserrat", sans-serif;
 
-  font-size: 11px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 15px;
@@ -1272,6 +1273,7 @@ p {
 
   .why-auto {
     width: 80%;
+    margin: 40px auto;
   }
 
   .why-us {
@@ -1310,12 +1312,33 @@ p {
     font-size: 15px;
     padding: 10px 20px 10px 10px;
   }
-  .our-services__item-content-lightning-wrapper{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  .our-services__item-content-lightning-wrapper {
+    // display: grid;
+    // grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 5px 20px;
+width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
-  .our-services__item:nth-child(2) .our-services__item-content .our-services__item-content-container .our-services__item-text .our-services__item-content-description, .our-services__item:nth-child(4) .our-services__item-content .our-services__item-content-container .our-services__item-text .our-services__item-content-description{
+  .our-services__item-wrapper{
+    width: 330px;
+  }
+  // .our-services__item-wrapper:last-child {
+  //   grid-column: 2 / 3;
+  // }
+  .our-services__item:nth-child(2)
+    .our-services__item-content
+    .our-services__item-content-container
+    .our-services__item-text
+    .our-services__item-content-description,
+  .our-services__item:nth-child(4)
+    .our-services__item-content
+    .our-services__item-content-container
+    .our-services__item-text
+    .our-services__item-content-description {
     text-align: left;
   }
 
@@ -1436,7 +1459,7 @@ p {
   }
   .our-services__item-text {
     max-width: none;
-    width: 80%;
+    width: 90%;
     margin: auto;
   }
   .our-services__item-content-title,
@@ -1539,6 +1562,16 @@ p {
   }
 }
 @media (max-width: 1200px) {
+  .our-services__item-wrapper {
+    width: 280px;
+}
+  .our-services__item-case-situation-description,.our-services__item-case-solution-description-item-p,.our-services__item-case-solution-description-item-b{
+    font-size: 11px;
+    line-height: normal;
+  }
+  .our-services__item-case-solution-description-wrapper{
+    line-height: 11px;
+  }
   .service__main {
     height: 550px;
   }
@@ -1606,13 +1639,9 @@ p {
     gap: 40px;
   }
 
-
-
   .why-auto {
     padding: 50px 0;
   }
-
-
 
   .why-auto__item {
     padding: 15px 15px 20px 15px;
@@ -1656,6 +1685,13 @@ p {
 }
 
 @media (max-width: 1024px) {
+  .our-services__item-content-lightning-wrapper{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 20px;
+  }
   .our-services__item-case {
     flex-direction: column;
   }
@@ -1707,21 +1743,18 @@ p {
   .why-us__line {
     height: 1px;
   }
-
-  
-
-
 }
 
 @media (max-width: 768px) {
-    .our-services__item-content-lightning-wrapper {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 5px 20px;
-    }
-    .our-services__item-wrapper{
-        align-items: start;
-    }
+  .our-services__item-content-lightning-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px 20px;
+    width: 100%;
+  }
+  .our-services__item-wrapper {
+    align-items: start;
+  }
   .our-services__item-pc {
     top: auto;
     bottom: -10px;
@@ -1906,8 +1939,18 @@ p {
 }
 
 @media (max-width: 500px) {
+  .our-services__item-case {
+    border: 5px solid #af7b20;
+  }
+  .our-services__item-pc{
+    display: none;
+  }
   .role__wrapper {
     margin: 0 auto 0px auto;
+  }
+  .our-services__item-case-situation-title, .our-services__item-case-solution-title{
+    font-size: 18px;
+    line-height: normal;
   }
   .when {
     width: 90%;
@@ -2090,9 +2133,7 @@ p {
   .our-services__item-right {
     width: 100%;
   }
-  .our-services__item-case {
-    border: none;
-  }
+
   .our-services__item-case-bottom {
     padding: 15px;
     max-width: 300px;
