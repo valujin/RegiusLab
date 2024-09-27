@@ -26,17 +26,17 @@ export default function SwiperTestimonails() {
         <Swiper
           effect={"slide"}
           grabCursor={true}
-          centeredSlides={window.innerWidth < 1024 ? true : true}
+          centeredSlides={window.innerWidth < 1200 ? true : false}
           slidesPerView={
             window.innerWidth < 800
               ? 1
-              : window.innerWidth < 1024
+              : window.innerWidth < 1200
               ? 2
               : window.innerWidth < 1700
-              ? 2
-              : 3
+              ? 3
+              : 4
           }
-          spaceBetween={window.innerWidth < 1024 && window.innerWidth > 500 ? 150: 50}
+          spaceBetween={window.innerWidth < 1200 && window.innerWidth > 1000 ? 150: 50}
           loop={true}
           speed={5000}
           autoplay={{
@@ -49,10 +49,11 @@ export default function SwiperTestimonails() {
           {testimolail_data.map(
             ({ img, name, profession, description }, index) => (
               <SwiperSlide key={index} className="init_container">
+                <div className="init__container-wrapper">
                 <img src={img} className="swiper__img" />
                 <p className="swiper__name">{name}</p>
                 <p className="swiper__prof">{profession}</p>
-                <p className="swiper__description">{description}</p>
+                <p className="swiper__description">{description}</p></div>
               </SwiperSlide>
             )
           )}
