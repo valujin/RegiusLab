@@ -36,7 +36,7 @@ export default function Automatization() {
     serviceDb.automatization,
     serviceDb.telegram,
     serviceDb["1Cdev"],
-    serviceDb.CMSMagento,
+    serviceDb.SitesDev,
     serviceDb.Bitrix24,
   ];
   useEffect(() => {
@@ -45,7 +45,7 @@ export default function Automatization() {
   const currentPath = window.location.pathname;
 
   return (
-    <div className="service">
+    <div className="service-new">
       <div
         className={
           currentInfo === serviceDb["1Cdev"]
@@ -58,17 +58,17 @@ export default function Automatization() {
           backgroundImage: `url(${currentInfo["main-back-img"]}) `,
         }}
       >
-        <div className="service__main-back"></div>
+        <div className="service-new__main-back"></div>
 
-        <div className="service__main-container">
-          {/* <p className="service__main-id">#{currentInfo.id}</p> */}
-          <h1 className="service__main-title">{currentInfo["main-title"]}</h1>
-          <p className="service__main-description">
+        <div className="service-new__main-container">
+          {/* <p className="service-new__main-id">#{currentInfo.id}</p> */}
+          <h1 className="service-new__main-title">{currentInfo["main-title"]}</h1>
+          <p className="service-new__main-description">
             {currentInfo["main-description"]}
           </p>
-          <div className="service__main-bullit-wrapper">
+          <div className="service-new__main-bullit-wrapper">
             {currentInfo["main-bullits"].map((bullet, index) => (
-              <div className="service__main-bullit" key={index}>
+              <div className="service-new__main-bullit" key={index}>
                 {bullet}
               </div>
             ))}
@@ -79,7 +79,7 @@ export default function Automatization() {
               setModal(true);
               setIsScrollDisabled(true);
             }}
-            className="service__main-button role__button flare-button"
+            className="service-new__main-button role-new__button flare-button"
           >
             Связаться
           </button>
@@ -101,13 +101,13 @@ export default function Automatization() {
           );
         })}
       </div>
-      <div className="theory">
-        <p className="theory__title"> {currentInfo["what-is-title"]}</p>
-        <div className="theory__wrapper">
-          <img className="theory__lamp" src={lamp} alt="" />
-          <div className="theory__text">
+      <div className="theory-new">
+        <p className="theory-new__title"> {currentInfo["what-is-title"]}</p>
+        <div className="theory-new__wrapper">
+          <img className="theory-new__lamp" src={lamp} alt="" />
+          <div className="theory-new__text">
             {currentInfo["what-is-description"].map((definition, index) => (
-              <p key={index} className="theory__item">
+              <p key={index} className="theory-new__item">
                 {definition}
               </p>
             ))}
@@ -122,22 +122,22 @@ export default function Automatization() {
           serviceName={currentInfo["main-title"]}
         />
       )}
-      <div className="role">
-        <div className="role__top">
-          <div className="role__text">
-            <p className="role__title">{currentInfo["role-title"]}</p>
+      <div className="role-new">
+        <div className="role-new__top">
+          <div className="role-new__text">
+            <p className="role-new__title">{currentInfo["role-title"]}</p>
           </div>
         </div>
 
-        <div className="role__wrapper">
+        <div className="role-new__wrapper">
           {currentInfo["role-wrapper"].map((role, index) => (
-            <div className="role__item" key={index}>
+            <div className="role-new__item" key={index}>
               <img
                 src={role["role-item-img"]}
-                className="role__item-img"
+                className="role-new__item-img"
                 alt=""
               />
-              <p className="role__item-text">{role["role-item-title"]}</p>
+              <p className="role-new__item-text">{role["role-item-title"]}</p>
             </div>
           ))}
         </div>
@@ -146,27 +146,27 @@ export default function Automatization() {
             setModal(true);
             setIsScrollDisabled(true);
           }}
-          className="role__button flare-button"
+          className="role-new__button flare-button"
         >
           получить бесплатную консультацию
         </button>
       </div>
 
-      <div className="when">
-        <p className="when__title title">
+      <div className="when-new">
+        <p className="when-new__title title">
           Когда пора внедрять автоматизацию бизнеса?
         </p>
-        <div className="when__wrapper">
+        <div className="when-new__wrapper">
           {currentInfo.when.map((when, index) => (
-            <div className="when__item" key={index}>
-              <div className="when__item-top">
-                <img src={when.img} className="when__img" alt="" />
-                <p className="when__item-title">{when.title}</p>
+            <div className="when-new__item" key={index}>
+              <div className="when-new__item-top">
+                <img src={when.img} className="when-new__img" alt="" />
+                <p className="when-new__item-title">{when.title}</p>
               </div>
 
-              <div className="when__text">
+              <div className="when-new__text">
                 {when.description.map((text, index) => (
-                  <span className="when__text-item" key={index}>
+                  <span className="when-new__text-item" key={index}>
                     {text}
                   </span>
                 ))}
@@ -176,29 +176,29 @@ export default function Automatization() {
         </div>
       </div>
 
-      <div className="our-services">
-        <p className="our-services__title">Наши услуги</p>
-        <div className="our-services__wrapper">
+      <div className="our-services-new">
+        <p className="our-services-new__title">Наши услуги</p>
+        <div className="our-services-new__wrapper">
           {currentInfo.services.map((service, index) => (
-            <div className="our-services__item" key={index}>
-              <div className="our-services__item-content">
-                <div className="our-services__item-content-container">
-                  <p className="our-services__item-content-num">0{index + 1}</p>
-                  <div className="our-services__item-text">
-                    <p className="our-services__item-content-title">
+            <div className="our-services-new__item" key={index}>
+              <div className="our-services-new__item-content">
+                <div className="our-services-new__item-content-container">
+                  <p className="our-services-new__item-content-num">0{index + 1}</p>
+                  <div className="our-services-new__item-text">
+                    <p className="our-services-new__item-content-title">
                       {service.title}
                     </p>
-                    <div className="our-services__item-content-line"></div>
+                    <div className="our-services-new__item-content-line"></div>
 
-                    <div className="our-services__item-content-lightning-wrapper">
+                    <div className="our-services-new__item-content-lightning-wrapper">
                       {service.description.map((text, index) => (
-                        <div key={index} className="our-services__item-wrapper">
+                        <div key={index} className="our-services-new__item-wrapper">
                           <img
                             src={lightning}
-                            className="our-services__item-img-lightning"
+                            className="our-services-new__item-img-lightning"
                             alt=""
                           />
-                          <p className="our-services__item-content-description">
+                          <p className="our-services-new__item-content-description">
                             {text}
                           </p>
                         </div>
@@ -208,70 +208,70 @@ export default function Automatization() {
                 </div>
               </div>
 
-              <div className="our-services__item-right ">
-                <div className="our-services__item-pc">
+              <div className="our-services-new__item-right ">
+                <div className="our-services-new__item-pc">
                   <img
                     src={service.right.imgPC}
-                    className="our-services__item-pc-img"
+                    className="our-services-new__item-pc-img"
                     alt=""
                   />
                 </div>
 
-                <div className="our-services__item-case">
-                  <div className="our-services__item-case-top">
+                <div className="our-services-new__item-case">
+                  <div className="our-services-new__item-case-top">
                     <img
                       src={service.right.imgPhone}
                       alt=""
-                      className="our-services__item-case-phone"
+                      className="our-services-new__item-case-phone"
                     />
-                    <div className="our-services__item-case-top-bullits">
+                    <div className="our-services-new__item-case-top-bullits">
                       
-                      <div className="our-services__item-case-bullits-wrapper">
+                      <div className="our-services-new__item-case-bullits-wrapper">
                         {service.right.bullits.map((bullit, BullitIndex) => (
                           <div
                             key={BullitIndex}
-                            className="our-services__item-case-bullits-item"
+                            className="our-services-new__item-case-bullits-item"
                           >
                             <img
                               src={index % 2 === 0 ?case_good  :case_good_dark }
-                              className="our-services__item-case-bullits-item-img"
+                              className="our-services-new__item-case-bullits-item-img"
                               alt=""
                             />
-                            <p className="our-services__item-case-bullits-item-text">
+                            <p className="our-services-new__item-case-bullits-item-text">
                               {bullit[0]+ " " } 
                             </p>
-                            <p className="our-services__item-case-bullits-item-percents">
+                            <p className="our-services-new__item-case-bullits-item-percents">
                               {bullit[1]}
                             </p>
                           </div>
                         ))}
                       </div>
-                      <div className="our-services__item-case-description">
+                      <div className="our-services-new__item-case-description">
                         {service.right.description}
                       </div>
                     </div>
                   </div>
 
-                  <div className="our-services__item-case-bottom">
-                    <div className="our-services__item-case-situation">
-                      <p className="our-services__item-case-situation-title">
+                  <div className="our-services-new__item-case-bottom">
+                    <div className="our-services-new__item-case-situation">
+                      <p className="our-services-new__item-case-situation-title">
                         Ситуация:
                       </p>
-                      <p className="our-services__item-case-situation-description">
+                      <p className="our-services-new__item-case-situation-description">
                         {service.right.situation}
                       </p>
                     </div>
-                    <div className="our-services__item-case-solution">
-                      <p className="our-services__item-case-solution-title">
+                    <div className="our-services-new__item-case-solution">
+                      <p className="our-services-new__item-case-solution-title">
                         Решение:
                       </p>
-                      <div className="our-services__item-case-solution-description">
+                      <div className="our-services-new__item-case-solution-description">
                         {service.right.solution.map((solution, index) => (
-                          <p className="our-services__item-case-solution-description-wrapper" key={index}>
-                            <span className="our-services__item-case-solution-description-item-b">
+                          <p className="our-services-new__item-case-solution-description-wrapper" key={index}>
+                            <span className="our-services-new__item-case-solution-description-item-b">
                               {solution[0]+ " "}
                             </span>
-                            <span className="our-services__item-case-solution-description-item-p">
+                            <span className="our-services-new__item-case-solution-description-item-p">
                               {solution[1]}
                             </span>
                           </p>
@@ -284,7 +284,7 @@ export default function Automatization() {
 
               {/* <img
                 src={service.img}
-                className="our-services__item-img"
+                className="our-services-new__item-img"
                 alt=""
               /> */}
             </div>
@@ -296,7 +296,7 @@ export default function Automatization() {
           setModal(true);
           setIsScrollDisabled(true);
         }}
-        className="role__button service-button flare-button"
+        className="role-new__button service-button flare-button"
       >
         Получить консультацию
       </button>
@@ -327,7 +327,7 @@ export default function Automatization() {
           setModal(true);
           setIsScrollDisabled(true);
         }}
-        className="role__button service-button flare-button"
+        className="role-new__button service-button flare-button"
       >
         Бесплатная консультация
       </button>

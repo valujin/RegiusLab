@@ -32,7 +32,7 @@ export default function ServiceTemplate({ currentInfo }) {
     serviceDb.automatization,
     serviceDb.telegram,
     serviceDb['1Cdev'],
-    serviceDb.CMSMagento,
+    serviceDb.SitesDev,
     serviceDb.Bitrix24,
   ];
   useEffect(() => {

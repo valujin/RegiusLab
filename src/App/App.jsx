@@ -19,9 +19,8 @@ import serviceDb from '../data/services.json';
 import Blockchain from '../Pages/Blockchain/Blockchain';
 import Automatization from '../Pages/Automatization/Automatization';
 import TelegramBots from '../Pages/TelegramBots/TelegramBots';
-import CDev from '../Pages/OneCDev/OneCDev';
 import OneCDev from '../Pages/OneCDev/OneCDev';
-import Magento from '../Pages/Magento/Magento';
+import SitesDev from '../Pages/SitesDev/SitesDev';
 import Bitrix24 from '../Pages/Bitrix24/Bitrix24';
 function App() {
   const [bodyScroll, setBodyScroll] = useState(true);
@@ -58,7 +57,7 @@ function App() {
             <Route path="/automatization" element={<Automatization />}></Route>
             <Route path="/telegram-bots" element={<TelegramBots />}></Route>
             <Route path="/1c-development" element={<OneCDev />}></Route>
-            <Route path="/magento" element={<Magento />}></Route>
+            <Route path="/sites-dev" element={<SitesDev />}></Route>
             <Route path="/b24" element={<Bitrix24 />}></Route>
             <Route path="/noPage" element={<NoPage />}></Route>
             <Route path="/*" element={<Navigate to="/" />} />
