@@ -4,9 +4,7 @@ import arrowDownImg from '../../assets/arrow-down-right.png';
 import arrowBlack from '../../assets/arrow-down-right-black.png';
 import '../../style/fonts/fonts.scss';
 import { useState } from 'react';
-import { saveAs } from "file-saver";
 import pegasusLeft from '../../assets/PegasusLeft.png';
-import ReCAPTCHA from 'react-google-recaptcha';
 import Marquee from '../../Components/Marquee/Marquee';
 import partner1 from '../../assets/partner1.png';
 import partner2 from '../../assets/partner2.png';
@@ -111,9 +109,7 @@ export default function Home() {
         <img src={pegasusLeft} alt="  " className="about__pegas-right" />
 
         <div className="about__container">
-       
-            <p className="about__button-text title">О нас</p>
-         
+          <p className="about__button-text title">О нас</p>
 
           <p className="about__description">
             Мы — команда высококвалифицированных профессионалов. <br />
@@ -124,7 +120,12 @@ export default function Home() {
             нас, чтобы вместе достичь новых высот!
           </p>
 
-          <button className="about__button" onClick={()=> window.open("/RegiusLab_Creds.pdf", "_blank")}>Презентация компании</button>
+          <button
+            className="about__button"
+            onClick={() => window.open('/RegiusLab_Creds.pdf', '_blank')}
+          >
+            Презентация компании
+          </button>
         </div>
       </div>
       <div className="partners">
@@ -205,17 +206,18 @@ export default function Home() {
                 pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$"
                 placeholder="Электронная почта"
               />
-        <label className="form__checkbox">
-          <input required type="checkbox" id="consent" name="consent" />
-          <span className='form__checkbox-text'>
-            Нажимая на кнопку "Отправить", я даю свое согласие на обработку моих
-            персональных данных для получения обратной связи в соответствии с
-            <a className="form__checkbox-link" href="/privacy">
-              Политикой обработки персональных данных
-            </a>
-          </span>
-        </label>
-        {/* <ReCAPTCHA
+              <label className="form__checkbox">
+                <input required type="checkbox" id="consent" name="consent" />
+                <span className="form__checkbox-text">
+                  Нажимая на кнопку "Отправить", я даю свое согласие на
+                  обработку моих персональных данных для получения обратной
+                  связи в соответствии с
+                  <a className="form__checkbox-link" href="/privacy">
+                    Политикой обработки персональных данных
+                  </a>
+                </span>
+              </label>
+              {/* <ReCAPTCHA
     sitekey="6Lfrb1AqAAAAAFGoyeSuU9O_cgzV4K6C9hyBlbO4"
     onChange={handleCaptchaVerify}
   /> */}
@@ -228,8 +230,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-     
-      <SwiperTestimonails/>
+
+      <SwiperTestimonails />
       <FAQ />
     </div>
   );

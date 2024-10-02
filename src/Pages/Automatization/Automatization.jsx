@@ -1,14 +1,14 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from 'react';
 
-import "./Automatization.scss";
-import serviceDb from "../../data/services.json";
-import lamp from "../../assets/lamp.png";
-import serviceDB from "../../data/services.json";
-import ServiceForm from "../../Components/ServiceForm/ServiceForm";
+import './Automatization.scss';
+import serviceDb from '../../data/services.json';
+import lamp from '../../assets/lamp.png';
+import serviceDB from '../../data/services.json';
+import ServiceForm from '../../Components/ServiceForm/ServiceForm';
 
-import case_good from "../../assets/case-good.svg";
-import case_good_dark from '../../assets/case-good-dark.svg'
-import lightning from "../../assets/lightning.png";
+import case_good from '../../assets/case-good.svg';
+import case_good_dark from '../../assets/case-good-dark.svg';
+import lightning from '../../assets/lightning.png';
 
 export default function Automatization() {
   const currentInfo = serviceDB.automatization;
@@ -20,13 +20,13 @@ export default function Automatization() {
 
   React.useEffect(() => {
     if (isScrollDisabled) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = "";
+      document.body.style.overflow = '';
     }
 
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = '';
     };
   }, [isScrollDisabled]);
   const [modal, setModal] = useState(false);
@@ -35,12 +35,12 @@ export default function Automatization() {
     serviceDb.blockchain,
     serviceDb.automatization,
     serviceDb.telegram,
-    serviceDb["1Cdev"],
+    serviceDb['1Cdev'],
     serviceDb.SitesDev,
     serviceDb.Bitrix24,
   ];
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "instant" });
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }, []);
   const currentPath = window.location.pathname;
 
@@ -48,26 +48,28 @@ export default function Automatization() {
     <div className="service-new">
       <div
         className={
-          currentInfo === serviceDb["1Cdev"]
-            ? "service__main service__main-bottom"
+          currentInfo === serviceDb['1Cdev']
+            ? 'service__main service__main-bottom'
             : currentInfo === serviceDb.CMSMagento
-            ? "service__main service__main-center"
-            : "service__main"
+            ? 'service__main service__main-center'
+            : 'service__main'
         }
         style={{
-          backgroundImage: `url(${currentInfo["main-back-img"]}) `,
+          backgroundImage: `url(${currentInfo['main-back-img']}) `,
         }}
       >
         <div className="service-new__main-back"></div>
 
         <div className="service-new__main-container">
           {/* <p className="service-new__main-id">#{currentInfo.id}</p> */}
-          <h1 className="service-new__main-title">{currentInfo["main-title"]}</h1>
+          <h1 className="service-new__main-title">
+            {currentInfo['main-title']}
+          </h1>
           <p className="service-new__main-description">
-            {currentInfo["main-description"]}
+            {currentInfo['main-description']}
           </p>
           <div className="service-new__main-bullit-wrapper">
-            {currentInfo["main-bullits"].map((bullet, index) => (
+            {currentInfo['main-bullits'].map((bullet, index) => (
               <div className="service-new__main-bullit" key={index}>
                 {bullet}
               </div>
@@ -79,7 +81,7 @@ export default function Automatization() {
               setModal(true);
               setIsScrollDisabled(true);
             }}
-            className="service-new__main-button role-new__button flare-button"
+            className="service-new__main-button  flare-button"
           >
             Связаться
           </button>
@@ -93,20 +95,20 @@ export default function Automatization() {
           return (
             <a
               key={index}
-              className={`tabs__item ${isActive ? "active" : ""}`}
+              className={`tabs__item ${isActive ? 'active' : ''}`}
               href={service.href}
             >
-              {service["main-title"]}
+              {service['main-title']}
             </a>
           );
         })}
       </div>
       <div className="theory-new">
-        <p className="theory-new__title"> {currentInfo["what-is-title"]}</p>
+        <p className="theory-new__title"> {currentInfo['what-is-title']}</p>
         <div className="theory-new__wrapper">
           <img className="theory-new__lamp" src={lamp} alt="" />
           <div className="theory-new__text">
-            {currentInfo["what-is-description"].map((definition, index) => (
+            {currentInfo['what-is-description'].map((definition, index) => (
               <p key={index} className="theory-new__item">
                 {definition}
               </p>
@@ -119,25 +121,25 @@ export default function Automatization() {
           modal={modal}
           setModal={setModal}
           setIsScrollDisabled={setIsScrollDisabled}
-          serviceName={currentInfo["main-title"]}
+          serviceName={currentInfo['main-title']}
         />
       )}
       <div className="role-new">
         <div className="role-new__top">
           <div className="role-new__text">
-            <p className="role-new__title">{currentInfo["role-title"]}</p>
+            <p className="role-new__title">{currentInfo['role-title']}</p>
           </div>
         </div>
 
         <div className="role-new__wrapper">
-          {currentInfo["role-wrapper"].map((role, index) => (
+          {currentInfo['role-wrapper'].map((role, index) => (
             <div className="role-new__item" key={index}>
               <img
-                src={role["role-item-img"]}
+                src={role['role-item-img']}
                 className="role-new__item-img"
                 alt=""
               />
-              <p className="role-new__item-text">{role["role-item-title"]}</p>
+              <p className="role-new__item-text">{role['role-item-title']}</p>
             </div>
           ))}
         </div>
@@ -183,7 +185,9 @@ export default function Automatization() {
             <div className="our-services-new__item" key={index}>
               <div className="our-services-new__item-content">
                 <div className="our-services-new__item-content-container">
-                  <p className="our-services-new__item-content-num">0{index + 1}</p>
+                  <p className="our-services-new__item-content-num">
+                    0{index + 1}
+                  </p>
                   <div className="our-services-new__item-text">
                     <p className="our-services-new__item-content-title">
                       {service.title}
@@ -192,7 +196,10 @@ export default function Automatization() {
 
                     <div className="our-services-new__item-content-lightning-wrapper">
                       {service.description.map((text, index) => (
-                        <div key={index} className="our-services-new__item-wrapper">
+                        <div
+                          key={index}
+                          className="our-services-new__item-wrapper"
+                        >
                           <img
                             src={lightning}
                             className="our-services-new__item-img-lightning"
@@ -225,7 +232,6 @@ export default function Automatization() {
                       className="our-services-new__item-case-phone"
                     />
                     <div className="our-services-new__item-case-top-bullits">
-                      
                       <div className="our-services-new__item-case-bullits-wrapper">
                         {service.right.bullits.map((bullit, BullitIndex) => (
                           <div
@@ -233,12 +239,12 @@ export default function Automatization() {
                             className="our-services-new__item-case-bullits-item"
                           >
                             <img
-                              src={index % 2 === 0 ?case_good  :case_good_dark }
+                              src={index % 2 === 0 ? case_good : case_good_dark}
                               className="our-services-new__item-case-bullits-item-img"
                               alt=""
                             />
                             <p className="our-services-new__item-case-bullits-item-text">
-                              {bullit[0]+ " " } 
+                              {bullit[0] + ' '}
                             </p>
                             <p className="our-services-new__item-case-bullits-item-percents">
                               {bullit[1]}
@@ -267,9 +273,12 @@ export default function Automatization() {
                       </p>
                       <div className="our-services-new__item-case-solution-description">
                         {service.right.solution.map((solution, index) => (
-                          <p className="our-services-new__item-case-solution-description-wrapper" key={index}>
+                          <p
+                            className="our-services-new__item-case-solution-description-wrapper"
+                            key={index}
+                          >
                             <span className="our-services-new__item-case-solution-description-item-b">
-                              {solution[0]+ " "}
+                              {solution[0] + ' '}
                             </span>
                             <span className="our-services-new__item-case-solution-description-item-p">
                               {solution[1]}
@@ -303,14 +312,14 @@ export default function Automatization() {
       <div className="why-auto">
         <div className="why-auto__left">
           <img
-            src={currentInfo["why-need-img"]}
+            src={currentInfo['why-need-img']}
             className="why-auto__img"
             alt=""
           />
-          <p className="why-auto__title">{currentInfo["why-need"]}</p>
+          <p className="why-auto__title">{currentInfo['why-need']}</p>
         </div>
         <div className="why-auto__wrapper">
-          {currentInfo["why-need-wrapper"].map((item, index) => (
+          {currentInfo['why-need-wrapper'].map((item, index) => (
             <div className="why-auto__item" key={index}>
               <p className="why-auto__text">
                 <span className="why-auto__item-title">{item.title} </span>
@@ -335,7 +344,7 @@ export default function Automatization() {
         <p className="why-us__title">Почему выбирают нас?</p>
         <div className="why-us__content">
           <div className="why-us__wrapper">
-            {currentInfo["why-us-wrapper"].map((item, index) => (
+            {currentInfo['why-us-wrapper'].map((item, index) => (
               <div className="why-us__item" key={index}>
                 <p className="why-us__item-title">{item.title}</p>
                 <p className="why-us__description">{item.description}</p>
@@ -343,7 +352,7 @@ export default function Automatization() {
               </div>
             ))}
           </div>
-          <img src={currentInfo["why-us-img"]} className="why-us__img" alt="" />
+          <img src={currentInfo['why-us-img']} className="why-us__img" alt="" />
         </div>
       </div>
     </div>
