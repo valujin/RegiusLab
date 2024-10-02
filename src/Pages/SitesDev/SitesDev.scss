@@ -70,7 +70,6 @@ p {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin: 50px 0;
   font-size: 20px;
   transition: 0.3s;
   position: relative;
@@ -338,7 +337,7 @@ p {
   scroll-behavior: auto !important;
 }
 .service-button {
-  margin: 70px auto;
+  margin: auto;
 }
 .role-new__title {
   color: var(--white-75, rgba(255, 255, 255, 0.75));
@@ -1233,8 +1232,13 @@ p {
 
   .role-new {
     width: 80%;
+    gap: 20px;
   }
-
+  .why-auto {
+    width: 80%;
+    padding: 100px 0;
+    margin: 0 auto;
+  }
   .role-new__wrapper {
     gap: 30px;
   }
@@ -1299,11 +1303,6 @@ p {
 
   .why-auto__item {
     padding: 20px 30px;
-  }
-
-  .why-auto {
-    width: 80%;
-    margin: 100px auto;
   }
 
   .why-us {
@@ -1437,16 +1436,8 @@ p {
     font-size: 20px;
   }
 
-  .flare-button {
-    margin: 20px;
-  }
-
   .service-new__main-button {
     margin: 20px;
-  }
-
-  .role-new__button {
-    margin: 50px auto 0 auto !important;
   }
 
   .service-new__main-button {
@@ -1603,7 +1594,6 @@ p {
     padding: 15px 30px;
   }
   .role__wrapper {
-    margin: auto auto 50px auto;
   }
   .our-services-new__item-wrapper {
     width: 280px;
@@ -1722,10 +1712,6 @@ p {
 
   .our-services-new__item-content-title {
     font-size: 16px;
-  }
-
-  .our-services-new {
-    padding: 0;
   }
 }
 
@@ -1863,7 +1849,9 @@ p {
       rgba(0, 0, 0, 0.35) 100%
     );
   }
-
+  .our-services {
+    padding: 50px 0;
+  }
   .role-new__wrapper {
     grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     width: 70%;
@@ -2093,7 +2081,7 @@ p {
   }
 
   .why-auto {
-    padding: 0 20px;
+    padding: 50px 20px;
     width: 100%;
     grid-template-columns: auto;
     // overflow: visible;
@@ -2172,7 +2160,6 @@ p {
   }
 
   .flare-button {
-    margin: 20px;
     width: auto;
     padding: 10px 30px;
   }

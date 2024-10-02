@@ -243,13 +243,13 @@ p {
   flex-direction: column;
   align-items: center;
   margin: auto;
+  gap: 50px;
 }
 .role__top {
   display: flex;
   align-items: start;
   justify-content: space-between;
   gap: 50px;
-  margin: 0 0 40px 0;
 }
 .role-new__button {
   display: flex;
@@ -312,7 +312,6 @@ p {
   display: grid;
   // margin: 100px 0 0 0;
   gap: 60px;
-  margin: 0 auto 100px auto;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
 }
 
@@ -344,8 +343,8 @@ p {
 }
 
 .our-services {
+  padding: 100px 0 50px 0;
   width: 100%;
-
 }
 
 .our-services__title {
@@ -763,9 +762,7 @@ p {
   .role-new__button {
     font-size: 20px;
   }
-  .flare-button {
-    margin: 20px auto;
-  }
+
   .service__main-button {
     margin: 20px;
   }
@@ -872,7 +869,7 @@ p {
   .role-new__button {
     font-size: 16px;
     padding: 15px 30px;
-}
+  }
 }
 
 @media (max-width: 1024px) {
@@ -1063,8 +1060,14 @@ p {
   .theory__title {
     margin: 0 0 10px 0;
   }
+  .role {
+    gap: 20px;
+    padding: 50px 0;
+  }
+  .role__top {
+    margin: 0;
+  }
   .role__title {
-    margin: 0 0 30px 0;
   }
   .role__top {
     gap: 20px;
@@ -1171,7 +1174,6 @@ p {
   }
 
   .flare-button {
-    margin: 20px;
     width: auto;
     padding: 10px 30px;
   }

@@ -64,13 +64,12 @@ p {
   border: 2px solid var(--Yelow, #af7b20);
   background: var(--Black, #000);
   color: var(--White, #fff);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   text-decoration: none;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin: 50px 0;
   font-size: 20px;
   transition: 0.3s;
   position: relative;
@@ -79,7 +78,7 @@ p {
 }
 
 .flare-button:after {
-  content: "";
+  content: '';
   display: block;
   width: 20px;
   height: 200px;
@@ -118,7 +117,7 @@ p {
 
 .service-new__main-id {
   color: var(--Yelow, #af7b20);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: 600;
@@ -128,7 +127,7 @@ p {
 
 .service-new__main-title {
   color: var(--White, #fff);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 64px;
   max-width: 837px;
   font-style: normal;
@@ -140,7 +139,7 @@ p {
 
 .service-new__main-description {
   color: #b3b3b3;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   max-width: 773px;
   font-size: 20px;
   font-style: normal;
@@ -166,7 +165,7 @@ p {
   padding: 18px 108px 21px 25px;
   width: fit-content;
   color: var(--White, #fff);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -194,7 +193,7 @@ p {
   padding: 20px 30px 20px 20px;
   text-align: center;
   color: var(--White, #fff);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
@@ -248,7 +247,7 @@ p {
 
 .theory-new__title {
   color: var(--white-75, rgba(255, 255, 255, 0.75));
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 
   font-size: 40px;
   font-style: normal;
@@ -273,7 +272,7 @@ p {
 
 .theory-new__item {
   color: var(--White, #fff);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -314,7 +313,7 @@ p {
   border: 2px solid var(--Yelow, #af7b20);
   background: var(--Black, #000);
   color: var(--White, #fff);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   text-decoration: none;
   font-style: normal;
@@ -335,7 +334,7 @@ p {
 
 .role-new__title {
   color: var(--white-75, rgba(255, 255, 255, 0.75));
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
@@ -351,7 +350,7 @@ p {
 
 .role-new__definition-text {
   color: var(--White, #fff);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -381,7 +380,7 @@ p {
 .role-new__item-text {
   color: var(--White, #fff);
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -398,13 +397,13 @@ p {
 
 .our-services-new {
   width: 100%;
- 
+
   padding: 50px 0 0100px 0;
 }
 
 .our-services-new__title {
   color: var(--white-75, rgba(255, 255, 255, 0.75));
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 40px;
   text-align: center;
   font-style: normal;
@@ -462,7 +461,7 @@ p {
 
 .our-services-new__item-content-num {
   color: var(--white-75, rgba(255, 255, 255, 0.75));
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 128px;
   font-style: normal;
   font-weight: 600;
@@ -479,7 +478,7 @@ p {
 
 .our-services-new__item-content-title {
   color: var(--White, #fff);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 26px;
   font-style: normal;
   font-weight: 700;
@@ -496,7 +495,7 @@ p {
 
 .our-services-new__item-content-description {
   color: var(--White, #fff);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -868,7 +867,7 @@ p {
   position: absolute;
   justify-self: center;
   color: var(--white-75, rgba(255, 255, 255, 0.75));
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 40px;
   width: fit-content;
   display: block;
@@ -901,7 +900,7 @@ p {
 
 .why-auto__item-title {
   color: var(--White, #fff);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 26px;
   font-style: normal;
   font-weight: 500;
@@ -911,7 +910,7 @@ p {
 
 .why-auto__description {
   color: var(--White, #fff);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -929,7 +928,7 @@ p {
 .why-us__title {
   color: var(--white-75, rgba(255, 255, 255, 0.75));
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 600;
@@ -964,7 +963,7 @@ p {
 
 .why-us__item-title {
   color: var(--White, #fff);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 26px;
   font-style: normal;
   font-weight: 600;
@@ -974,7 +973,7 @@ p {
 
 .why-us__description {
   color: var(--White, #fff);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -999,7 +998,7 @@ p {
 
 .when-new__title {
   color: #bfbfbf;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 
   font-size: 40px;
   font-style: normal;
@@ -1031,7 +1030,7 @@ p {
 
 .when-new__item-title {
   color: var(--White, #fff);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
@@ -1040,7 +1039,7 @@ p {
 
 .when-new__text-item {
   color: var(--White, #fff);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
@@ -1113,7 +1112,7 @@ p {
 
 .our-services-new__item-case-bullits-item-text {
   color: var(--White, #fff);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 
   font-size: 11px;
   font-style: normal;
@@ -1122,7 +1121,7 @@ p {
 
 .our-services-new__item-case-bullits-item-percents {
   color: #16154d;
-  font-family: "Montserrat bold", sans-serif;
+  font-family: 'Montserrat bold', sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 900;
@@ -1138,7 +1137,7 @@ p {
 
   color: var(--White, #fff);
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 
   font-size: 16px;
   font-style: normal;
@@ -1158,7 +1157,7 @@ p {
 .our-services-new__item-case-situation-title,
 .our-services-new__item-case-solution-title {
   color: var(--White, #fff);
-  font-family: "Montserrat bold", sans-serif;
+  font-family: 'Montserrat bold', sans-serif;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -1168,7 +1167,7 @@ p {
 
 .our-services-new__item-case-situation-description {
   color: var(--White, #fff);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -1176,7 +1175,7 @@ p {
 }
 .our-services-new__item-case-solution-description-item-b {
   color: var(--White, #fff);
-  font-family: "Montserrat bold", sans-serif;
+  font-family: 'Montserrat bold', sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 900;
@@ -1185,7 +1184,7 @@ p {
 
 .our-services-new__item-case-solution-description-item-p {
   color: var(--White, #fff);
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 
   font-size: 14px;
   font-style: normal;
@@ -1325,14 +1324,14 @@ p {
     // display: grid;
     // grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 5px 20px;
-width: 100%;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content: center;
   }
-  .our-services-new__item-wrapper{
+  .our-services-new__item-wrapper {
     width: 330px;
   }
   // .our-services-new__item-wrapper:last-child {
@@ -1416,16 +1415,8 @@ width: 100%;
     font-size: 20px;
   }
 
-  .flare-button {
-    margin: 20px ;
-  }
-
   .service-new__main-button {
     margin: 20px;
-  }
-
-  .role-new__button {
-    margin: 50px auto 0 auto !important;
   }
 
   .service-new__main-button {
@@ -1571,24 +1562,25 @@ width: 100%;
   }
 }
 @media (max-width: 1200px) {
-  .our-services{
+  .our-services {
     padding: 100px 0;
   }
   .flare-button {
     font-size: 16px;
     padding: 15px 30px;
-}
-.role__wrapper{
-  margin: auto auto 50px auto;
-}
+  }
+  .role__wrapper {
+  }
   .our-services-new__item-wrapper {
     width: 280px;
-}
-  .our-services-new__item-case-situation-description,.our-services-new__item-case-solution-description-item-p,.our-services-new__item-case-solution-description-item-b{
+  }
+  .our-services-new__item-case-situation-description,
+  .our-services-new__item-case-solution-description-item-p,
+  .our-services-new__item-case-solution-description-item-b {
     font-size: 11px;
     line-height: normal;
   }
-  .our-services-new__item-case-solution-description-wrapper{
+  .our-services-new__item-case-solution-description-wrapper {
     line-height: 11px;
   }
   .service-new__main {
@@ -1697,14 +1689,10 @@ width: 100%;
   .our-services-new__item-content-title {
     font-size: 16px;
   }
-
-  .our-services-new {
-    padding: 0;
-  }
 }
 
 @media (max-width: 1024px) {
-  .our-services-new__item-content-lightning-wrapper{
+  .our-services-new__item-content-lightning-wrapper {
     width: 80%;
     margin: auto;
     display: grid;
@@ -1961,13 +1949,14 @@ width: 100%;
   .our-services-new__item-case {
     border: 5px solid #af7b20;
   }
-  .our-services-new__item-pc{
+  .our-services-new__item-pc {
     display: none;
   }
   .role-new__wrapper {
     margin: 0 auto 0px auto;
   }
-  .our-services-new__item-case-situation-title, .our-services-new__item-case-solution-title{
+  .our-services-new__item-case-situation-title,
+  .our-services-new__item-case-solution-title {
     font-size: 18px;
     line-height: normal;
   }
@@ -2141,7 +2130,6 @@ width: 100%;
   }
 
   .flare-button {
-    margin: 20px;
     width: auto;
     padding: 10px 30px;
   }
