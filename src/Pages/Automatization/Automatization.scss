@@ -289,6 +289,7 @@ p {
   flex-direction: column;
   align-items: center;
   margin: auto;
+  gap: 50px;
 }
 
 .role-new__top {
@@ -296,7 +297,6 @@ p {
   align-items: start;
   justify-content: space-between;
   gap: 50px;
-  margin: 0 0 40px 0;
 }
 
 .role-new__button {
@@ -1019,7 +1019,7 @@ p {
 .when-new__item {
   padding: 40px;
   border-radius: 40px;
-  border: 2px solid #af7b20;
+  // border: 2px solid #af7b20;
 }
 .when-new__item-top {
   display: flex;
