@@ -874,7 +874,7 @@ p {
   position: absolute;
   justify-self: center;
   color: var(--white-75, rgba(255, 255, 255, 0.75));
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat bold', sans-serif;
   font-size: 40px;
   width: fit-content;
   display: block;
@@ -883,7 +883,6 @@ p {
   line-height: normal;
   text-transform: uppercase;
   left: 50px;
-  text-align: center;
 }
 
 .why-auto__wrapper {

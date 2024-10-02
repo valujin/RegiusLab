@@ -159,9 +159,7 @@ export default function SitesDev() {
         </div>
 
         <div className="when-new">
-          <p className="when-new__title title">
-            Когда пора внедрять автоматизацию бизнеса?
-          </p>
+          <p className="when-new__title title">{currentInfo['when-title']}</p>
           <div className="when-new__wrapper">
             {currentInfo.when.map((when, index) => (
               <div className="when-new__item" key={index}>

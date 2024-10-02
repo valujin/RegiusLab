@@ -65,7 +65,7 @@
         "description": "Прозрачность и безопасность данных укрепляют доверие клиентов к вашему бизнесу."
       },
       {
-        "title": "Сократить операционные расходы: :",
+        "title": "Сократить операционные расходы: ",
         "description": "Устранение посредников и автоматизация процессов снижают затраты на выполнение операций."
       },
       {
@@ -205,7 +205,7 @@
         ],
         "right": {
           "imgPC": "./auto-service-PC1.png",
-          "imgPhone": "./site-PHONE1.png",
+          "imgPhone": "./auto-service-phone1.png",
           "bullits": [
             ["Рост продаж на ", "25%"],
             ["Увеличение скорости  обработки заказов на", "50%"],
@@ -243,7 +243,7 @@
         ],
         "right": {
           "imgPC": "./auto-service-PC2.png",
-          "imgPhone": "./site-PHONE2.png",
+          "imgPhone": "./auto-service-phone2.png",
           "bullits": [
             ["Ускорение составления документов на", "60%"],
             ["Снижение ошибок в документах на", "80%"],
@@ -281,7 +281,7 @@
         ],
         "right": {
           "imgPC": "./auto-service-PC3.png",
-          "imgPhone": "./site-PHONE3.png",
+          "imgPhone": "./auto-service-phone3.png",
           "bullits": [
             ["Уменьшение дефектов на ", "35%"],
             ["Сокращение времени выполнения операций на", "40%"],
@@ -319,7 +319,7 @@
         ],
         "right": {
           "imgPC": "./auto-service-PC4.png",
-          "imgPhone": "./site-PHONE4.png",
+          "imgPhone": "./auto-service-phone4.png",
           "bullits": [
             ["Увеличение повторных покупок на ", "30%"],
             ["Увеличение общего объема продаж на", "20%"],
@@ -581,7 +581,7 @@
   "SitesDev": {
     "id": 5,
     "href": "/sites-dev",
-    "main-back-img": "./automatization-main-back.png",
+    "main-back-img": "./magento-back.png",
     "main-title": "Разработка сайтов",
     "main-description": "— Создайте сайт, который работает на вас! Профессиональная веб-разработка для максимальной эффективности вашего бизнеса.",
     "main-bullits": [
@@ -613,6 +613,7 @@
         "role-item-title": "Укрепление бренда - профессиональный имидж компании"
       }
     ],
+    "when-title": "Когда пора внедрять разработку сайтов?",
     "when": [
       {
         "img": "./when-site1.svg",
@@ -686,7 +687,7 @@
         ],
         "right": {
           "imgPC": "./site-PC1.png",
-          "imgPhone": "./auto-service-phone1.png",
+          "imgPhone": "./site-PHONE1.png",
           "bullits": [
             ["Увеличение посещаемости сайта на  ", "50%"],
             ["Рост числа заявок на", "35%"],
@@ -727,7 +728,7 @@
         ],
         "right": {
           "imgPC": "./site-PC2.png",
-          "imgPhone": "./auto-service-phone2.png",
+          "imgPhone": "./site-PHONE2.png",
           "bullits": [
             ["Увеличение записей на услуги косметологии на", "40%"],
             ["Увеличение общего объема продаж на", "25%"],
@@ -762,7 +763,7 @@
         ],
         "right": {
           "imgPC": "./site-PC3.png",
-          "imgPhone": "./auto-service-phone3.png",
+          "imgPhone": "./site-PHONE3.png",
           "bullits": [
             ["Рост числа заявок на услуги на  ", "35%"],
             ["Увеличение времени пребывания пользователей на сайте на", "50%"],
@@ -800,7 +801,7 @@
         ],
         "right": {
           "imgPC": "./site-PC4.png",
-          "imgPhone": "./auto-service-phone4.png",
+          "imgPhone": "./site-PHONE4.png",
           "bullits": [
             ["Увеличение числа успешных бронирований на ", "45%"],
             ["Сокращение времени обработки заявок на", "50%"],
@@ -826,7 +827,7 @@
       }
     ],
     "why-need": "Почему стоит внедрять Разработку сайтов в бизнес?",
-    "why-need-img": "./why-auto.png",
+    "why-need-img": "./why-1c.png",
     "why-need-wrapper": [
       {
         "title": "Повысить доверие клиентов: ",
@@ -845,7 +846,7 @@
         "description": "Использование передовых веб-технологий и актуального дизайна позволяет вашему бизнесу оставаться на шаг впереди конкурентов."
       }
     ],
-    "why-us-img": "./why-us.jpg",
+    "why-us-img": "./why-us4.png",
     "why-us-wrapper": [
       {
         "title": "Опыт и профессионализм",
