@@ -148,6 +148,34 @@ export default function ServiceTemplate({ currentInfo }) {
         </button>
       </div>
 
+
+      {console.log(currentInfo.when)}
+      {currentInfo.when !== undefined ? (
+      
+      
+    <div className="when-new">
+          <p className="when-new__title title">{currentInfo["when-title"]}</p>
+          <div className="when-new__wrapper">
+            {currentInfo.when.map((when, index) => (
+              <div className="when-new__item" key={index}>
+                <div className="when-new__item-top">
+                  <img src={when.img} className="when-new__img" alt="" />
+                  <p className="when-new__item-title">{when.title}</p>
+                </div>
+
+                <div className="when-new__text">
+                  {when.description.map((text, index) => (
+                    <span className="when-new__text-item" key={index}>
+                      {text}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>) : (<></>)
+}
+    
       <div className="our-services">
         <p className="our-services__title">Наши услуги</p>
         <div className="our-services__wrapper">
