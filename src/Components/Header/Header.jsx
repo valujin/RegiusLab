@@ -74,6 +74,15 @@ export default function Header({ bodyScroll, setBodyScroll }) {
                 Контакты
               </a>
             </div>
+            <div className="header-mobile__item">
+              <a
+                href="/chat-Rgpt"
+                onClick={() => setBurgerStatus(false)}
+                className="header-mobile__link"
+              >
+                Чат c AI
+              </a>
+            </div>
           </div>
 
           <a
@@ -117,6 +126,9 @@ export default function Header({ bodyScroll, setBodyScroll }) {
           </a>
           <a href="/#footer" className="header__link">
             Контакты
+          </a>
+          <a href="/chat-Rgpt" className="header__link">
+          Чат c AI
           </a>
         </div>
       </div>
