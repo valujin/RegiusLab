@@ -1,5 +1,5 @@
 .gpt-main {
-  max-width: 90%;
+  max-width: 80%;
   margin: auto;
   padding: 100px 0;
   font-family: "montserrat", sans-serif;
@@ -66,26 +66,7 @@
   }
 }
 
-.chat {
-  width: 90%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-}
-
 .chat__messages {
-  padding: 100px 80px;
-  overflow-y: auto;
-  width: 100%;
-
-  border-radius: 15px;
-  border: 1px solid var(--Yelow, #af7b20);
-  background: #17140d;
-  box-shadow: 0px 0px 30px 0px #997331;
-  gap: 50px;
-  display: flex;
-  flex-direction: column;
-  max-height: 800px;
 }
 
 .chat__message {
@@ -161,7 +142,7 @@
   min-width: 83px;
   border: none;
   &:hover {
-    scale: 1.1;
+    scale: 1.05;
   }
 }
 
@@ -189,7 +170,7 @@
 
   color: #ffffff;
   font-family: "montserrat", sans-serif;
-  font-size: 36px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -230,90 +211,92 @@
   }
 }
 .chat {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; /* Чтобы чат занимал доступное пространство */
-  }
-  
-  .chat__messages {
-    padding: 20px;
-    overflow-y: auto;
-    width: 100%;
-    flex-grow: 1; /* Чтобы сообщения растягивались */
-    max-height: 500px; /* Устанавливай нужную высоту */
-  }
-  
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Чтобы чат занимал доступное пространство */
+}
+.chat__messages-container{
+  padding: 20px;
 
-  /* Анимация вращения для chat__reload */
+  width: 100%;
+  flex-grow: 1; /* Чтобы сообщения растягивались */
+  max-height: 500px; /* Устанавливай нужную высоту */
+overflow: hidden;
+  padding: 100px 80px;
+  overflow-y: auto;
+  width: 100%;
+
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  max-height: 800px;
+}
+.chat__messages {
+  border-radius: 15px;
+  border: 1px solid var(--Yelow, #af7b20);
+  background: #17140d;
+  box-shadow: 0px 0px 30px 0px #997331;
+
+}
+
+/* Анимация вращения для chat__reload */
 @keyframes rotate {
-    0%{
-        transform: rotate(0deg);
-scale: 1;
-    }
-    50%{
-        transform: rotate(-180deg);
-        scale: 1.4;
-    }
-    100%{
-        transform: rotate(-360deg);
-        scale: 1;
-
-    }
-    // from {
-    // }
-    // to {
-    //   transform: rotate(-360deg);
-    // }
+  0% {
+    transform: rotate(0deg);
+    scale: 1.05;
   }
-  
-  .chat__reload.rotate {
-    animation: rotate 1s linear;
+  50% {
+    transform: rotate(-180deg);
+    scale: 1.2;
   }
-  
-  /* Анимация полета для chat__button */
-  @keyframes fly {
-
-
-    0%{
-      transform: translateY(0) scale(1);
-    }
-    10%{
-        transform: translateY(-10px) scale(0.8) rotate(10deg);
-
-
-    }
-    30%{
-        transform: translateY(-5px) scale(0.7) rotate(0deg);
-
-    }
-    50%{
-        transform: translateY(-10px) scale(0.6)rotate(10deg);
-
-    }
-
-   
-
-
-    100%{
-
-      transform: translateY(0) scale(1) rotate(0deg);
-
-    }
-
-    // from {
-    //   transform: translateY(0) scale(1);
-    // }
-    // to {
-    //   transform: translateY(-20px) scale(0.8);
-    // }
+  100% {
+    transform: rotate(-360deg);
+    scale: 1.05;
   }
-  
-  .chat__button.fly {
-    animation: fly 2s linear;
+  // from {
+  // }
+  // to {
+  //   transform: rotate(-360deg);
+  // }
+}
+
+.chat__reload.rotate {
+  animation: rotate 1s linear;
+}
+
+/* Анимация полета для chat__button */
+@keyframes fly {
+  0% {
+    transform: translateY(0) scale(1);
   }
-  
+  10% {
+    transform: translateY(-10px) scale(0.8) rotate(10deg);
+  }
+  30% {
+    transform: translateY(-5px) scale(0.7) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) scale(0.6) rotate(10deg);
+  }
+
+  100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+
+  // from {
+  //   transform: translateY(0) scale(1);
+  // }
+  // to {
+  //   transform: translateY(-20px) scale(0.8);
+  // }
+}
+
+.chat__button.fly {
+  animation: fly 2s linear;
+}
+
 @media (max-width: 1600px) {
   .gpt-main__title {
     font-size: 68px;
@@ -322,8 +305,43 @@ scale: 1;
     gap: 30px;
   }
   .gpt-main__button {
-    font-size: 28px !important;
+    font-size: 22px !important;
   }
+
+  .chat__message.user,
+  .chat__message.gpt {
+    font-size: 16px;
+    line-height: normal;
+  }
+  .chat__message {
+    padding: 15px 30px;
+  }
+  .chat__message-time {
+    font-size: 13px;
+    line-height: normal;
+    right: -8px;
+  }
+  .chat__message.gpt {
+    border-radius: 30.415px 30.415px 30.415px 0;
+  }
+
+  .chat__message.user {
+    border-radius: 30.415px 30.415px 0 30.415px;
+  }
+  .chat__input {
+    font-size: 18px;
+    line-height: normal;
+  }
+  .chat__messages{
+    padding: 50px 30px;
+  }
+  .gpt-main__description{
+    font-size: 16px;
+  }
+  .chat__input{
+    min-height: 100px;
+  }
+
 }
 @media (max-width: 1024px) {
   .gpt-main__title {
@@ -344,7 +362,7 @@ scale: 1;
 
 @media (max-width: 768px) {
   .chat {
-    padding: 50px 0 0 0 ;
+    padding: 50px 0 0 0;
   }
   .chat__messages {
     padding: 20px;
@@ -482,10 +500,10 @@ scale: 1;
   .chat__message.user {
     border-radius: 14.415px 14.415px 0 14.415px;
   }
-  .chat__input{
+  .chat__input {
     min-height: 80px;
   }
-  .chat__messages{
+  .chat__messages {
     max-height: 400px;
   }
 }

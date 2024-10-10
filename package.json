@@ -18,12 +18,16 @@
     "nav-link": "^1.1.4",
     "pdfjs-dist": "^4.6.82",
     "react": "^18.3.1",
+    "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^18.3.1",
     "react-google-recaptcha": "^3.1.0",
     "react-i18next": "^15.0.1",
     "react-input-mask": "^2.0.4",
     "react-router-dom": "^6.26.1",
     "react-spring": "^9.7.4",
+    "resize-observer-polyfill": "^1.5.1",
+    "simplebar": "^6.2.7",
+    "simplebar-react": "^3.2.6",
     "swiper": "^11.1.14"
   },
   "devDependencies": {

@@ -41,9 +41,8 @@ export default function ChatGPT() {
       setMessages((prevMessages) => [...prevMessages, userMessage, gptMessage]);
       setInput("");
 
-      // Анимация полёта
       setIsFlying(true);
-      setTimeout(() => setIsFlying(false), 2000); // Сброс анимации через 0.5 сек
+      setTimeout(() => setIsFlying(false), 2000);
     }
     scrollToBottom();
   };
@@ -55,9 +54,8 @@ export default function ChatGPT() {
     };
     setMessages([initialMessage]);
 
-    // Анимация вращения
     setIsRotating(true);
-    setTimeout(() => setIsRotating(false), 1000); // Сброс анимации через 1 сек
+    setTimeout(() => setIsRotating(false), 1000); 
   };
 
   const handleKeyDown = (e) => {
@@ -97,6 +95,7 @@ export default function ChatGPT() {
 
       <div id='gpt' className="chat">
         <div className="chat__messages" ref={chatMessagesRef}>
+        <div className="chat__messages-container">
           {messages.map((msg, index) => (
             <div key={index} className={`chat__message ${msg.sender}`}>
               <div className="chat__message-container">
@@ -106,7 +105,7 @@ export default function ChatGPT() {
             </div>
           ))}
         </div>
-
+</div>
         <div className="chat__input-container">
           <button onClick={chatReset} className={`chat__reload ${isRotating ? 'rotate' : ''}`}>
             <img src={rotate} className="chat__reload-img" alt="" />
