@@ -9,7 +9,7 @@ export default function ChatGPT() {
   const [input, setInput] = useState("");
   const [isFlying, setIsFlying] = useState(false);
   const [isRotating, setIsRotating] = useState(false);
-  const messagesEndRef = useRef(null);
+  const [isLoading, setIsLoading] = useState(false); // Новое состояние для анимации загрузки
   const chatMessagesRef = useRef(null);
 
   function getDate() {
@@ -28,29 +28,69 @@ export default function ChatGPT() {
   useEffect(() => {
     const initialMessage = {
       sender: "gpt",
-      text: "Привет, я твой виртуальный помощник. Можешь спросить у меня ответы на интересующиеся вопросы.",
+      text: "Привет! Я чат-бот с нейросетью ChatGPT и вы можете общаться со мной без ограничения запросов и платных подписок. Напишите ваш первый вопрос.",
     };
     setMessages([initialMessage]);
   }, []);
 
-  const sendMessage = () => {
+  const sendMessage = async () => {
     if (input.trim()) {
       const userMessage = { sender: "user", text: input };
-      const gptMessage = { sender: "gpt", text: "Извините, я еще в разработке🫤" };
+      const newMessages = [
+        { role: "system", content: "Вы - интеллектуальный ассистент. Отвечайте кратко и по существу." },
+        ...messages.map(msg => ({ role: msg.sender === "gpt" ? "assistant" : "user", content: msg.text })),
+        { role: "user", content: input },
+      ];
 
-      setMessages((prevMessages) => [...prevMessages, userMessage, gptMessage]);
+      setMessages((prevMessages) => [...prevMessages, userMessage]);
       setInput("");
-
       setIsFlying(true);
+      setIsLoading(true); // Устанавливаем состояние загрузки
       setTimeout(() => setIsFlying(false), 2000);
+      scrollToBottom();
+
+      try {
+        const response = await fetch('https://rgpt.regiuslab.by/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ messages: newMessages }),
+        });
+
+        const data = await response.json();
+
+        if (data.response && data.response.length > 0) {
+          const lastAssistantResponse = data.response.find(
+            (msg) => msg.role === "assistant_response"
+          );
+
+          if (lastAssistantResponse) {
+            const gptMessage = {
+              sender: "gpt",
+              text: lastAssistantResponse.content,
+            };
+
+            setMessages((prevMessages) => [...prevMessages, gptMessage]);
+            scrollToBottom();
+          } else {
+            console.error("Ответ ассистента не найден:", data);
+          }
+        } else {
+          console.error("Некорректный формат ответа:", data);
+        }
+      } catch (error) {
+        console.error("Ошибка при отправке сообщения:", error);
+      } finally {
+        setIsLoading(false); // Сбрасываем состояние загрузки после ответа
+      }
     }
-    scrollToBottom();
   };
 
   const chatReset = () => {
     const initialMessage = {
       sender: "gpt",
-      text: "Привет, я твой виртуальный помощник. Можешь спросить у меня ответы на интересующиеся вопросы.",
+      text: "Привет! Я чат-бот с нейросетью ChatGPT и вы можете общаться со мной без ограничения запросов и платных подписок. Напишите ваш первый вопрос.",
     };
     setMessages([initialMessage]);
 
@@ -95,17 +135,24 @@ export default function ChatGPT() {
 
       <div id='gpt' className="chat">
         <div className="chat__messages" ref={chatMessagesRef}>
-        <div className="chat__messages-container">
-          {messages.map((msg, index) => (
-            <div key={index} className={`chat__message ${msg.sender}`}>
-              <div className="chat__message-container">
-                {msg.text}
-                <span className="chat__message-time">{getDate()}</span>
+          <div className="chat__messages-container">
+            {messages.map((msg, index) => (
+              <div key={index} className={`chat__message ${msg.sender}`}>
+                <div className="chat__message-container">
+                  {msg.text}
+                  <span className="chat__message-time">{getDate()}</span>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+            {isLoading && (
+              <div className="chat__message gpt">
+                <div className="chat__message-container loading">
+                  Генерация ответа...
+                </div>
+              </div>
+            )}
+          </div>
         </div>
-</div>
         <div className="chat__input-container">
           <button onClick={chatReset} className={`chat__reload ${isRotating ? 'rotate' : ''}`}>
             <img src={rotate} className="chat__reload-img" alt="" />

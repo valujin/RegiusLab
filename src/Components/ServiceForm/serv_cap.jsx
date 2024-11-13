@@ -1,6 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './ServiceForm.scss';
-import { useState, useEffect } from 'react';
 import closeCross from '../../assets/cross.png';
 
 export default function ServiceForm({
@@ -14,54 +13,89 @@ export default function ServiceForm({
   const [email, setEmail] = useState('');
   const [comment, setComment] = useState('');
   const [thanks, setThanks] = useState(false);
+  const [turnstileToken, setTurnstileToken] = useState(null);
+  const [isVerified, setIsVerified] = useState(false);
+  const captchaRef = useRef(null);
+
+
+  const TURNSTILE_SITE_KEY = '0x4AAAAAAAmbqmpfLAfHC-Xs';
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (window.turnstile && captchaRef.current) {
+        window.turnstile.render(captchaRef.current, {
+          sitekey: TURNSTILE_SITE_KEY,
+          callback: (token) => {
+            setTurnstileToken(token);
+            setIsVerified(true); 
+            console.log(turnstileToken)
+          },
+          'error-callback': () => {
+            setTurnstileToken(null);
+            setIsVerified(false); 
+            console.log(turnstileToken)
+
+          },
+        });
+        clearInterval(intervalId); 
+        console.log(turnstileToken)
+
+      }
+    }, 500);
+    console.log(turnstileToken)
+
+    return () => clearInterval(intervalId); 
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    window.fbq('track', 'Lead');
-
+    if (!isVerified) {
+      alert('Пожалуйста, завершите проверку CAPTCHA.');
+      return;
+    }
+  
     const data = {
+      'cf-turnstile-response': turnstileToken,
       name,
       phone,
       email,
       comment,
       serviceName,
     };
-
+  
     try {
-      const response = await fetch('https://b24-lead.valuxin.workers.dev', {
-        method: 'POST',
+      console.log('Attempting to submit:', data);
+      const response = await fetch('https://turnstile.regiuslab.by/v0/captcha', {
         mode: 'no-cors',
+        method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
       });
-      console.log(JSON.stringify(data));
-      setThanks(true);
-
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
+  
+      console.log('Response Status:', response.status);
+      
+      if (response.status === 200) {
+        setThanks(true);
+        console.log('Форма успешно отправлена');
+      } else {
+        throw new Error('Проверка Turnstile не удалась');
       }
-
-      const result = await response.json();
-      console.log('Success:', result);
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Ошибка:', error);
     }
   };
-
   const handleChange = (e) => {
     const value = e.target.value;
-
     const digits = value.replace(/\D/g, '');
-
     setPhone(`+${digits}`);
   };
 
   const [countdown, setCountdown] = useState(3);
 
   useEffect(() => {
-    if (thanks === true) {
+    if (thanks) {
       const timer = setInterval(() => {
         setCountdown((prevCountdown) => {
           if (prevCountdown <= 1) {
@@ -69,7 +103,6 @@ export default function ServiceForm({
             setThanks(false);
             setModal(false);
             setIsScrollDisabled(false);
-
             return 0;
           }
           return prevCountdown - 1;
@@ -78,7 +111,7 @@ export default function ServiceForm({
 
       return () => clearInterval(timer);
     }
-  }, [thanks, setThanks, setModal]);
+  }, [thanks]);
 
   return (
     <div
@@ -90,8 +123,8 @@ export default function ServiceForm({
     >
       <div
         style={{
-          opacity: thanks === true ? '1' : '0',
-          visibility: thanks === true ? 'visible' : 'hidden',
+          opacity: thanks ? '1' : '0',
+          visibility: thanks ? 'visible' : 'hidden',
         }}
         className="consultation__thanks"
       >
@@ -104,8 +137,8 @@ export default function ServiceForm({
         onClick={(event) => event.stopPropagation()}
         className="service-form__form"
         style={{
-          opacity: thanks === false ? '1' : '0',
-          visibility: thanks === false ? 'visible' : 'hidden',
+          opacity: !thanks ? '1' : '0',
+          visibility: !thanks ? 'visible' : 'hidden',
         }}
         onSubmit={handleSubmit}
       >
@@ -179,10 +212,14 @@ export default function ServiceForm({
           </span>
         </label>
 
+        {/* Turnstile CAPTCHA */}
+        <div ref={captchaRef} className="turnstile-captcha"></div>
+
         <input
           type="submit"
           className="service-form__submit"
           value="Отправить"
+          disabled={!isVerified}
         />
       </form>
     </div>

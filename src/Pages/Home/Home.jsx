@@ -1,9 +1,9 @@
+import { useState } from 'react';
 import './Home.scss';
 import mainBack from '../../assets/main-back.png';
 import arrowDownImg from '../../assets/arrow-down-right.png';
 import arrowBlack from '../../assets/arrow-down-right-black.png';
 import '../../style/fonts/fonts.scss';
-import { useState } from 'react';
 import pegasusLeft from '../../assets/PegasusLeft.png';
 import Marquee from '../../Components/Marquee/Marquee';
 import partner1 from '../../assets/partner1.png';
@@ -217,10 +217,7 @@ export default function Home() {
                   </a>
                 </span>
               </label>
-              {/* <ReCAPTCHA
-    sitekey="6Lfrb1AqAAAAAFGoyeSuU9O_cgzV4K6C9hyBlbO4"
-    onChange={handleCaptchaVerify}
-  /> */}
+
               <input
                 type="submit"
                 className="consultation__submit"
