@@ -9,7 +9,7 @@ export default function ChatGPT() {
   const [input, setInput] = useState("");
   const [isFlying, setIsFlying] = useState(false);
   const [isRotating, setIsRotating] = useState(false);
-  const [isLoading, setIsLoading] = useState(false); // Новое состояние для анимации загрузки
+  const [isLoading, setIsLoading] = useState(false); 
   const chatMessagesRef = useRef(null);
 
   function getDate() {
@@ -45,7 +45,7 @@ export default function ChatGPT() {
       setMessages((prevMessages) => [...prevMessages, userMessage]);
       setInput("");
       setIsFlying(true);
-      setIsLoading(true); // Устанавливаем состояние загрузки
+      setIsLoading(true); 
       setTimeout(() => setIsFlying(false), 2000);
       scrollToBottom();
 
@@ -82,7 +82,7 @@ export default function ChatGPT() {
       } catch (error) {
         console.error("Ошибка при отправке сообщения:", error);
       } finally {
-        setIsLoading(false); // Сбрасываем состояние загрузки после ответа
+        setIsLoading(false); 
       }
     }
   };
