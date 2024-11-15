@@ -10,8 +10,8 @@ export default function ChatGPT() {
   const [isFlying, setIsFlying] = useState(false);
   const [isRotating, setIsRotating] = useState(false);
   const [isLoading, setIsLoading] = useState(false); 
-  const chatMessagesRef = useRef(null);
-
+  const chatEndRef = useRef(null);
+  const messagesContainerRef = useRef(null); 
   function getDate() {
     const time = new Date();
     const minutes = time.getMinutes().toString().padStart(2, "0");
@@ -19,11 +19,7 @@ export default function ChatGPT() {
     return currentTime;
   }
 
-  const scrollToBottom = () => {
-    if (chatMessagesRef.current) {
-      chatMessagesRef.current.scrollTop = chatMessagesRef.current.scrollHeight;
-    }
-  };
+
 
   useEffect(() => {
     const initialMessage = {
@@ -32,6 +28,14 @@ export default function ChatGPT() {
     };
     setMessages([initialMessage]);
   }, []);
+
+
+  useEffect(() => {
+    // Прокручиваем к последнему сообщению каждый раз, когда messages изменяются
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+    }
+  }, [messages]);
 
   const sendMessage = async () => {
     if (input.trim()) {
@@ -47,7 +51,6 @@ export default function ChatGPT() {
       setIsFlying(true);
       setIsLoading(true); 
       setTimeout(() => setIsFlying(false), 2000);
-      scrollToBottom();
 
       try {
         const response = await fetch('https://rgpt.regiuslab.by/v1/chat/completions', {
@@ -72,7 +75,6 @@ export default function ChatGPT() {
             };
 
             setMessages((prevMessages) => [...prevMessages, gptMessage]);
-            scrollToBottom();
           } else {
             console.error("Ответ ассистента не найден:", data);
           }
@@ -134,15 +136,19 @@ export default function ChatGPT() {
       </div>
 
       <div id='gpt' className="chat">
-        <div className="chat__messages" ref={chatMessagesRef}>
-          <div className="chat__messages-container">
+        <div className="chat__messages" >
+          <div className="chat__messages-container" ref={messagesContainerRef}>
             {messages.map((msg, index) => (
               <div key={index} className={`chat__message ${msg.sender}`}>
                 <div className="chat__message-container">
                   {msg.text}
                   <span className="chat__message-time">{getDate()}</span>
+             <div ref={chatEndRef} />
+
                 </div>
+                
               </div>
+              
             ))}
             {isLoading && (
               <div className="chat__message gpt">

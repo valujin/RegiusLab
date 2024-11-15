@@ -130,17 +130,29 @@
 }
 .header-mobile__link {
   font-family: 'Montserrat', sans-serif;
-  font-size: 32px;
+  font-size: 32px !important;
   font-weight: 400;
   line-height: 39.01px;
   text-align: left;
   color: #ffffff;
   text-decoration: none;
 }
+.rGPT{
+  color: #AC7A21;
+text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+-webkit-text-stroke-width: 0.5;
+-webkit-text-stroke-color: #924600;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+font-family: 'montserrat bold',sans-serif;
+line-height: normal;
+}
+
 
 @media (max-width: 1768px) {
   .header__link {
-    font-size: 20px;
+    font-size: 20px !important;
     line-height: normal;
   }
   .header__nav {
@@ -152,7 +164,7 @@
 }
 @media (max-width: 1600px) {
   .header__link {
-    font-size: 16px;
+    font-size: 16px !important;
   }
 }
 
@@ -163,12 +175,12 @@
 }
 @media (max-width: 600px) {
   .header__link {
-    font-size: 12px;
+    font-size: 12px  !important;
   }
 }
 @media (max-width: 500px) {
   .header__link {
-    font-size: 10px;
+    font-size: 10px  !important;
   }
 }
 @media (max-width: 450px) {

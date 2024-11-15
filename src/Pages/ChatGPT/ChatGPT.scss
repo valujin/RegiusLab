@@ -141,6 +141,7 @@
   font-weight: 300;
   line-height: normal;
   letter-spacing: 0.48px;
+  
 }
 
 .chat__input-container {
@@ -249,7 +250,7 @@ overflow: hidden;
   gap: 50px;
   display: flex;
   flex-direction: column;
-  max-height: 800px;
+  scroll-behavior: smooth;
 }
 
 .chat__messages {
@@ -421,9 +422,9 @@ overflow: hidden;
     font-size: 14px;
   }
   .chat__reload {
-    min-width: 50px;
-    width: 50px;
-    height: 50px;
+    min-width: 40px;
+    width: 40px;
+    height: 40px;
 
     img {
       width: 60%;
@@ -494,7 +495,7 @@ overflow: hidden;
     height: 30px;
 
     img {
-      width: 90%;
+      width: 70%;
     }
   }
   .chat__input-text {
@@ -524,5 +525,14 @@ overflow: hidden;
   }
   .chat__messages-container {
     max-height: 400px;
+  }
+  .chat__button {
+    max-width: 25px;
+  }
+  .chat__messages{
+    padding: 0;
+  }
+  .chat__messages-container{
+    gap: 20px;
   }
 }
