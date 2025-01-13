@@ -20,7 +20,35 @@ export default function Cookies() {
     setCookieVisibleState(false);
     localStorage.setItem('cookiesAccepted', 'true');
   };
-
+  const handleOnlyNecessary = () => {
+    setCookieVisibleState(false);
+    localStorage.setItem('onlyNecessary', 'true');
+    
+    // Удаляем Facebook Pixel
+    if (window.fbq) {
+      window.fbq = function () {
+        console.log('Facebook Pixel отключен');
+      };
+    }
+  
+    // Отключаем Yandex.Metrika
+    if (window.ym) {
+      window.ym = function () {
+        console.log('Yandex.Metrika отключена');
+      };
+    }
+  
+    // Убираем загруженные скрипты
+    const yandexScript = document.querySelector('script[src*="mc.yandex.ru"]');
+    if (yandexScript) yandexScript.remove();
+  
+    const facebookScript = document.querySelector('script[src*="facebook.net"]');
+    if (facebookScript) facebookScript.remove();
+  
+    // Удаляем <noscript> для метрик
+    document.querySelectorAll('noscript').forEach((el) => el.remove());
+  };
+  
   return (
     <>
       <div className={cookieVisible ? 'cookie active' : 'cookie'}>
@@ -35,9 +63,14 @@ export default function Cookies() {
           </a>
           , помогающих нам сделать его удобнее для вас
         </p>
+        <div className="cookie_wrapper_buttons">
         <button className="cookie__button" onClick={handleAccept}>
           Согласен
         </button>
+        <button className="cookie__button" onClick={handleOnlyNecessary}>
+  Только необходимые
+</button>
+</div>
       </div>
     </>
   );
