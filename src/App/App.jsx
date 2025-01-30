@@ -23,6 +23,7 @@ import OneCDev from '../Pages/OneCDev/OneCDev';
 import SitesDev from '../Pages/SitesDev/SitesDev';
 import Bitrix24 from '../Pages/Bitrix24/Bitrix24';
 import ChatGPT from '../Pages/ChatGPT/ChatGPT';
+import CyberSecurity from '../Pages/CyberSecurity/CyberSecurity';
 function App() {
   const [bodyScroll, setBodyScroll] = useState(true);
 
@@ -60,6 +61,7 @@ function App() {
             <Route path="/1c-development" element={<OneCDev />}/>
             <Route path="/sites-dev" element={<SitesDev />}/>
             <Route path="/b24" element={<Bitrix24 />}/>
+            <Route path="/cybersecurity" element={<CyberSecurity />}/>
             <Route path="/chat-Rgpt" element={<ChatGPT/>}/>
             <Route path="/noPage" element={<NoPage />}/>
             <Route path="/*" element={<Navigate to="/" />} />

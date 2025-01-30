@@ -75,3 +75,10 @@
     color: #000000;
   }
 }
+
+
+@media(max-width:768px){
+  .cookie_wrapper_buttons{
+    flex-direction: column;
+  }
+}

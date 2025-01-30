@@ -9,21 +9,11 @@ import bullit4 from '../../assets/bullit4.jpg';
 import bullit5 from '../../assets/bullit5.jpg';
 import arrowDownImg from '../../assets/arrow-down-right.png';
 import bullit6 from '../../assets/bullit6.png';
+import bullit7 from '../../assets/cybersecurity.png'
 import serviceDb from '../../data/services.json';
 import { Link } from 'react-router-dom';
 
 const services_data = [
-  {
-    title: 'Блокчейн и Web3',
-    description: [
-      ' Разработка Smart контрактов',
-      ' Создание криптобирж и криптообменников',
-      'Разработка майнинг пулов',
-      'Создание блокчейн / монет с нуля под ключ',
-    ],
-    image: bullit1,
-    link: '/blockchain&web3',
-  },
   {
     title: 'Автоматизация бизнеса',
     description: [
@@ -37,6 +27,18 @@ const services_data = [
     link: '/automatization',
   },
   {
+    title: 'Блокчейн и Web3',
+    description: [
+      ' Разработка Smart контрактов',
+      ' Создание криптобирж и криптообменников',
+      'Разработка майнинг пулов',
+      'Создание блокчейн / монет с нуля под ключ',
+    ],
+    image: bullit1,
+    link: '/blockchain&web3',
+  },
+
+  {
     title: 'Telegram боты',
     description: [
       'Информационный бот',
@@ -48,19 +50,7 @@ const services_data = [
     image: bullit3,
     link: '/telegram-bots',
   },
-  {
-    title: '1С разработка',
-    description: [
-      'Настройка логики',
-      'Оптимизация быстродействия',
-      'Разработка модулей и калькуляторов',
-      'Автоматизация интернет-торговли',
-      'Интеграция с другими информационными системами',
-    ],
-    image: bullit4,
-    link: '/1c-development',
-  },
-  {
+    {
     title: 'Разработка сайтов',
     description: [
       '    Создание корпоративных сайтов',
@@ -74,6 +64,19 @@ const services_data = [
     link: '/sites-dev',
   },
   {
+    title: '1С разработка',
+    description: [
+      'Настройка логики',
+      'Оптимизация быстродействия',
+      'Разработка модулей и калькуляторов',
+      'Автоматизация интернет-торговли',
+      'Интеграция с другими информационными системами',
+    ],
+    image: bullit4,
+    link: '/1c-development',
+  },
+
+  {
     title: 'Битрикс24',
     description: [
       'Автоматизация бизнес процессов',
@@ -83,6 +86,17 @@ const services_data = [
     ],
     image: bullit6,
     link: '/b24',
+  },
+  {
+    title: 'Обеспечение кибербезопасности',
+    description: [
+      'Облачная безопасность',
+      'Безопасность приложений ',
+      ' Защита данных',
+      'Служба обнаружения и реагирования',
+    ],
+    image: bullit7,
+    link: '/cybersecurity',
   },
 ];
 
