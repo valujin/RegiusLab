@@ -1220,26 +1220,26 @@
     "role-description": "Кибербезопасность играет важную роль в обеспечении защиты цифровых активов компаний:",
     "role-wrapper": [
       {
-        "role-item-img": "./cyrrole1.png",
+        "role-item-img": "./role22.png",
         "role-item-title": "Защита конфиденциальных данных"
       },
       {
-        "role-item-img": "./cybere2.png",
+        "role-item-img": "./role23.png",
         "role-item-title": "Минимизация рисков утечек"
       },
       {
-        "role-item-img": "./role73.png",
+        "role-item-img": "./role3.png",
         "role-item-title": "Соблюдение нормативных стандартов"
       },
       {
-        "role-item-img": "./role74.png",
+        "role-item-img": "./cyberrrole3.png",
         "role-item-title": "Обнаружение и предотвращение угроз"
       }
     ],
     "when-title": "Когда необходимо внедрять кибербезопасность?",
     "when": [
       {
-        "img": "./when-cyber1.svg",
+        "img": "./when-tg.svg",
         "title": "Обработка конфиденциальных данных",
         "description": [
           "Если",
@@ -1248,7 +1248,7 @@
         ]
       },
       {
-        "img": "./when-cyber2.svg",
+        "img": "./when-block4.svg",
         "title": "Рост количества кибератак",
         "description": [
           "Если",
@@ -1257,7 +1257,7 @@
         ]
       },
       {
-        "img": "./when-cyber3.svg",
+        "img": "./when-block6.svg",
         "title": "Сложности с управлением доступом",
         "description": [
           "Если",
@@ -1266,7 +1266,7 @@
         ]
       },
       {
-        "img": "./when-cyber4.svg",
+        "img": "./when6.svg",
         "title": "Несоответствие требованиям законодательства",
         "description": [
           "Если",
@@ -1275,7 +1275,7 @@
         ]
       },
       {
-        "img": "./when-cyber5.svg",
+        "img": "./when-tg4.svg",
         "title": "Использование облачных технологий",
         "description": [
           "Если",
@@ -1284,7 +1284,7 @@
         ]
       },
       {
-        "img": "./when-cyber6.svg",
+        "img": "./when-1c5.svg",
         "title": "Отсутствие плана реагирования на инциденты",
         "description": [
           "Если",

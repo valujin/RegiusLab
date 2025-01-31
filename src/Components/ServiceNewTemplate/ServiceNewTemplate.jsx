@@ -39,6 +39,7 @@ export default function ServiceNewTemplate({currentInfo}) {
     serviceDb['1Cdev'],
     serviceDb.SitesDev,
     serviceDb.Bitrix24,
+    serviceDb.cybersecurity,
   ];
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'instant' });
