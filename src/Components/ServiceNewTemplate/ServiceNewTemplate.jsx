@@ -164,6 +164,8 @@ export default function ServiceNewTemplate({currentInfo}) {
           <div className="when-new__wrapper">
             {currentInfo.when.map((when, index) => (
               <div className="when-new__item" key={index}>
+                <div className="new__item_container">
+
                 <div className="when-new__item-top">
                   <img src={when.img} className="when-new__img" alt="" />
                   <p className="when-new__item-title">{when.title}</p>
@@ -176,6 +178,8 @@ export default function ServiceNewTemplate({currentInfo}) {
                     </span>
                   ))}
                 </div>
+                </div>
+
               </div>
             ))}
           </div>
