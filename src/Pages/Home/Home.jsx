@@ -229,7 +229,7 @@ export default function Home() {
         </div>
       </div>
 
-      <SwiperTestimonails />
+      {/* <SwiperTestimonails /> */}
 
 
       <p className="title clients_title services__title">
