@@ -1,32 +1,32 @@
-import { useState } from 'react';
-import './Home.scss';
-import mainBack from '../../assets/main-back.png';
-import arrowDownImg from '../../assets/arrow-down-right.png';
-import arrowBlack from '../../assets/arrow-down-right-black.png';
-import '../../style/fonts/fonts.scss';
-import pegasusLeft from '../../assets/PegasusLeft.png';
-import Marquee from '../../Components/Marquee/Marquee';
-import partner1 from '../../assets/partner1.png';
-import partner2 from '../../assets/partner2.png';
-import partner3 from '../../assets/partner3.png';
-import partner4 from '../../assets/partner4.png';
-import partner6 from '../../assets/partner6.png';
-import partner7 from '../../assets/partner7.png';
-import partner8 from '../../assets/partner8.png';
+import { useState } from "react";
+import "./Home.scss";
+import mainBack from "../../assets/main-back.png";
+import arrowDownImg from "../../assets/arrow-down-right.png";
+import arrowBlack from "../../assets/arrow-down-right-black.png";
+import "../../style/fonts/fonts.scss";
+import pegasusLeft from "../../assets/PegasusLeft.png";
+import Marquee from "../../Components/Marquee/Marquee";
+import partner1 from "../../assets/partner1.png";
+import partner2 from "../../assets/partner2.png";
+import partner3 from "../../assets/partner3.png";
+import partner4 from "../../assets/partner4.png";
+import partner6 from "../../assets/partner6.png";
+import partner7 from "../../assets/partner7.png";
+import partner8 from "../../assets/partner8.png";
 
-import Services from '../../Components/Services/Services';
+import Services from "../../Components/Services/Services";
 
-import arrowDownMain from '../../assets/main__arrow.png';
+import arrowDownMain from "../../assets/main__arrow.png";
 
-import bro from '../../assets/bro.png';
-import FAQ from '../../Components/FAQ/FAQ';
-import SwiperTestimonails from '../../Components/SwiperTestimonails/SwiperTestimonails';
-import Clients from '../../Components/Clients/Clients';
+import bro from "../../assets/bro.png";
+import FAQ from "../../Components/FAQ/FAQ";
+import SwiperTestimonails from "../../Components/SwiperTestimonails/SwiperTestimonails";
+import Clients from "../../Components/Clients/Clients";
 
 export default function Home() {
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [email, setEmail] = useState('');
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
   const [thanks, setThanks] = useState(false);
 
   const [captchaVerified, setCaptchaVerified] = useState(true);
@@ -39,10 +39,10 @@ export default function Home() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!captchaVerified) {
-      alert('Пожалуйста, пройдите капчу');
+      alert("Пожалуйста, пройдите капчу");
       return;
     }
-    window.fbq('track', 'Lead');
+    window.fbq("track", "Lead");
     const data = {
       name,
       email,
@@ -50,11 +50,11 @@ export default function Home() {
     };
 
     try {
-      const response = await fetch('https://b24-lead.valuxin.workers.dev', {
-        method: 'POST',
-        mode: 'no-cors',
+      const response = await fetch("https://b24-lead.valuxin.workers.dev", {
+        method: "POST",
+        mode: "no-cors",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
       });
@@ -64,20 +64,20 @@ export default function Home() {
       setThanks(true);
 
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error("Network response was not ok");
       }
 
       const result = await response.json();
-      console.log('Success:', result);
+      console.log("Success:", result);
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
     }
   };
 
   const handleChange = (e) => {
     const value = e.target.value;
 
-    const digits = value.replace(/\D/g, '');
+    const digits = value.replace(/\D/g, "");
 
     setPhone(`+${digits}`);
   };
@@ -123,7 +123,7 @@ export default function Home() {
 
           <button
             className="about__button"
-            onClick={() => window.open('/RegiusLab_Creds.pdf', '_blank')}
+            onClick={() => window.open("/RegiusLab_Creds.pdf", "_blank")}
           >
             Презентация компании
           </button>
@@ -147,8 +147,8 @@ export default function Home() {
           <div className="consultation__right">
             <div
               style={{
-                opacity: thanks === true ? '1' : '0',
-                visibility: thanks === true ? 'visible' : 'hidden',
+                opacity: thanks === true ? "1" : "0",
+                visibility: thanks === true ? "visible" : "hidden",
               }}
               className="consultation__thanks"
             >
@@ -159,8 +159,8 @@ export default function Home() {
 
             <p
               style={{
-                opacity: thanks === false ? '1' : '0',
-                visibility: thanks === false ? 'visible' : 'hidden',
+                opacity: thanks === false ? "1" : "0",
+                visibility: thanks === false ? "visible" : "hidden",
               }}
               className="consultation__title"
             >
@@ -168,8 +168,8 @@ export default function Home() {
             </p>
             <form
               style={{
-                opacity: thanks === false ? '1' : '0',
-                visibility: thanks === false ? 'visible' : 'hidden',
+                opacity: thanks === false ? "1" : "0",
+                visibility: thanks === false ? "visible" : "hidden",
               }}
               onSubmit={handleSubmit}
               className="consultation__form"
@@ -231,13 +231,8 @@ export default function Home() {
 
       {/* <SwiperTestimonails /> */}
 
-
-      <p className="title clients_title services__title">
-        Партнеры и Клиенты
-      </p>
-<Clients/>
-
-
+      <p className="title clients_title services__title">Партнеры и Клиенты</p>
+      <Clients />
 
       <FAQ />
     </div>
