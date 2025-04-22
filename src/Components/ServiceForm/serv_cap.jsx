@@ -28,21 +28,17 @@ export default function ServiceForm({
           callback: (token) => {
             setTurnstileToken(token);
             setIsVerified(true); 
-            console.log(turnstileToken)
           },
           'error-callback': () => {
             setTurnstileToken(null);
             setIsVerified(false); 
-            console.log(turnstileToken)
 
           },
         });
         clearInterval(intervalId); 
-        console.log(turnstileToken)
 
       }
     }, 500);
-    console.log(turnstileToken)
 
     return () => clearInterval(intervalId); 
   }, []);
@@ -64,7 +60,7 @@ export default function ServiceForm({
     };
   
     try {
-      console.log('Attempting to submit:', data);
+      // console.log('Attempting to submit:', data);
       const response = await fetch('https://turnstile.regiuslab.by/v0/captcha', {
         mode: 'no-cors',
         method: 'POST',
@@ -74,7 +70,7 @@ export default function ServiceForm({
         body: JSON.stringify(data),
       });
   
-      console.log('Response Status:', response.status);
+      // console.log('Response Status:', response.status);
       
       if (response.status === 200) {
         setThanks(true);

@@ -17,7 +17,13 @@ export default function ServiceForm({
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    window.fbq('track', 'Lead');
+
+    // Проверка перед вызовом Facebook Pixel
+    if (typeof window.fbq === "function") {
+      window.fbq("track", "Lead");
+    } else {
+      console.warn("Facebook Pixel отключен или не загружен");
+    }
 
     const data = {
       name,
@@ -28,25 +34,27 @@ export default function ServiceForm({
     };
 
     try {
-      const response = await fetch('https://b24-lead.valuxin.workers.dev', {
-        method: 'POST',
-        mode: 'no-cors',
+      const response = await fetch("https://b24-lead.valuxin.workers.dev", {
+        method: "POST",
+        mode: "no-cors",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
       });
-      console.log(JSON.stringify(data));
+
+      // console.log(JSON.stringify(data));
+
       setThanks(true);
 
       if (!response.ok) {
-        throw new Error('Network response was not ok');
+        throw new Error("Network response was not ok");
       }
 
       const result = await response.json();
-      console.log('Success:', result);
+      // console.log("Success:", result);
     } catch (error) {
-      console.error('Error:', error);
+      console.error("Error:", error);
     }
   };
 

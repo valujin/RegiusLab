@@ -42,7 +42,14 @@ export default function Home() {
       alert("Пожалуйста, пройдите капчу");
       return;
     }
-    window.fbq("track", "Lead");
+
+    // Проверка перед вызовом Facebook Pixel
+    if (typeof window.fbq === "function") {
+      window.fbq("track", "Lead");
+    } else {
+      console.warn("Facebook Pixel отключен или не загружен");
+    }
+
     const data = {
       name,
       email,
@@ -59,7 +66,7 @@ export default function Home() {
         body: JSON.stringify(data),
       });
 
-      console.log(JSON.stringify(data));
+      // console.log(JSON.stringify(data));
 
       setThanks(true);
 
@@ -68,11 +75,12 @@ export default function Home() {
       }
 
       const result = await response.json();
-      console.log("Success:", result);
+      // console.log("Success:", result);
     } catch (error) {
       console.error("Error:", error);
     }
   };
+
 
   const handleChange = (e) => {
     const value = e.target.value;

@@ -150,7 +150,7 @@ export default function ServiceTemplate({ currentInfo }) {
       </div>
 
 
-      {console.log(currentInfo.when)}
+      {/* {console.log(currentInfo.when)} */}
       {currentInfo.when !== undefined ? (
       
       
