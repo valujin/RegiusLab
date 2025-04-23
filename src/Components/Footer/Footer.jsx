@@ -44,11 +44,11 @@ export default function Footer() {
         </div>
 
         <a
-          href="tel:+375447041787"
+          href="tel:+375447980498"
           onClick={() => window.fbq('track', 'Contact')}
           className="footer__tel"
         >
-          Тел: +375447041787
+          Тел: +375447980498
         </a>
         <a href="mailto:sales@regiuslab.by" className="footer__tel">
           sales@regiuslab.by
