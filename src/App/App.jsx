@@ -9,6 +9,7 @@ import {
   Route,
   Routes,
   Navigate,
+  useNavigate,
 } from 'react-router-dom';
 import NoPage from '../Pages/NoPage/NoPage';
 import Privacy from '../Pages/Pivacy/Privacy';
@@ -19,14 +20,17 @@ import serviceDb from '../data/services.json';
 import Blockchain from '../Pages/Blockchain/Blockchain';
 import Automatization from '../Pages/Automatization/Automatization';
 import TelegramBots from '../Pages/TelegramBots/TelegramBots';
+import Game from '../Pages/Game/Game';
+import Questions from '../Pages/Questions/Questions';
+import Thanks from '../Pages/Thanks/Thanks';
 import OneCDev from '../Pages/OneCDev/OneCDev';
 import SitesDev from '../Pages/SitesDev/SitesDev';
 import Bitrix24 from '../Pages/Bitrix24/Bitrix24';
 import ChatGPT from '../Pages/ChatGPT/ChatGPT';
 import CyberSecurity from '../Pages/CyberSecurity/CyberSecurity';
+import { useCookies } from 'react-cookie';
 function App() {
   const [bodyScroll, setBodyScroll] = useState(true);
-
   useEffect(() => {
     document.querySelector('body').style.overflow = bodyScroll
       ? 'visible'
@@ -43,8 +47,15 @@ function App() {
     }
   }, []);
 
+const navigate = useNavigate()
+const [cookie, setCookie] = useCookies(['is_overed_game'])
+  useEffect(()=>{
+    if(!cookie.is_overed_game) {
+      navigate('/game')
+    }
+  })
+
   return (
-    <Router>
       <div className="app">
         <div className="app__container">
           <Header bodyScroll={bodyScroll} setBodyScroll={setBodyScroll} />
@@ -64,6 +75,14 @@ function App() {
             <Route path="/cybersecurity" element={<CyberSecurity />}/>
             <Route path="/chat-Rgpt" element={<ChatGPT/>}/>
             <Route path="/noPage" element={<NoPage />}/>
+
+
+
+<Route path='/game' element={<Game/>}/>
+        <Route path="/thanks" element={<Thanks />} />
+        <Route path="/questions" element={<Questions />} />
+
+
             <Route path="/*" element={<Navigate to="/" />} />
           </Routes>
 
@@ -72,7 +91,7 @@ function App() {
           <Cookies />
         </div>
       </div>
-    </Router>
+
   );
 }
 
