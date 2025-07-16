@@ -55,7 +55,7 @@ export default function Game() {
   return (
     <div className="fixed h-screen w-screen flex justify-center items-center bg-black top-0 left-0 right-0 bottom-0">
       <div className="  absolute h-full w-full opacity-50 overflow-hidden ">
-        {/* <VantaBackground /> */}
+        <VantaBackground />
       </div>
       <div className="relative">
         <div className="max-h-[120px] flex items-center justify-center">
