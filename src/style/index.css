@@ -12,7 +12,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 *::-webkit-scrollbar {
   width: 12px;
 }
@@ -28,7 +27,6 @@ html {
 *::-webkit-scrollbar-thumb:hover {
   background-color: #555;
 }
-
 
 .custom-checkbox {
   appearance: none;
@@ -62,8 +60,8 @@ html {
 .message-banner {
   z-index: 99999;
   position: fixed;
- top: 50%;
- left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translateX(-50%);
   color: #fff;
   padding: 12px 20px;
@@ -85,8 +83,25 @@ html {
   height: 40px;
 }
 
-
-.game_plush{
+.game_plush {
   padding: 6px 20px;
   margin: 25px auto 0 auto;
+}
+.q-cont {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap:50px ;
+}
+.animated_cont .amimated_sec:nth-child(2) {
+  display: none;
+  transition: 0;
+}
+
+@media (max-width: 1024px) {
+  .q-cont {
+    width: 100%;
+    grid-template-columns: auto;
+    gap: 30px;
+  }
 }

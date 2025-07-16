@@ -27,7 +27,7 @@ export default function Thanks() {
   return (
     <div className=" flex flex-col gap-8 justify-center items-center fixed h-screen w-screen    bg-black top-0 left-0 right-0 bottom-0">
       <p className="text-white font-semibold text-center text-2xl leading-7 tracking-wider w-11/12">
-        Ура, вы спасли робота!
+        Ура, Вы спасли робота!
       </p>
 
       <div className="relative w-64 h-64">

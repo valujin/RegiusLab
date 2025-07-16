@@ -17,6 +17,7 @@
     "create-cloudflare": "^2.29.2",
     "express": "^4.19.2",
     "file-saver": "^2.0.5",
+    "framer-motion": "^12.23.6",
     "gsap": "^3.13.0",
     "i18next": "^23.12.2",
     "nav-link": "^1.1.4",

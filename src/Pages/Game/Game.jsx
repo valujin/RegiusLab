@@ -19,6 +19,7 @@ export default function Game() {
       name,
       email,
       phone,
+      serviceName: "ai conference 2025",
     };
 
     try {
@@ -31,12 +32,11 @@ export default function Game() {
         body: JSON.stringify(data),
       });
 
-     
-        setCookie("is_overed_game", true, {
-          path: "/",
-          expires: new Date("2099-12-31"),
-        });
-        navigate("/thanks");
+      setCookie("is_overed_game", true, {
+        path: "/",
+        expires: new Date("2099-12-31"),
+      });
+      navigate("/thanks");
 
       const result = await response.json();
       console.log("Success:", result);
@@ -66,7 +66,7 @@ export default function Game() {
           />
         </div>
         <p className="text-white mt-[20px] leading-[24px] font-semibold text-center w-[90%] !m-auto text-[20px]  tracking-[1.2px]">
-          Упс, кажется ты сломал AI робота...
+          Упс, кажется, ты сломал AI робота...
         </p>
 
         <div className="bg-[#41928977] rounded-[10px] !p-[6px_20px] w-[90%] max-w-[450px] text-white font-semibold text-[20px] text-center leading-[24px] tracking-[1.2px] !m-[25px_auto_0px_auto] border-1 border-[#72FFEC] backdrop-blur-[2px] shadow-[0px_0px_48.7px_0px_rgba(114,_255,_236,_0.66)]">
@@ -92,7 +92,7 @@ export default function Game() {
       <div
         className={`${
           !popup ? "top-[-100%]" : "top-[50%]"
-        } flex flex-col justify-center items-center absolute translate-x-[-50%] translate-y-[-50%]
+        } max-w-[600px] max-h-[600px] flex flex-col justify-center items-center absolute translate-x-[-50%] translate-y-[-50%]
  w-[95%] h-[80%]  left-[50%] border-1 border-[#72FFEC] shadow-[0px_0px_44.3px_0px_rgba(255,_255,_255,_0.34)_inset] bg-[#627e7bd1] rounded-[18px] backdrop-blur-[5px] !p-[30px_20px] `}
       >
         <div className="absolute top-[5%]" onClick={() => setPopup(false)}>
