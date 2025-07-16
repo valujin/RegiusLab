@@ -53,7 +53,7 @@ const [cookie, setCookie] = useCookies(['is_overed_game'])
     if(!cookie.is_overed_game) {
       navigate('/game')
     }
-  })
+  }, [])
 
   return (
       <div className="app">
