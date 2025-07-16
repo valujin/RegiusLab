@@ -57,7 +57,7 @@ export default function Home() {
     };
 
     try {
-      const response = await fetch("https://b24-lead.valuxin.workers.dev", {
+      const response = await fetch("https://b24-lead.regiuslab.by", {
         method: "POST",
         mode: "no-cors",
         headers: {
